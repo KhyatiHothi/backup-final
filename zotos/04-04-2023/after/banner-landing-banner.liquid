@@ -1,0 +1,113 @@
+
+<section class="biotera-banner-section">
+    <img class="banner-img desktop-banner" src="{{ 'biotera-desktop-banner.jpg' | asset_url }}" alt="desktop-banner">
+    <img class="banner-img mobile-banner" src="{{ 'biotera-mobile-banner.jpg' | asset_url }}" alt="desktop-banner">
+        <div class="container">
+            <div class="biotera-banner-content-wrapper">
+                <h1>
+                    <img class="banner-logo" src="{{ 'bio-tera-logo.png' | asset_url }}" alt="biotera-logo">
+                </h1>
+                <p>Clinically Tested. Salon Proven.</p>
+                <a href="#" title="Play video" class="custom-popup-link  site-border-btn" data-popup="biotera-banner-video">Watch the Video</a>
+            </div>
+        </div>
+</section>
+<div class="separator"> </div>
+<section class="browse-assortment">
+    <div class="container">
+        <h2 class="script">Browse Our Assortment</h2>
+        <p class="browse-assortment-description">
+            Lorem ipsum lead in copy here lorem ipsum dolor sit amet.
+            <div class="browse-assortment-slider-wrapper">
+                <div class="browse-assortment-slider">
+                    <div class="browse-assortment-item">
+                        <a href="#" title="shampoo and conditionar">
+                            <div class="img-wrapper">
+                                <img src="{{ 'shampoo-plus-conditionar.jpg' | asset_url }}" alt="shampoo-plus-conditionar">
+                            </div>
+                            <h3>Shampoo + conditioners</h3>
+                        </a>
+                    </div>
+                    <div class="browse-assortment-item">
+                        <a href="#" title="stylers and finishers">
+                            <div class="img-wrapper">
+                                <img src="{{ 'stylers-plus-finishers.jpg' | asset_url }}" alt="stylers-plus-finishers">
+                            </div>
+                            <h3>Stylers + Finishers</h3>
+                        </a>
+                    </div>
+                    <div class="browse-assortment-item">
+                        <a href="#" title="top-sellers">
+                            <div class="img-wrapper">
+                                <img src="{{ 'top-sellers.jpg' | asset_url }}" alt="top-sellers">
+                            </div>
+                            <h3>TOP SELLERS</h3>
+                        </a>
+                    </div>
+                    <div class="browse-assortment-item">
+                        <a href="#" title="top-sellers">
+                            <div class="img-wrapper">
+                                <img src="{{ 'top-sellers.jpg' | asset_url }}" alt="top-sellers">
+                            </div>
+                            <h3>TOP SELLERS</h3>
+                        </a>
+                    </div>
+                    <div class="browse-assortment-item">
+                        <a href="#" title="top-sellers">
+                            <div class="img-wrapper">
+                                <img src="{{ 'top-sellers.jpg' | asset_url }}" alt="top-sellers">
+                            </div>
+                            <h3>TOP SELLERS</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </p>
+    </div>
+</section>
+<div class="custom-popup video-popup tab-focus-none" data-modal="biotera-banner-video">
+    <div class="popup-dialog-wrapper">
+        <div class="popup-dialog">
+            <div class="popup-content">
+                <button class="close-popup" aria-label="Close Video Popup">
+                    <svg version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 20.4 20.4"
+                        style="enable-background:new 0 0 20.4 20.4" xml:space="preserve">
+                        <path d="M11.6,10.2l8.5-8.5c0.4-0.4,0.4-1,0-1.4s-1-0.4-1.4,0l-8.5,8.5L1.7,0.3c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l8.5,8.5l-8.5,8.5
+                              c-0.4,0.4-0.4,1,0,1.4c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3l8.5-8.5l8.5,8.5c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3
+                              c0.4-0.4,0.4-1,0-1.4L11.6,10.2z"></path>
+                    </svg>
+                </button>
+                <div class="popup-content-inner">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/No5QWCiroi8" title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen=""></iframe>
+                    </div>
+
+                    <div class="video-title">
+                        <h2>How To Go From Brunette to Dark Blue with AGEbeautiful Hair Color</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Brand Landing Banner",
+    "settings": [],
+    "presets": [
+        {
+            "name": "Brand Landing Banner"
+        }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

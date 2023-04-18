@@ -1,0 +1,112 @@
+.learn-how-to-video { padding: 5.7rem 0  8rem; }
+.learn-how-to-video h2 { margin-bottom: 3rem; text-align: center; line-height: 0.7; }
+.learn-how-to-video .btn-wrapper { text-align: center; margin-top: 3.2rem; }
+.learn-how-to-video .learn-how-to-video-grid { display: flex; justify-content: space-between; margin: 0 -3.8rem; }
+.learn-how-to-video .learn-how-to-video-grid .learn-how-to-video-grid-item { flex: 0 0 33.33%; max-width: 33.33%; padding: 0 3.8rem; }
+.learn-how-to-video .learn-how-to-video-grid .learn-how-to-video-grid-item .grid-inner { position: relative; line-height: 0; }
+.learn-how-to-video .learn-how-to-video-grid .learn-how-to-video-grid-item .grid-inner a:before { content: url("{{ 'youtube-icon-red.svg' | asset_url }}"); display: block; left: 50%; position: absolute; top: 50%; -webkit-transform: translate3d(-50%, -50%, 0); transform: translate3d(-50%, -50%, 0); transition: transform .2s cubic-bezier(.785, .135, .15, .86); transition: transform .2s cubic-bezier(.785, .135, .15, .86), -webkit-transform .2s cubic-bezier(.785, .135, .15, .86); width: 4.9rem; z-index: 1; opacity: 1; }
+.learn-how-to-video .learn-how-to-video-grid .learn-how-to-video-grid-item .grid-inner a { padding-top: 57%; position: relative; width: 100%; overflow: hidden; }
+.learn-how-to-video .learn-how-to-video-grid .learn-how-to-video-grid-item .grid-inner a img { position: absolute; left: 0; top: 0; height: 100%; width: 100%; object-fit: cover; transition: transform .2s cubic-bezier(.785, .135, .15, .86), -webkit-transform .2s cubic-bezier(.785, .135, .15, .86); }
+.learn-how-to-video .learn-how-to-video-grid .learn-how-to-video-grid-item .grid-inner a:hover img, .learn-how-to-video .learn-how-to-video-grid .learn-how-to-video-grid-item .grid-inner a:focus img { transform: scale(1.05) }
+.learn-how-to-video .container { max-width: 1740px; }
+
+/* blog-and-technique  */
+.blog-and-technique { background-color: #f4f6f9; padding: 6.1rem 0 6.6rem; text-align: center; }
+.blog-and-technique h2, .visit-shade-chart h2 { margin-bottom: 3.4rem; line-height: 0.7; }
+.blog-and-technique .blog-grid-main { margin-bottom: 2.7rem; }
+.blog-and-technique .blog-grid-wrappper { display: flex; flex-wrap: wrap; margin: 0 -2.5rem -5rem; }
+.blog-and-technique .blog-grid-wrappper .blog-grid-item { max-width: 25%; flex: 0 0 25%; padding: 0 2.5rem 5rem; }
+.blog-and-technique .blog-grid-wrappper .blog-grid-item a { display: block; position: relative; overflow: hidden; }
+.blog-and-technique .blog-grid-wrappper .blog-grid-item a p { font-size: 2.5rem; font-family: helvetica-neue-condensed-bold, sans-serif, Open Sans; color: #fff; max-width: 25rem; text-transform: uppercase; position: absolute; left: 2.2rem; text-align: left; bottom: 1.3rem; right: 2.2rem; }
+.blog-and-technique .blog-grid-wrappper .blog-grid-item .blog-img { position: relative; padding-bottom: 118%; }
+.blog-and-technique .blog-grid-wrappper .blog-grid-item img { position: absolute; height: 100%; width: 100%; top: 0; left: 0; object-fit: cover; transition: all 0.2s; }
+.blog-and-technique .blog-grid-wrappper .blog-grid-item .blog-content { position: relative; z-index: 2; }
+.blog-and-technique .blog-grid-wrappper .blog-grid-item a:hover img, .blog-and-technique .blog-grid-wrappper .blog-grid-item a:focus img { transform: scale(1.05); }
+
+/* biotera-experts-section  */
+.biotera-experts-section.learn-how-to-video .container { max-width: 1770px; }
+.biotera-experts-section.learn-how-to-video .learn-how-to-video-grid .learn-how-to-video-grid-item { max-width: inherit; }
+.biotera-experts-section.learn-how-to-video .learn-how-to-video-grid .slick-list { margin: 0 -3.8rem; }
+.biotera-experts-section.learn-how-to-video .learn-how-to-video-grid { margin: 0; display: block; }
+.learn-how-to-video.biotera-experts-section { padding: var(--section-space) 0 4.8rem; }
+
+/* biotera-blog-technique  */
+.biotera-blog-technique.blog-and-technique .blog-grid-wrappper .blog-grid-item .blog-img:after { position: absolute; left: 0; top: 0; height: 100%; width: 100%; content: ""; background-image: url("{{ 'biotera-blog-technique-overlay.png' | asset_url }}"); }
+.biotera-blog-technique.blog-and-technique { padding: 0 0  var(--section-space); }
+.biotera-experts-section.learn-how-to-video .learn-how-to-video-grid { opacity: 0; visibility: hidden; }
+.biotera-experts-section.learn-how-to-video .learn-how-to-video-grid.slick-initialized { opacity: 1; visibility: visible; }
+.learn-how-to-video.biotera-experts-section .learn-how-to-video-grid  .slick-prev { left: -7rem; }
+.learn-how-to-video.biotera-experts-section .learn-how-to-video-grid  .slick-next { right: -7rem; }
+.learn-how-to-video.biotera-experts-section  .learn-how-to-video-grid .learn-how-to-video-grid-item .grid-inner a:before { content: url("{{ 'youtube-icon-black.svg' | asset_url }}") }
+.learn-how-to-video.biotera-experts-section .learn-how-to-video-grid .learn-how-to-video-grid-item .grid-inner.has-iframe { padding-bottom: 57.3%; overflow: hidden; }
+.learn-how-to-video.biotera-experts-section .learn-how-to-video-grid .learn-how-to-video-grid-item .grid-inner.has-iframe iframe { position: absolute; height: 100%; width: 100%; left: 0; top: 0; object-fit: cover; transition: all .2s; }
+.learn-how-to-video.biotera-experts-section .learn-how-to-video-grid .learn-how-to-video-grid-item .grid-inner.has-iframe:hover iframe { transform: scale(1.05); }
+.biotera-blog-technique.blog-and-technique .slick-next { right: -2.5rem; border: 0.1rem solid transparent; }
+.biotera-blog-technique.blog-and-technique .slick-prev { left: -2.5rem; border: 0.1rem solid transparent; }
+.blog-and-technique.biotera-blog-technique .blog-grid-wrappper .blog-grid-item{padding-bottom: 0;}
+.blog-and-technique.biotera-blog-technique .blog-grid-wrappper .slick-prev:before,.blog-and-technique.biotera-blog-technique .blog-grid-wrappper .slick-next:before {    height: 1.8rem;
+    right: 6px;}
+    .blog-and-technique.biotera-blog-technique .blog-grid-wrappper .slick-prev,.blog-and-technique.biotera-blog-technique .blog-grid-wrappper .slick-next{    height: 36px;
+        width: 27px;}
+@media(max-width:1820px) {
+  .learn-how-to-video .learn-how-to-video-grid { margin: 0 -2.4rem }
+  .learn-how-to-video .learn-how-to-video-grid .learn-how-to-video-grid-item { padding: 0 2.4rem }
+  .blog-and-technique .blog-grid-wrappper { margin: 0 -1.5rem -3rem }
+  .blog-and-technique .blog-grid-wrappper .blog-grid-item { padding: 0 1.5rem 3rem }
+  .biotera-experts-section.learn-how-to-video .learn-how-to-video-grid .slick-list { margin: 0 -2.4rem; }
+  .learn-how-to-video.biotera-experts-section .learn-how-to-video-grid  .slick-prev { left: 0rem; }
+  .learn-how-to-video.biotera-experts-section .learn-how-to-video-grid  .slick-next { right: 0rem; }
+  .learn-how-to-video.biotera-experts-section .learn-how-to-video-grid  .slick-prev, .learn-how-to-video.biotera-experts-section .learn-how-to-video-grid  .slick-next, .biotera-blog-technique.blog-and-technique .blog-grid-wrappper .slick-prev, .biotera-blog-technique.blog-and-technique .blog-grid-wrappper .slick-next { background-color: #fff; box-shadow: 0 0 15px rgba(0, 0, 0, 0.15); }
+  .learn-how-to-video.biotera-experts-section .learn-how-to-video-grid  .slick-prev:hover, .learn-how-to-video.biotera-experts-section .learn-how-to-video-grid  .slick-next:hover, .learn-how-to-video.biotera-experts-section .learn-how-to-video-grid  .slick-prev:focus, .learn-how-to-video.biotera-experts-section .learn-how-to-video-grid  .slick-next:focus { background-color: #fff; border-color: #212529; }
+  .biotera-blog-technique.blog-and-technique .slick-next { right: 1.2rem; }
+  .biotera-blog-technique.blog-and-technique .slick-prev { left: 1.5rem; }
+}
+@media (max-width:1366px) {
+  .blog-and-technique .blog-grid-wrappper .blog-grid-item a p { font-size: 2.2rem; line-height: 1 }
+}
+@media(max-width:1199px) {
+  .learn-how-to-video h2 { margin-bottom: 1.8rem; }
+  .learn-how-to-video { padding: 5rem 0; }
+  .learn-how-to-video .learn-how-to-video-grid { margin: 0 -1.5rem }
+  .learn-how-to-video .learn-how-to-video-grid .learn-how-to-video-grid-item { padding: 0 1.5rem }
+  .blog-and-technique, .curl-with-confidence-section, .visit-shade-chart { padding: 4.5rem 0 }
+  .blog-and-technique .blog-grid-wrappper { margin: 0 -1rem -2rem }
+  .blog-and-technique .blog-grid-wrappper .blog-grid-item { padding: 0 1rem 2rem }
+  .blog-and-technique h2 { margin-bottom: 1.8rem }
+  .biotera-experts-section.learn-how-to-video .learn-how-to-video-grid .slick-list { margin: 0 -1.5rem; }
+  .biotera-blog-technique.blog-and-technique { padding: 0 0  var(--section-space); }
+  .learn-how-to-video.biotera-experts-section { padding: var(--section-space) 0 3rem; }
+  .biotera-blog-technique.blog-and-technique .slick-next { right: 0.7rem; }
+  .biotera-blog-technique.blog-and-technique .slick-prev { left: 1rem; }
+}
+@media(max-width:991px) {
+  .blog-and-technique .blog-grid-wrappper { margin: 0 -.5rem -1rem }
+  .blog-and-technique .blog-grid-wrappper .blog-grid-item { padding: 0 .5rem 1rem }
+  .blog-and-technique .blog-grid-wrappper .blog-grid-item a p { font-size: 2rem; }
+  .biotera-blog-technique.blog-and-technique .slick-next { right: 0rem; }
+  .biotera-blog-technique.blog-and-technique .slick-prev { left: 0.5rem; }
+}
+@media(max-width:767px) {
+  .learn-how-to-video .learn-how-to-video-grid { flex-wrap: wrap; margin: 0 }
+  .learn-how-to-video .learn-how-to-video-grid .learn-how-to-video-grid-item { padding: 0; max-width: 100%; flex: 0 0 100% }
+  .learn-how-to-video .learn-how-to-video-grid .learn-how-to-video-grid-item:not(:last-child) { margin-bottom: 2rem }
+  .learn-how-to-video { padding: 4.2rem 0 3.7rem; }
+  .learn-how-to-video .container { padding: 0 2.8rem }
+  .learn-how-to-video .btn-wrapper { margin-top: 1.7rem; }
+  .blog-and-technique { padding: 3.6rem 0 4.5rem }
+  .blog-and-technique .blog-grid-wrappper { display: flex; flex-wrap: wrap; margin: 0 -.5rem -1rem }
+  .blog-and-technique .blog-grid-wrappper .blog-grid-item { max-width: 50%; flex: 0 0 50%; padding: 0 .5rem 1rem }
+  .blog-and-technique .blog-grid-wrappper .blog-grid-item a p { left: 1.2rem; bottom: 1rem; right: 4rem; font-size: 1.8rem; }
+  .blog-and-technique .blog-grid-main { margin-bottom: 1rem }
+  .biotera-blog-technique.blog-and-technique { padding: 0 0  var(--section-space); }
+  .learn-how-to-video.biotera-experts-section .learn-how-to-video-grid .learn-how-to-video-grid-item { padding: 0 1.5rem; margin: 0; }
+  .learn-how-to-video.biotera-experts-section { padding: var(--section-space) 0 2rem; }
+}
+@media (max-width:479px) {
+  .blog-and-technique .blog-grid-wrappper { margin: 0 -0.25rem -0.5rem; }
+  .blog-and-technique .blog-grid-wrappper .blog-grid-item { padding: 0 0.25rem 0.5rem; }
+  .blog-and-technique .container { padding: 0 0.75rem; }
+  .blog-and-technique.biotera-blog-technique .container { padding: 0 2.4rem; }
+  .biotera-blog-technique.blog-and-technique .slick-next { right: 0.25rem; }
+  .biotera-blog-technique.blog-and-technique .slick-prev { left: 0.25rem; }
+}

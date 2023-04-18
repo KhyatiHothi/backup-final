@@ -1,0 +1,850 @@
+{%- if section.settings.enable_quick_add -%}
+  <link rel="stylesheet" href="{{ 'quick-add.css' | asset_url }}" media="print" onload="this.media='all'">
+  <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
+{% paginate collection.products by 1000 %}{% assign products_count = collection.products.size %}{% endpaginate %}
+<section class="collection-shop-section" handle="{{ collection.handle }}" id="collection-handle">
+   
+    <div class="container">
+        <div class="breadcrumb-wrapper">
+            <ul>
+                <li><a href="/">Home</a><span class="breadcrumb-seprator">/</span></li>
+                {% if collection.metafields.accentuate.collection_type contains "Brand" %}
+                    <li><a href="/collections/all">Shop by brand</a><span class="breadcrumb-seprator">/</span></li>
+              {% else %}
+                    <li><a href="/collections/all">Shop by collection</a><span class="breadcrumb-seprator">/</span></li>
+             {% endif %}
+             
+                <li><a aria-current="page" href="javascript:void(0);">{{ collection.handle }}</a></li>
+           
+            </ul>
+        </div>
+       
+        <div class="collection-grid-wrapper {% if collection.metafields.accentuate.hide_filter == 'true' %}hideFilters{% endif %}">
+            {% include 'collection-filters', products_count: products_count %}
+            
+            
+            <div class="collection-product-wrapper">
+                  <div class="collection-product-top"> 
+                      
+                      <p id="product_count"><strong>{{ products_count }}</strong> results</p>
+                      <div class="custom-dropdown-wrapper">
+                          <label for="SortBy">Sort By:</label>
+                          <select name="" id="SortBy"
+                            class="filters-toolbar__input select-sort-by"
+                            data-default-sortby="{{ collection.default_sort_by }}"
+                            data-select-input
+                          >
+                            {%- for option in collection.sort_options -%}
+                              {% if option.value contains 'best-selling' or option.value contains 'price-ascending' or option.value contains 'price-descending' or option.value contains 'created-descending' %}
+                              <option value="{{ option.value }}" {% if option.value == sort_by %}selected="selected"{% endif %}>{{ option.name | replace: 'Best selling', 'Best Sellers' | replace: 'Price, low to high', 'Price Low to High' | replace: 'Price, high to low', 'Price High to Low' | replace: 'Date, new to old', 'New'}}</option>
+                              {% endif %}
+                            {%- endfor -%}
+                            
+                          </select>
+                      </div>
+                  </div>
+                   
+                      {% for image in collection.metafields.accentuate.image %}
+                        {% if collection.metafields.accentuate.image[forloop.index0] != blank %}
+                            <div data-position ='{{ collection.metafields.accentuate.position_in_grid[forloop.index0] }}' class="information-box" style="display:none;">
+                              <div class="info-box">
+                                  <div class="info-box-image">
+                                      <img src="{{ collection.metafields.accentuate.image[forloop.index0][0].src }}" alt="{{ collection.metafields.accentuate.image[forloop.index0].alt }}">
+                                  </div>
+                                  <div class="info-box-content">
+                                  {% if collection.metafields.accentuate.content[forloop.index0] != blank %}
+                                      {{ collection.metafields.accentuate.content[forloop.index0] }}
+                                    {% endif %}
+                                  {% if collection.metafields.accentuate.button_link[forloop.index0] != blank and collection.metafields.accentuate.button_text[forloop.index0] != blank %}
+                                      <a href="{{ collection.metafields.accentuate.button_link[forloop.index0] }}" title="{{ collection.metafields.accentuate.button_text[forloop.index0] }}">{{ collection.metafields.accentuate.button_text[forloop.index0] }}</a>
+                                    {% endif %}
+                                  {% if collection.metafields.accentuate.text_below_button[forloop.index0] != blank %}
+                                      <p class="disclaimer-text">{{ collection.metafields.accentuate.text_below_button[forloop.index0] }}</p>
+                                    {% endif %}
+                                  </div>
+                              </div>
+                          </div>
+                          {% endif %}
+                          {% endfor %}
+                      
+                  <div class="collection-product-grid">
+                    {% assign ads_count = 0 %}
+                    {% paginate collection.products by 1000 %}
+                      {% for product in collection.products %}
+                        {% assign check = forloop.index %}
+                        {% for image in collection.metafields.accentuate.image %}
+                          {% if collection.metafields.accentuate.image[forloop.index0] != blank %}
+                          {% assign deduct = forloop.index0 %}
+                          {% assign checks = collection.metafields.accentuate.position_in_grid[forloop.index0] | plus: 0 %}
+                          {% assign checks = checks | minus: ads_count %}
+                        {% if check == checks %}
+                            {% assign ads_count = ads_count | plus:1 %}
+                            <div data-position ='{{ collection.metafields.accentuate.position_in_grid[forloop.index0] }}' class="information-box">
+                              <div class="info-box">
+                                  <div class="info-box-image">
+                                      <img src="{{ collection.metafields.accentuate.image[forloop.index0][0].src }}" alt="{{ collection.metafields.accentuate.image[forloop.index0].alt }}">
+                                  </div>
+                                  <div class="info-box-content">
+                                   {% if collection.metafields.accentuate.content[forloop.index0] != blank %}
+                                      {{ collection.metafields.accentuate.content[forloop.index0] }}
+                                    {% endif %}
+                                  {% if collection.metafields.accentuate.button_link[forloop.index0] != blank and collection.metafields.accentuate.button_text[forloop.index0] != blank %}
+                                      <a href="{{ collection.metafields.accentuate.button_link[forloop.index0] }}" title="{{ collection.metafields.accentuate.button_text[forloop.index0] }}">{{ collection.metafields.accentuate.button_text[forloop.index0] }}</a>
+                                    {% endif %}
+                                  {% if collection.metafields.accentuate.text_below_button[forloop.index0] != blank %}
+                                      <p class="disclaimer-text">{{ collection.metafields.accentuate.text_below_button[forloop.index0] }}</p>
+                                    {% endif %}
+                                  </div>
+                              </div>
+                          </div>
+                          {% endif %}
+                            {% endif %}
+                          {% endfor %}
+                        {% include 'product-grid' %}
+                      {% endfor %}
+                      {% assign comparenum = ads_count | plus: products_count %}
+                      {% for place in collection.metafields.accentuate.position_in_grid %}
+                        {% assign place_check = place | plus: 0 %}
+                        {% if place_check >= comparenum %}
+                          {% assign index_for_data = forloop.index0 %}
+                          {% if collection.metafields.accentuate.image[index_for_data] != blank %}
+                            <div data-position ='{{ collection.metafields.accentuate.position_in_grid[index_for_data] }}' class="information-box">
+                              <div class="info-box">
+                                  <div class="info-box-image">
+                                      <img src="{{ collection.metafields.accentuate.image[index_for_data][0].src }}" alt="{{ collection.metafields.accentuate.image[index_for_data].alt }}">
+                                  </div>
+                                  <div class="info-box-content">
+                                  {% if collection.metafields.accentuate.content[forloop.index0] != blank %}
+                                      {{ collection.metafields.accentuate.content[forloop.index0] }}
+                                    {% endif %}
+                                  {% if collection.metafields.accentuate.button_link[index_for_data] != blank and collection.metafields.accentuate.button_text[index_for_data] != blank %}
+                                      <a href="{{ collection.metafields.accentuate.button_link[index_for_data] }}" title="{{ collection.metafields.accentuate.button_text[index_for_data] }}">{{ collection.metafields.accentuate.button_text[index_for_data] }}</a>
+                                    {% endif %}
+                                  {% if collection.metafields.accentuate.text_below_button[index_for_data] != blank %}
+                                      <p class="disclaimer-text">{{ collection.metafields.accentuate.text_below_button[index_for_data] }}</p>
+                                    {% endif %}
+                                  </div>
+                              </div>
+                          </div>
+                             {% endif %}
+                          {% endif %}
+                        {% endfor %}
+                    {% endpaginate %}
+                  </div>
+                <div class="collection-product-pagination" data-total-count="{{ products_count }}" data-display-count="{{ section.settings.product_default_count }}" data-defaut-count="{{ section.settings.product_default_count }}" {% if products_count < 1 %}style="display:none;"{% endif %}>
+                    <p class="pagination_text">1-{% if section.settings.product_default_count < products_count %}{{ section.settings.product_default_count }}{% else %}{{ products_count }}{% endif %} of {{ products_count }} Results</p>
+                    <a href="javascript:void(0);" class="primary-btn border-btn">Show More Products</a>
+                </div>
+                <div class="empty-collection-wrapper" {% if products_count > 0 %}style="display:none;"{% endif %}>
+                  <p class="text-center">0 Results</p>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</section>
+{% if collection.metafields.accentuate.collection_article_image != blank or collection.metafields.accentuate.collection_article_heading != blank or collection.metafields.accentuate.collection_article_sub_heading != blank or collection.metafields.accentuate.collection_article_content != blank %}
+{% include 'collection-article' %}
+{% endif %}
+{% schema %}
+{
+  "name": "t:sections.main-collection-product-grid.name",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.main-collection-product-grid.settings.header__3.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_secondary_image",
+      "default": false,
+      "label": "t:sections.main-collection-product-grid.settings.show_secondary_image.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_quick_add",
+      "default": false,
+      "label": "t:sections.main-collection-product-grid.settings.enable_quick_buy.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.main-collection-product-grid.settings.header__1.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_filtering",
+      "default": true,
+      "label": "t:sections.main-collection-product-grid.settings.enable_filtering.label",
+      "info": "t:sections.main-collection-product-grid.settings.enable_filtering.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_sorting",
+      "default": true,
+      "label": "t:sections.main-collection-product-grid.settings.enable_sorting.label"
+    },
+    {
+      "type": "number",
+      "id": "product_default_count",
+      "default": 12,
+      "label": "Product default count(For pagination)"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Filter",
+      "settings": [
+		{
+          "type": "text",
+          "id": "heading",
+          "label": "Filter title",
+          "default": "Filter by X"
+        },
+        {
+          "type": "textarea",
+          "id": "sort_a",
+          "label": "Filter tags",
+          "info": "Comma separated"
+        }
+      ]
+    },
+    {
+      "type": "collection_filter",
+      "name": "Filters-Redirect Links",
+      "settings": [
+		{
+          "type": "text",
+          "id": "collection-filter-title",
+          "label": "Filter title",
+          "default": "Filter by X"
+        },
+        {
+          "type": "header",
+          "content": "Filter item 1"
+        },
+        {
+          "type": "text",
+          "id": "filter_name1",
+          "label": "Filter 1 name"
+        },
+        {
+          "type": "text",
+          "id": "filter_link_title_1_1",
+          "label": "Filter Link Title 1 of 1"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_1_1",
+          "label": "Filter Link 1 of 1"
+        },
+        {
+          "type": "text",
+          "id": "filter_link_title_1_2",
+          "label": "Filter Link Title 1 of 2"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_1_2",
+          "label": "Filter Link 1 of 2"
+        },
+        {
+          "type": "text",
+          "id": "filter_link_title_1_3",
+          "label": "Filter Link Title 1 of 3"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_1_3",
+          "label": "Filter Link 1 of 3"
+        },
+        {
+          "type": "text",
+          "id": "filter_link_title_1_4",
+          "label": "Filter Link Title 1 of 4"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_1_4",
+          "label": "Filter Link 1 of 4"
+        },
+        {
+          "type": "text",
+          "id": "filter_link_title_1_5",
+          "label": "Filter Link Title 1 of 5"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_1_5",
+          "label": "Filter Link 1 of 5"
+        },
+        {
+          "type": "text",
+          "id": "filter_link_title_1_6",
+          "label": "Filter Link Title 1 of 6"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_1_6",
+          "label": "Filter Link 1 of 6"
+        },
+        {
+          "type": "text",
+          "id": "filter_link_title_1_7",
+          "label": "Filter Link Title 1 of 7"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_1_7",
+          "label": "Filter Link 1 of 7"
+        },{
+          "type": "text",
+          "id": "filter_link_title_1_8",
+          "label": "Filter Link Title 1 of 8"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_1_8",
+          "label": "Filter Link 1 of 8"
+        },{
+          "type": "text",
+          "id": "filter_link_title_1_9",
+          "label": "Filter Link Title 1 of 9"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_1_9",
+          "label": "Filter Link 1 of 9"
+        },{
+          "type": "text",
+          "id": "filter_link_title_1_10",
+          "label": "Filter Link Title 1 of 10"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_1_10",
+          "label": "Filter Link 1 of 10"
+        },
+        {
+          "type": "header",
+          "content": "Filter item 2"
+        },
+        {
+          "type": "text",
+          "id": "filter_name2",
+          "label": "Filter 2 name"
+        },
+        {
+          "type": "text",
+          "id": "filter_link_title_2_1",
+          "label": "Filter Link Title 2 of 1"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_2_1",
+          "label": "Filter Link 2 of 1"
+        },
+        {
+          "type": "text",
+          "id": "filter_link_title_2_2",
+          "label": "Filter Link Title 2 of 2"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_2_2",
+          "label": "Filter Link 2 of 2"
+        },{
+          "type": "text",
+          "id": "filter_link_title_2_3",
+          "label": "Filter Link Title 2 of 3"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_2_3",
+          "label": "Filter Link 2 of 3"
+        },{
+          "type": "text",
+          "id": "filter_link_title_2_4",
+          "label": "Filter Link Title 2 of 4"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_2_4",
+          "label": "Filter Link 2 of 4"
+        },{
+          "type": "text",
+          "id": "filter_link_title_2_5",
+          "label": "Filter Link Title 2 of 5"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_2_5",
+          "label": "Filter Link 2 of 5"
+        },
+        {
+          "type": "text",
+          "id": "filter_link_title_2_6",
+          "label": "Filter Link Title 2 of 6"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_2_6",
+          "label": "Filter Link 2 of 6"
+        },
+        {
+          "type": "text",
+          "id": "filter_link_title_2_7",
+          "label": "Filter Link Title 2 of 7"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_2_7",
+          "label": "Filter Link 2 of 7"
+        },{
+          "type": "text",
+          "id": "filter_link_title_2_8",
+          "label": "Filter Link Title 2 of 8"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_2_8",
+          "label": "Filter Link 2 of 8"
+        },{
+          "type": "text",
+          "id": "filter_link_title_2_9",
+          "label": "Filter Link Title 2 of 9"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_2_9",
+          "label": "Filter Link 2 of 9"
+        },{
+          "type": "text",
+          "id": "filter_link_title_2_10",
+          "label": "Filter Link Title 2 of 10"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_2_10",
+          "label": "Filter Link 2 of 10"
+        },
+        {
+          "type": "header",
+          "content": "Filter item 3"
+        },
+        {
+          "type": "text",
+          "id": "filter_name3",
+          "label": "Filter 3 name"
+        },
+        {
+          "type": "text",
+          "id": "filter_link_title_3_1",
+          "label": "Filter Link Title 3 of 1"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_3_1",
+          "label": "Filter Link 3 of 1"
+        },
+        {
+          "type": "text",
+          "id": "filter_link_title_3_2",
+          "label": "Filter Link Title 3 of 2"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_3_2",
+          "label": "Filter Link 3 of 2"
+        },{
+          "type": "text",
+          "id": "filter_link_title_3_3",
+          "label": "Filter Link Title 3 of 3"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_3_3",
+          "label": "Filter Link 3 of 3"
+        },{
+          "type": "text",
+          "id": "filter_link_title_3_4",
+          "label": "Filter Link Title 3 of 4"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_3_4",
+          "label": "Filter Link 3 of 4"
+        },{
+          "type": "text",
+          "id": "filter_link_title_3_5",
+          "label": "Filter Link Title 3 of 5"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_3_5",
+          "label": "Filter Link 3 of 5"
+        },
+        {
+          "type": "text",
+          "id": "filter_link_title_3_6",
+          "label": "Filter Link Title 3 of 6"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_3_6",
+          "label": "Filter Link 3 of 6"
+        },
+        {
+          "type": "text",
+          "id": "filter_link_title_3_7",
+          "label": "Filter Link Title 3 of 7"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_3_7",
+          "label": "Filter Link 3 of 7"
+        },{
+          "type": "text",
+          "id": "filter_link_title_3_8",
+          "label": "Filter Link Title 3 of 8"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_3_8",
+          "label": "Filter Link 3 of 8"
+        },{
+          "type": "text",
+          "id": "filter_link_title_3_9",
+          "label": "Filter Link Title 3 of 9"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_3_9",
+          "label": "Filter Link 3 of 9"
+        },{
+          "type": "text",
+          "id": "filter_link_title_3_10",
+          "label": "Filter Link Title 3 of 10"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_3_10",
+          "label": "Filter Link 3 of 10"
+        },
+        {
+          "type": "header",
+          "content": "Filter item 4"
+        },
+        {
+          "type": "text",
+          "id": "filter_name4",
+          "label": "Filter 4 name"
+        },
+        {
+          "type": "text",
+          "id": "filter_link_title_4_1",
+          "label": "Filter Link Title 4 of 1"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_4_1",
+          "label": "Filter Link 4 of 1"
+        },
+        {
+          "type": "text",
+          "id": "filter_link_title_4_2",
+          "label": "Filter Link Title 4 of 2"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_4_2",
+          "label": "Filter Link 4 of 2"
+        },{
+          "type": "text",
+          "id": "filter_link_title_4_3",
+          "label": "Filter Link Title 4 of 3"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_4_3",
+          "label": "Filter Link 4 of 3"
+        },{
+          "type": "text",
+          "id": "filter_link_title_4_4",
+          "label": "Filter Link Title 4 of 4"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_4_4",
+          "label": "Filter Link 4 of 4"
+        },{
+          "type": "text",
+          "id": "filter_link_title_4_5",
+          "label": "Filter Link Title 4 of 5"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_4_5",
+          "label": "Filter Link 4 of 5"
+        },
+        {
+          "type": "text",
+          "id": "filter_link_title_4_6",
+          "label": "Filter Link Title 4 of 6"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_4_6",
+          "label": "Filter Link 4 of 6"
+        },
+        {
+          "type": "text",
+          "id": "filter_link_title_4_7",
+          "label": "Filter Link Title 4 of 7"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_4_7",
+          "label": "Filter Link 4 of 7"
+        },{
+          "type": "text",
+          "id": "filter_link_title_4_8",
+          "label": "Filter Link Title 4 of 8"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_4_8",
+          "label": "Filter Link 4 of 8"
+        },{
+          "type": "text",
+          "id": "filter_link_title_4_9",
+          "label": "Filter Link Title 4 of 9"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_4_9",
+          "label": "Filter Link 4 of 9"
+        },{
+          "type": "text",
+          "id": "filter_link_title_4_10",
+          "label": "Filter Link Title 4 of 10"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_4_10",
+          "label": "Filter Link 4 of 10"
+        },
+        {
+          "type": "header",
+          "content": "Filter item 5"
+        },
+        {
+          "type": "text",
+          "id": "filter_name5",
+          "label": "Filter 5 name"
+        },
+        {
+          "type": "text",
+          "id": "filter_link_title_5_1",
+          "label": "Filter Link Title 5 of 1"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_5_1",
+          "label": "Filter Link 5 of 1"
+        },
+        {
+          "type": "text",
+          "id": "filter_link_title_5_2",
+          "label": "Filter Link Title 5 of 2"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_5_2",
+          "label": "Filter Link 5 of 2"
+        },{
+          "type": "text",
+          "id": "filter_link_title_5_3",
+          "label": "Filter Link Title 5 of 3"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_5_3",
+          "label": "Filter Link 5 of 3"
+        },{
+          "type": "text",
+          "id": "filter_link_title_5_4",
+          "label": "Filter Link Title 5 of 4"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_5_4",
+          "label": "Filter Link 5 of 4"
+        },{
+          "type": "text",
+          "id": "filter_link_title_5_5",
+          "label": "Filter Link Title 5 of 5"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_5_5",
+          "label": "Filter Link 5 of 5"
+        },
+        {
+          "type": "text",
+          "id": "filter_link_title_5_6",
+          "label": "Filter Link Title 5 of 6"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_5_6",
+          "label": "Filter Link 5 of 6"
+        },
+        {
+          "type": "text",
+          "id": "filter_link_title_5_7",
+          "label": "Filter Link Title 5 of 7"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_5_7",
+          "label": "Filter Link 5 of 7"
+        },{
+          "type": "text",
+          "id": "filter_link_title_5_8",
+          "label": "Filter Link Title 5 of 8"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_5_8",
+          "label": "Filter Link 5 of 8"
+        },{
+          "type": "text",
+          "id": "filter_link_title_5_9",
+          "label": "Filter Link Title 5 of 9"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_5_9",
+          "label": "Filter Link 5 of 9"
+        },{
+          "type": "text",
+          "id": "filter_link_title_5_10",
+          "label": "Filter Link Title 5 of 10"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_5_10",
+          "label": "Filter Link 5 of 10"
+        },{
+          "type": "header",
+          "content": "Filter item 6"
+        },
+        {
+          "type": "text",
+          "id": "filter_name6",
+          "label": "Filter 6 name"
+        },
+        {
+          "type": "text",
+          "id": "filter_link_title_6_1",
+          "label": "Filter Link Title 6 of 1"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_6_1",
+          "label": "Filter Link 6 of 1"
+        },
+        {
+          "type": "text",
+          "id": "filter_link_title_6_2",
+          "label": "Filter Link Title 6 of 2"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_6_2",
+          "label": "Filter Link 6 of 2"
+        },{
+          "type": "text",
+          "id": "filter_link_title_6_3",
+          "label": "Filter Link Title 6 of 3"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_6_3",
+          "label": "Filter Link 6 of 3"
+        },{
+          "type": "text",
+          "id": "filter_link_title_6_4",
+          "label": "Filter Link Title 6 of 4"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_6_4",
+          "label": "Filter Link 6 of 4"
+        },{
+          "type": "text",
+          "id": "filter_link_title_6_5",
+          "label": "Filter Link Title 6 of 5"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_6_5",
+          "label": "Filter Link 6 of 5"
+        },
+        {
+          "type": "text",
+          "id": "filter_link_title_6_6",
+          "label": "Filter Link Title 6 of 6"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_6_6",
+          "label": "Filter Link 6 of 6"
+        },
+        {
+          "type": "text",
+          "id": "filter_link_title_6_7",
+          "label": "Filter Link Title 6 of 7"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_6_7",
+          "label": "Filter Link 6 of 7"
+        },{
+          "type": "text",
+          "id": "filter_link_title_6_8",
+          "label": "Filter Link Title 6 of 8"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_6_8",
+          "label": "Filter Link 6 of 8"
+        },{
+          "type": "text",
+          "id": "filter_link_title_6_9",
+          "label": "Filter Link Title 6 of 9"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_6_9",
+          "label": "Filter Link 6 of 9"
+        },{
+          "type": "text",
+          "id": "filter_link_title_6_10",
+          "label": "Filter Link Title 6 of 10"
+        },
+        {
+          "type": "url",
+          "id": "filter_link_6_10",
+          "label": "Filter Link 6 of 10"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

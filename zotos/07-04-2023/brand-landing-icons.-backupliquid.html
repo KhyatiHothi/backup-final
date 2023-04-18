@@ -1,0 +1,94 @@
+<section class="brand-icons-section">
+  <div class="container">
+    <div class="brand-icons-outer-wrapper">
+      {% if section.settings.heading != blank %}
+      <h2 class="script">{{ section.settings.heading }}</h2>
+      {% endif %}
+      {% if section.blocks.size > 0 %}
+      <div class="brands-icons-wrapper">
+        <ul class="brands-list">
+          {% for block in section.blocks %}
+            {% if block.type == 'image' %}
+              {% if block.settings.desktop_image != blank  %}
+              <li>
+                <em>
+                  <img src="{{ block.settings.desktop_image | img_url: 'master' }}" alt="{{ block.settings.desktop_image.alt | escape }}" {% if block.settings.mobile_image != blank %}class="desktop-image"{% endif %}/>
+                  {% if block.settings.mobile_image != blank %}
+                  <img src="{{ block.settings.mobile_image | img_url: 'master' }}" alt="{{ block.settings.mobile_image.alt | escape }}" class="mobile-image"/>
+                  {% endif %}
+                </em>          
+              </li>
+              {% endif %}
+            {% else %}
+              {% if block.settings.text != blank %}
+              <li class="has-text"><span>{{ block.settings.text }}</span></li>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+{% schema %}
+  {
+    "name": "Brand Landing Icons",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Our Promise" 
+      }
+    ],
+    "blocks": [
+      {
+        "type": "image",
+        "name": "Image",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "desktop_image",
+            "label": "Image"
+          },
+          {
+            "type": "image_picker",
+            "id": "mobile_image",
+            "label": "Mobile Image",
+            "info": "Optional"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "name": "Text",
+        "settings": [
+          {
+            "type": "text",
+            "id": "text",
+            "label": "Text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+        {
+            "name": "Brand Landing Icons"
+        }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

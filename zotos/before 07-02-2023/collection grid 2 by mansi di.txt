@@ -1,0 +1,156 @@
+{%- if section.settings.enable_quick_add -%}
+  <link rel="stylesheet" href="{{ 'quick-add.css' | asset_url }}" media="print" onload="this.media='all'">
+  <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
+
+
+<section class="collection-shop-section">
+    <div class="container">
+        <div class="breadcrumb-wrapper">
+            <ul>
+                <li><a href="/">Home</a><span class="breadcrumb-seprator">/</span></li>
+                <li><a href="/collections">Shop by collection</a><span class="breadcrumb-seprator">/</span></li>
+                <li><a aria-current="page" href="javascript:void(0);">{{ collection.handle }}</a></li>
+            </ul>
+        </div>
+        <div class="collection-grid-wrapper">
+            {% include 'collection-filters' %}
+            
+            <div class="collection-product-wrapper">
+                <div class="collection-product-top">
+                    <p><strong>{{ collection.all_products_count }}</strong> results</p>
+                    <div class="custom-dropdown-wrapper">
+                        <label for="sort-by">Sort By:</label>
+                        <select name="sort-by" id="sort-by">
+                            <option value="best-sellers">Best Sellers</option>
+                            <option value="price-low-high">Price Low to High</option>
+                            <option value="price-high-low">Price High to Low</option>
+                            <option value="reviews">Avg. Customer Reviews</option>
+                            <option value="new">New</option>
+                          </select>
+                    </div>
+                </div>
+                <div class="collection-product-grid">
+                  {% for product in collection.products %}
+                    <div class="collection-product-grid-item hii">
+                        <div class="product-thumbnail">
+                            <a href="{{ product.url }}">
+                                <div class="product-thumbnail-inner">
+                                    {% if product.media[0] != blank %}
+                                    <div class="normal-block">
+                                        <img src="{{ product.featured_media | img_url: 'master' }}" alt="{{ product.featured_media.alt | escape }}">
+                                    </div>
+                                    {% endif %}
+                                    {% if product.media[1] != blank and product.media[1].media_type != 'video' and product.media[1].media_type != 'external_video' %}
+                                      <div class="hover-block">
+                                        <img src="{{ product.media[1].src | img_url: 'master' }}" alt="{{ product.media[1].alt }}">
+                                      </div>
+                                    {% else %}
+                                      <div class="hover-block has-no-image">
+                                      </div>
+                                    {% endif %}
+                                </div>
+                            </a>
+                        </div>
+                        <div class="product-link">
+                            <a href="{{ product.url }}">
+                                <h2>{{ product.title }}</h2>
+                            </a>
+                        </div>
+                        {% if product.options[0] == 'Color' %}
+                            <!--  Add color swatches structure here  -->
+                        {% else %}
+                            <!--  Add Dropdown structure here  -->
+                        {% endif %}
+                        <div class="product-button">
+                            <a href="#" class="primary-btn orange-btn">Buy from Amazon</a>
+                            <a href="#" class="primary-btn">Buy from Sally Beauty</a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="collection-product-pagination">
+                    <p>1-12 of 38 Results</p>
+                    <a href="#" class="primary-btn border-btn">Show More Products</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+{% schema %}
+{
+  "name": "t:sections.main-collection-product-grid.name",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.main-collection-product-grid.settings.header__3.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_secondary_image",
+      "default": false,
+      "label": "t:sections.main-collection-product-grid.settings.show_secondary_image.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_quick_add",
+      "default": false,
+      "label": "t:sections.main-collection-product-grid.settings.enable_quick_buy.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.main-collection-product-grid.settings.header__1.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_filtering",
+      "default": true,
+      "label": "t:sections.main-collection-product-grid.settings.enable_filtering.label",
+      "info": "t:sections.main-collection-product-grid.settings.enable_filtering.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_sorting",
+      "default": true,
+      "label": "t:sections.main-collection-product-grid.settings.enable_sorting.label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Filter",
+      "settings": [
+		{
+          "type": "text",
+          "id": "heading",
+          "label": "Filter title",
+          "default": "Filter by X"
+        },
+        {
+          "type": "textarea",
+          "id": "sort_a",
+          "label": "Filter tags",
+          "info": "Comma separated"
+        }
+      ]
+    },
+    {
+      "type": "collection_filter",
+      "name": "Collection Filter",
+      "settings": [
+		{
+          "type": "text",
+          "id": "collection-filter-title",
+          "label": "Filter title",
+          "default": "Filter by X"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

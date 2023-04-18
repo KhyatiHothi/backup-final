@@ -1,0 +1,52 @@
+Reference : https://zotosprofessional.com/
+
+Estimation Sheet: https://docs.google.com/spreadsheets/d/1NqoPSysTOrWsFEeA5RA0dFgj7e9fhFn8wRIRI4qVSSQ/edit#gid=1956316249
+
+
+
+Admin : https://zotos-dev-tatvasoft.myshopify.com/admin
+mailto:hetal.shah@sparsh-technologies.co.in
+Hetal@1311
+
+Frontend : https://zotos-dev-tatvasoft.myshopify.com/
+Pwd : zotos
+
+
+
+Below files are created 
+
+CSS files: 
+
+general.css.liquid
+homepage.css.liquid
+header.css.liquid
+footer.css.liquid
+-----------------------------------
+JS files: 
+general.js.liquid
+-----------------------------------
+Homepage Files : 
+
+header.liquid
+home-banner.liquid
+home-explore-brands.liquid
+home-browse-by-needs.liquid
+home-featured-logos.liquid
+home-blogpost-video.liquid
+home-contact.liquid
+footer.liquid
+
+
+
+About page : 
+
+link : https://zotos-dev-tatvasoft.myshopify.com/pages/about
+file : about-us.liquid
+css file : about-us.css.liquid
+
+
+Contact us page : 
+
+link : https://zotos-dev-tatvasoft.myshopify.com/pages/contact-us
+file : contact-us.liquid
+css file : contact-us.css.liquid

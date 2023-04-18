@@ -1,0 +1,1383 @@
+<section class="productpage-main-section">
+<div class="container">
+  <div class="single-breadcrumb">
+    <div class="breadcrumb">
+      <a href="#" class="breadcrumb-back" title="Back">
+        <svg enable-background="new 0 0 11.4 10" viewBox="0 0 11.4 10">
+          <path
+            d="m11.2 4.4-4.2-4.2c-.3-.3-.8-.3-1.1 0s-.3.8 0 1.1l2.8 2.8h-7.9c-.5 0-.8.3-.8.8s.4.8.8.8h8.1l-3 3c-.3.3-.3.8 0 1.1.1.1.3.2.5.2s.4-.1.6-.3l4.2-4.2c.3-.3.3-.8 0-1.1z"
+            ></path>
+        </svg>
+        Back to shop
+      </a>
+      <div class="breadcrumb-wrapper start">
+        <ul class="breadcrumb-list">
+          <li class="breadcrumb-item">
+            <a href="#" title="Home" class="breadcrumb-item-link">Home</a>
+            <span class="breadcrumb-item-separator">/</span>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="#" title="Shop" class="breadcrumb-item-link">Shop</a>
+            <span class="breadcrumb-seprator">/</span>
+          </li>
+          <li class="breadcrumb-item">
+            <a aria-current="page" href="#" class="breadcrumb-item-link">AGEbeautiful® Anti-Aging Crème
+              Lightener</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="productpage-main-inner">
+    <div class="productpage-titlecontent productpage-titlecontent-mobile">
+      <p class="productpage-vendor">AGEBeautiful</p>
+      <h1 class="productpage-title">AGEbeautiful® Anti-Aging Crème Lightener</h1>
+    </div>
+    <div class="productpage-gallery">
+
+      <div class="slider productpage-gallery-thumbnails thumb-image">
+        <div class="thumbnail-image" data-target="6oz">
+          <div class="thumbImg">
+            <img src="{{ 'product-thumbnail-1.jpg' | asset_url }}" alt="Product thumbnail image">
+          </div>
+
+        </div>
+        <div class="thumbnail-image" data-target="2oz">
+          <div class="thumbImg">
+            <img src="{{ 'product-thumbnail-2.jpg' | asset_url }}" alt="Product thumbnail image">
+          </div>
+        </div>
+
+      </div>
+      <div class="slider productpage-gallery-featured">
+        <div class="slider-banner-image" data-target="6oz">
+          <img src="{{ 'product-slide-1.jpg' | asset_url }}" alt="Product featured image">
+
+
+        </div>
+        <div class="slider-banner-image" data-target="2oz">
+          <img src="{{ 'product-slide-2.jpg' | asset_url }}" alt="Product featured image">
+        </div>
+
+      </div>
+    </div>
+    <div class="productpage-content">
+      <div class="productpage-titlecontent productpage-titlecontent-desktop">
+        <p class="productpage-vendor">AGEBeautiful</p>
+        <h1 class="productpage-title">AGEbeautiful® Anti-Aging Crème Lightener</h1>
+      </div>
+      <div class="productpage-summary productpage-summary-desktop">
+        <h3>Proven to Fight All 5 Signs of Aging Hair™</h3>
+        <p>With Biotin. Lightens up to 8 levels with less breakage*</p>
+        <p>*vs a leading non-conditioning powder lightener on damaged hair</p>
+      </div>
+      <div class="custom-dropdown-wrapper">
+        <div class="dropdown-toggle">Search for or select a size</div>
+        <div class="custom-dropdown-slidedown">
+          <div class="custom-dropdown-search">
+            <label for="color-search" class="dropdown-label">Search for or select a size</label>
+            <input id="color-search" name="colorsearch" class="dropdown-input" type="text"
+              placeholder="Search by size" autocomplete="off">
+            <svg enable-background="new 0 0 20.2 20.2" viewBox="0 0 20.2 20.2">
+              <path
+                d="m20 18.9-6-6c1.1-1.4 1.8-3.1 1.8-5 0-4.4-3.5-7.9-7.9-7.9s-7.9 3.5-7.9 7.9 3.5 7.9 7.9 7.9c1.9 0 3.7-.7 5-1.8l6 6c.1.1.3.2.5.2s.4-.1.5-.2c.4-.3.4-.8.1-1.1zm-18.5-11c0-3.5 2.9-6.4 6.4-6.4s6.4 2.9 6.4 6.4-2.9 6.4-6.4 6.4-6.4-2.9-6.4-6.4z"
+                fill="#212529"></path>
+            </svg>
+          </div>
+          <ul class="dropdown-menu-link">
+            <li data-filter="6oz">
+              <div class="dropdown-img-wrapper">
+                <img src="{{ 'product-thumbnail-1.jpg' | asset_url }}" alt="drop-down image">
+              </div>
+              <span>6 oz</span>
+            </li>
+            <li data-filter="2oz">
+              <div class="dropdown-img-wrapper">
+                <img src="{{ 'product-thumbnail-2.jpg' | asset_url }}" alt="drop-down image">
+              </div>
+              <span>2 oz</span>
+            </li>
+          </ul>
+        </div>
+        <div class="custom-radiobtn-wrapper">
+          <div class="custom-radiobtn-grp" data-input="6oz">
+
+            <label for="custom-radio1" class="custom-radio-label">
+              <input type="radio"  name="color" value="custom-radio1" id="custom-radio1"
+                class="custom-radio-input">
+              <div class="dropdown-img-wrapper">
+                <img src="{{ 'swatch-img1.jpeg' | asset_url }}" alt="drop-down image">
+              </div>
+              <span class="screenreader">3V - Twisted Plum</span>
+            </label>
+
+          </div>
+          <div class="custom-radiobtn-grp" data-input="2oz">
+
+            <label for="custom-radio1" class="custom-radio-label">
+              <input type="radio"  name="color" value="custom-radio1" id="custom-radio1"
+                class="custom-radio-input">
+              <div class="dropdown-img-wrapper">
+                <img src="{{ 'swatch-img1.jpeg' | asset_url }}" alt="drop-down image">
+              </div>
+              <span class="screenreader">3V - Twisted Plum</span>
+            </label>
+
+          </div>
+        </div>
+      </div>
+      <div class="product-button">
+        <a href="#" class="primary-btn orange-btn">Buy from Amazon</a>
+        <a href="#" class="primary-btn">Buy from Sally Beauty</a>
+      </div>
+      <div class="custom-accordion-wrapper productpage-tabs">
+        <div class="accordion-content-wrapper">
+          <div class="accordion-title">
+            <h4 class="accordion-head">Description</h4>
+          </div>
+          <div class="accordion-content">
+            <p><span>The first anti-aging crème lightener with Biotin, Keratin &amp; a Silk Amino Acid
+                formula to
+                provide extra conditioning.<br> • Evenly lifts up to 8 levels for maximum lightening
+                in one
+                step.<br> • Great for on and off scalp lightening<br> • Formulated with a
+                conditioning complex with
+                silk protein to provide ultimate conditioning, creating soft, shiny, radiant hair
+                with less breakage
+                than traditional powder bleach.</span></p>
+          </div>
+        </div>
+        <div class="accordion-content-wrapper">
+          <div class="accordion-title">
+            <h4 class="accordion-head">Ingredients</h4>
+          </div>
+          <div class="accordion-content">
+            <p>To see all ingredients, please visit our <a href="#" title="SDS">SDS</a> page.</p>
+          </div>
+        </div>
+        <div class="accordion-content-wrapper">
+          <div class="accordion-title">
+            <h4 class="accordion-head">How To Use</h4>
+          </div>
+          <div class="accordion-content">
+            <p>MIXING &amp; APPLICATION
+              AGEbeautiful® crème lightener should be mixed and applied using a bowl and brush. Do not
+              use
+              applicator bottle.</p>
+            <ol>
+              <li>Measure developer and lightener using 1:1 mixing ratio
+                (2 oz/57 g lightener and 2  oz/60 ml developer) into non-metallic bowl.</li>
+              <li>Mix well.</li>
+              <li>Apply to dry hair.</li>
+              <li>Timing: refer to Developer Usage &amp; Timing Chart.</li>
+              <li>Rinse hair well after application, shampoo and condition.
+                RE-TOUCHING
+                Apply lightener formula to re-growth only. Process for 30 minutes (or 45 minutes for
+                50% or less
+                gray hair).
+                Rinse with warm water, shampoo and condition.</li>
+            </ol>
+          </div>
+
+
+        </div>
+        <div class="accordion-content-wrapper">
+          <div class="accordion-title">
+            <h4 class="accordion-head">Pro Tips</h4>
+          </div>
+          <div class="accordion-content">
+            </p>
+            <p>TIPS FROM THE ZOTOS PROFESSIONALS
+            <p> • To achieve the brightest, most vibrant effects with bold color pre-lighten hair with
+              AGEbeautiful®
+              Crème Lightener.</p>
+            <p> • To pre-lighten, mix 2 oz/57 g AGEbeautiful® Crème Lightener with 2  oz/60 ml
+              AGEbeautiful 20-volume
+              Developer. Apply to sectioned hair, starting on darkest areas. Process to desired level.
+              Rinse
+              thoroughly,
+              shampoo and condition. Comb out and dry. Your hair is now the perfect base to add a
+              bold, captivating
+              color.</p>
+            <p> • Tools Needed:</p>
+            <ul>
+              <li>Bowl &amp; brush</li>
+              <li>Towel or Cape</li>
+              <li>Timer</li>
+              <li>Optional: Barrier cream (conditioner works well)</li>
+            </ul>
+          </div>
+
+
+        </div>
+        <div class="accordion-content-wrapper">
+          <div class="accordion-title">
+            <h4 class="accordion-head">FAQs</h4>
+          </div>
+          <div class="accordion-content">
+            <p>What are the 5 signs of aging hair and the AGEbeautiful® Hair Color results?</p>
+            <ol>
+              <li>thinning: instantly fuller and thicker hair</li>
+              <li>wiry gray: dramatically softer, more manageable hair</li>
+              <li>turning gray: 100% gray coverage for up to 8 weeks</li>
+              <li>dryness: significantly more conditioned hair</li>
+              <li>dullness: visibly more radiant, shiny hair</li>
+            </ol>
+            <p>Is it just for mature hair?
+              AGEbeautiful® was specifically designed for mature hair (35 years or older) experiencing
+              any of the 5
+              signs of aging hair, but it will provide rich, natural-looking color to all hair types
+              and age groups.
+            </p>
+            <p>Can color be used on permed hair?
+              Absolutely! Just ensure that it has been at least one week since the perm was performed
+              before
+              coloring the hair.</p>
+            <p>Can color be used on straightened hair?
+              First check with the manufacturer of the straightener. If their answer is yes, just
+              ensure that it has
+              been at least one week since the straightening service was performed before coloring the
+              hair.</p>
+            <p>Can AGEbeautiful® hair color be used on men?
+              Of course! After all, male hair ages, too. It is completely safe for use on men.</p>
+            <p>What is the shelf life of unopened hair color, or how long is it good for?
+              It is good for 3 years, so stock up when there’s a sale! Just remember to store it in a
+              cool, dark
+              place, and remember to never store opened, mixed color, as it will explode!</p>
+            <p>Why does AGEbeautiful® hair color contain Biotin?
+              Now with Biotin, our professional hair color formula helps to nourish and fortify the
+              fibers for
+              fuller, thicker and healthier looking hair*. * when used as directed</p>
+            <p>Will AGEbeautiful® hair color give me better results than boxed color?
+              Yes! We use professional hair dye formulas for better gray coverage than boxed color.
+              Plus, our unique
+              anti-aging formula with melanin, keratin peptides, and silk proteins replenishes the
+              hair with
+              essential components that are lost with aging. Hair feels instantly fuller, silkier, and
+              radiates with
+              dimensional shine.</p>
+            <p>Is AGEbeautiful® hair color tested on animals?
+              No, Zotos Professional does not use animal tests to confirm the safety of Zotos
+              Professional products.
+              Safety of Zotos Professional products is assured by using safe raw materials and where
+              applicable,
+              confirming safety by testing via patch tests with human volunteers under a physician’s
+              supervision and
+              using non-animal alternative tests.</p>
+            <p>Why does the packaging on AGEbeautiful® look different?
+              In celebration of AGEbeautiful’s 10th birthday, we’ve upgraded our packaging and
+              formula. Now with
+              Biotin, our professional hair color formula helps to nourish and fortify the fibers for
+              fuller,
+              thicker and healthier looking hair*. The new packaging, with unique swatches, makes it
+              easy to
+              navigate for accurate shade selection. * when used as directed</p>
+            <p>Is the AGEbeautiful® formula still the same?
+              AGEbeautiful® anti-aging hair color still replenishes hair with the essential components
+              that are lost
+              with aging and provides 100% gray coverage with rich dimensional color. Now with Biotin,
+              our
+              professional hair color formula helps to nourish and fortify the fibers for fuller,
+              thicker and
+              healthier looking hair*. * when used as directed</p>
+            <p>Is my shade still the same?
+              Yes! The shade results are still the same professional, radiant shades as the old
+              AGEbeautiful®
+              formula that you love.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+<section class="what-right-for-you">
+<div class="separator"></div>
+<div class="home-contact-section">
+  <div class="container">
+    <div class="home-contact-inner">
+      <div class="home-contact-content-block">
+        <h2 class="script">Unsure What's Right For You?</h2>
+        <h3 class="condensed">We’re happy to help</h3>
+      </div>
+      <div class="home-contact-grid">
+        <div class="home-contact-grid-item">
+          <a href="tel:18002429283" class="grid-inner">
+            <div class="img-block">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.2 35.3">
+                <path fill="#fa42ca"
+                  d="M30.9 35.3h-.4A34.7 34.7 0 0 1 15.6 30c-4.1-2.6-7.7-6.2-10.3-10.3A35.1 35.1 0 0 1 0 4.7C0 4.1 0 3.5.2 3c.2-.6.5-1.1.9-1.5C1.5 1 2 .6 2.6.4 3.1.1 3.7 0 4.3 0h5c1 0 2.1.4 2.9 1 .8.7 1.3 1.6 1.5 2.7.2 1.5.6 3 1.1 4.5a4.02 4.02 0 0 1-1 4.5l-1.6 1.6c2.1 3.5 5.1 6.5 8.6 8.6l1.6-1.6a4.32 4.32 0 0 1 4.6-1c1.4.5 2.9.9 4.5 1.1 1.1.2 2 .7 2.7 1.5s1.1 1.8 1 2.9v5c0 .6-.1 1.2-.4 1.8-.2.6-.6 1-1 1.5s-1 .7-1.5.9-.9.3-1.4.3zM9.4 2h-5c-.4 0-.7.1-1 .2s-.6.3-.8.6-.4.5-.5.8-.1.6-.1 1c.5 5 2.2 9.8 5 14 2.5 3.9 5.8 7.3 9.7 9.7 4.2 2.7 9 4.4 14 5 .3 0 .6 0 .9-.1s.6-.3.8-.5.4-.5.6-.8c.1-.3.2-.6.2-.9v-5c0-.6-.2-1.1-.6-1.6s-.9-.7-1.5-.8c-1.7-.2-3.3-.6-4.9-1.2-.4-.2-.9-.2-1.3-.1s-.8.3-1.2.6l-2 2.1c-.3.3-.8.4-1.2.2a28.8 28.8 0 0 1-10.4-10.4c-.2-.4-.2-.9.2-1.2l2.1-2.1c.3-.3.5-.7.6-1.2.1-.4.1-.9-.1-1.3-.6-1.6-1-3.2-1.2-4.9-.1-.6-.4-1.1-.8-1.4-.4-.5-1-.7-1.5-.7z">
+                </path>
+              </svg>
+            </div>
+            <h4>Call Us</h4>
+            <div class="contact-item-content">
+              <p>Available Monday – Friday 9am-8pm EST</p>
+            </div>
+            <span class="contact-item-link">Give Us a Call<svg enable-background="new 0 0 11.4 10"
+                viewBox="0 0 11.4 10">
+                <path
+                  d="m11.2 4.4-4.2-4.2c-.3-.3-.8-.3-1.1 0s-.3.8 0 1.1l2.8 2.8h-7.9c-.5 0-.8.3-.8.8s.4.8.8.8h8.1l-3 3c-.3.3-.3.8 0 1.1.1.1.3.2.5.2s.4-.1.6-.3l4.2-4.2c.3-.3.3-.8 0-1.1z"
+                  fill="#212529"></path>
+              </svg></span>
+          </a>
+        </div>
+        <div class="home-contact-grid-item">
+          <a href="#" class="grid-inner">
+            <div class="img-block">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.2 35.2">
+                <path fill="#fa42ca"
+                  d="M1 35.2a.9.9 0 0 1-.7-.3c-.3-.3-.4-.7-.2-1l3.4-10.1c-1-2.2-1.6-4.6-1.6-7.1 0-3.1.9-6.1 2.5-8.8s4-4.8 6.7-6.2C13.4.6 15.9 0 18.5 0h.9c4.2.2 8 2 10.9 4.9s4.6 6.8 4.9 10.9v1c0 2.6-.6 5.2-1.8 7.5-1.4 2.8-3.5 5.1-6.2 6.7-2.6 1.6-5.7 2.5-8.8 2.5-2.4 0-4.9-.5-7.1-1.6l-10 3.3H1zM18.5 2c-2.3 0-4.5.5-6.5 1.6-2.5 1.2-4.5 3-6 5.4s-2.2 5-2.2 7.7c0 2.3.5 4.5 1.6 6.6.1.2.1.5.1.8l-2.9 8.6 8.6-2.9c.3-.1.5-.1.8.1 2 1 4.3 1.6 6.5 1.6a14.62 14.62 0 0 0 13.1-8.1c1-2 1.6-4.3 1.6-6.6v-.9c-.2-3.7-1.7-7.1-4.2-9.6-2.6-2.6-6-4.1-9.6-4.3z">
+                </path>
+              </svg>
+            </div>
+            <h4>Chat Us</h4>
+            <div class="contact-item-content">
+              <p>Select a topic to speak directly with a licensed stylist.</p>
+            </div>
+            <span class="contact-item-link">Try It Out<svg enable-background="new 0 0 11.4 10" viewBox="0 0 11.4 10">
+                <path
+                  d="m11.2 4.4-4.2-4.2c-.3-.3-.8-.3-1.1 0s-.3.8 0 1.1l2.8 2.8h-7.9c-.5 0-.8.3-.8.8s.4.8.8.8h8.1l-3 3c-.3.3-.3.8 0 1.1.1.1.3.2.5.2s.4-.1.6-.3l4.2-4.2c.3-.3.3-.8 0-1.1z"
+                  fill="#212529"></path>
+              </svg></span>
+          </a>
+        </div>
+        <div class="home-contact-grid-item">
+          <a href="http://www.econsumeraffairs.com/zotos/zotos/contactus.htm" class="grid-inner" target="_blank">
+            <div class="img-block">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.7 26.5">
+                <path fill="#fa42ca"
+                  d="M28.6 0H4.1C1.8 0 0 1.8 0 4.1v18.4c0 2.2 1.8 4.1 4.1 4.1h24.5c2.2 0 4.1-1.8 4.1-4.1V4.1c0-2.3-1.9-4.1-4.1-4.1zM4.1 2h24.5c1 0 1.8.7 2 1.6l-14.3 10-14.2-10c.2-.9 1-1.6 2-1.6zm24.5 22.5H4.1C3 24.5 2 23.6 2 22.4V6l13.8 9.6c.2.1.4.2.6.2s.4-.1.6-.2L30.7 6v16.5c0 1.1-1 2-2.1 2z">
+                </path>
+              </svg>
+            </div>
+            <h4>Email Us</h4>
+            <div class="contact-item-content">
+              <p>Click the link below to be taken to our contact form.</p>
+            </div>
+            <span class="contact-item-link">Fill Out the Form<svg enable-background="new 0 0 11.4 10"
+                viewBox="0 0 11.4 10">
+                <path
+                  d="m11.2 4.4-4.2-4.2c-.3-.3-.8-.3-1.1 0s-.3.8 0 1.1l2.8 2.8h-7.9c-.5 0-.8.3-.8.8s.4.8.8.8h8.1l-3 3c-.3.3-.3.8 0 1.1.1.1.3.2.5.2s.4-.1.6-.3l4.2-4.2c.3-.3.3-.8 0-1.1z"
+                  fill="#212529"></path>
+              </svg></span>
+          </a>
+        </div>
+        <div class="home-contact-grid-item">
+          <a href="sms:18002429283" class="grid-inner">
+            <div class="img-block">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.2 35.2">
+                <path fill="#fa42ca"
+                  d="M34.9.3c-.3-.3-.7-.4-1-.2L.7 11.7c-.4.1-.7.5-.7.9s.2.8.6 1L15.2 20l6.5 14.6c.2.4.5.6.9.6s.8-.3.9-.7L35.2 1.3c.1-.3 0-.7-.3-1zm-4.5 3.1L15.7 18.1l-12-5.3zm-7.9 28.1-5.4-12L31.9 4.8z">
+                </path>
+              </svg>
+            </div>
+            <h4>Text Us</h4>
+            <div class="contact-item-content">
+              <p>Available Monday – Friday 9am-8pm EST</p>
+            </div>
+            <span class="contact-item-link">Message Us<svg enable-background="new 0 0 11.4 10" viewBox="0 0 11.4 10">
+                <path
+                  d="m11.2 4.4-4.2-4.2c-.3-.3-.8-.3-1.1 0s-.3.8 0 1.1l2.8 2.8h-7.9c-.5 0-.8.3-.8.8s.4.8.8.8h8.1l-3 3c-.3.3-.3.8 0 1.1.1.1.3.2.5.2s.4-.1.6-.3l4.2-4.2c.3-.3.3-.8 0-1.1z"
+                  fill="#212529"></path>
+              </svg></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="separator"></div>
+</section>
+<section class="you-may-like-section">
+<div class="container">
+  <h2 class="script">You may also like</h2>
+  <div class="productpage-slider-wrapper">
+    <div class="collection-product-grid">
+      <div class="collection-product-grid-item">
+        <div class="product-thumbnail">
+          <a href="#">
+            <div class="product-thumbnail-inner">
+              <div class="normal-block">
+                <img src="{{ 'product-slider-img1.jpg' | asset_url }}" alt="product-slider">
+              </div>
+              <div class="hover-block">
+                <img src="{{ 'product-slider-img1.jpg' | asset_url }}" alt="product-slider">
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="product-link">
+          <a href="">
+            <h2>AGEbeautiful® Get Started Kit</h2>
+          </a>
+        </div>
+        <div class="product-button">
+          <a href="#" class="primary-btn orange-btn">Buy from Amazon</a>
+          <a href="#" class="primary-btn">Buy from Sally Beauty</a>
+        </div>
+      </div>
+      <div class="collection-product-grid-item">
+        <div class="product-thumbnail">
+          <a href="#">
+            <div class="product-thumbnail-inner">
+              <div class="normal-block">
+                <img src="{{ 'product-slider-img2.jpg' | asset_url }}" alt="product-slider">
+              </div>
+              <div class="hover-block">
+                <img src="{{ 'product-slider-img3.jpg' | asset_url }}" alt="product-slider">>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="product-link">
+          <a href="">
+            <h2>AGEbeautiful® Anti-Aging Crème Lightener</h2>
+          </a>
+        </div>
+        <div class="product-button">
+          <a href="#" class="primary-btn orange-btn">Buy from Amazon</a>
+          <a href="#" class="primary-btn">Buy from Sally Beauty</a>
+        </div>
+      </div>
+      <div class="collection-product-grid-item">
+        <div class="product-thumbnail">
+          <a href="#">
+            <div class="product-thumbnail-inner">
+              <div class="normal-block">
+                <img src="{{ 'product-slider-img4.jpg' | asset_url }}" alt="product-slider">
+              </div>
+              <div class="hover-block has-no-image">
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="product-link">
+          <a href="">
+            <h2>All About Curls® Quenching Permanent Haircolor For Curls Dedicated Mixer - 20V Developer
+            </h2>
+          </a>
+        </div>
+        <div class="product-button">
+          <a href="#" class="primary-btn orange-btn">Buy from Amazon</a>
+          <a href="#" class="primary-btn">Buy from Sally Beauty</a>
+        </div>
+      </div>
+      <div class="collection-product-grid-item">
+        <div class="product-thumbnail">
+          <a href="#">
+            <div class="product-thumbnail-inner">
+              <div class="normal-block">
+                <img src="{{ 'product-slider-img5.jpg' | asset_url }}" alt="product-slider">
+              </div>
+              <div class="hover-block ">
+                <img src="{{ 'product-slider-img5.jpg' | asset_url }}" alt="product-slider">
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="product-link">
+          <a href="">
+            <h2>All About Curls® Quenching Permanent Haircolor For Curls - Blonde</h2>
+          </a>
+        </div>
+        <div class="product-button">
+          <a href="#" class="primary-btn orange-btn">Buy from Amazon</a>
+          <a href="#" class="primary-btn">Buy from Sally Beauty</a>
+        </div>
+      </div>
+      <div class="collection-product-grid-item">
+        <div class="product-thumbnail">
+          <a href="#">
+            <div class="product-thumbnail-inner">
+              <div class="normal-block">
+                <img src="{{ 'product-slider-img7.jpg' | asset_url }}" alt="product-slider">
+
+              </div>
+              <div class="hover-block">
+                <img src="{{ 'product-slider-img8.jpg' | asset_url }}" alt="product-slider">
+
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="product-link">
+          <a href="">
+            <h2>All About Curls™ Quenching Permanent Haircolor For Curls - Red</h2>
+          </a>
+        </div>
+        <div class="product-button">
+          <a href="#" class="primary-btn orange-btn">Buy from Amazon</a>
+          <a href="#" class="primary-btn">Buy from Sally Beauty</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</section>
+
+
+
+{%- if product.media.size > 0 -%}
+<script src="{{ 'product-modal.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'media-gallery.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
+
+{%- if first_3d_model -%}
+<script type="application/json" id="ProductJSON-{{ product.id }}">
+  {{ product.media | where: 'media_type', 'model' | json }}
+</script>
+<script src="{{ 'product-model.js' | asset_url }}" defer></script>
+{%- endif -%}
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  function isIE() {
+    const ua = window.navigator.userAgent;
+    const msie = ua.indexOf('MSIE ');
+    const trident = ua.indexOf('Trident/');
+
+    return (msie > 0 || trident > 0);
+  }
+
+  if (!isIE()) return;
+  const hiddenInput = document.querySelector('#{{ product_form_id }} input[name="id"]');
+  const noScriptInputWrapper = document.createElement('div');
+  const variantSwitcher = document.querySelector('variant-radios[data-section="{{ section.id }}"]') || document.querySelector('variant-selects[data-section="{{ section.id }}"]');
+  noScriptInputWrapper.innerHTML = document.querySelector('.product-form__noscript-wrapper-{{ section.id }}').textContent;
+  variantSwitcher.outerHTML = noScriptInputWrapper.outerHTML;
+
+  document.querySelector('#Variants-{{ section.id }}').addEventListener('change', function(event) {
+    hiddenInput.value = event.currentTarget.value;
+  });
+});
+</script>
+
+{%- liquid
+if product.selected_or_first_available_variant.featured_media
+  assign seo_media = product.selected_or_first_available_variant.featured_media
+else
+  assign seo_media = product.featured_media
+endif
+-%}
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org/",
+  "@type": "Product",
+  "name": {{ product.title | json }},
+  "url": {{ request.origin | append: product.url | json }},
+  {% if seo_media -%}
+    "image": [
+      {{ seo_media | image_url: width: seo_media.preview_image.width | prepend: "https:" | json }}
+    ],
+  {%- endif %}
+  "description": {{ product.description | strip_html | json }},
+  {% if product.selected_or_first_available_variant.sku != blank -%}
+    "sku": {{ product.selected_or_first_available_variant.sku | json }},
+  {%- endif %}
+  "brand": {
+    "@type": "Brand",
+    "name": {{ product.vendor | json }}
+  },
+  "offers": [
+    {%- for variant in product.variants -%}
+      {
+        "@type" : "Offer",
+        {%- if variant.sku != blank -%}
+          "sku": {{ variant.sku | json }},
+        {%- endif -%}
+        {%- if variant.barcode.size == 12 -%}
+          "gtin12": {{ variant.barcode }},
+        {%- endif -%}
+        {%- if variant.barcode.size == 13 -%}
+          "gtin13": {{ variant.barcode }},
+        {%- endif -%}
+        {%- if variant.barcode.size == 14 -%}
+          "gtin14": {{ variant.barcode }},
+        {%- endif -%}
+        "availability" : "http://schema.org/{% if variant.available %}InStock{% else %}OutOfStock{% endif %}",
+        "price" : {{ variant.price | divided_by: 100.00 | json }},
+        "priceCurrency" : {{ cart.currency.iso_code | json }},
+        "url" : {{ request.origin | append: variant.url | json }}
+      }{% unless forloop.last %},{% endunless %}
+    {%- endfor -%}
+  ]
+}
+</script>
+</section>
+
+{% schema %}
+{
+"name": "t:sections.main-product.name",
+"tag": "section",
+"class": "section",
+"blocks": [
+{
+  "type": "@app"
+},
+{
+  "type": "text",
+  "name": "t:sections.main-product.blocks.text.name",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text",
+      "default": "Text block",
+      "label": "t:sections.main-product.blocks.text.settings.text.label"
+    },
+    {
+      "type": "select",
+      "id": "text_style",
+      "options": [
+        {
+          "value": "body",
+          "label": "t:sections.main-product.blocks.text.settings.text_style.options__1.label"
+        },
+        {
+          "value": "subtitle",
+          "label": "t:sections.main-product.blocks.text.settings.text_style.options__2.label"
+        },
+        {
+          "value": "uppercase",
+          "label": "t:sections.main-product.blocks.text.settings.text_style.options__3.label"
+        }
+      ],
+      "default": "body",
+      "label": "t:sections.main-product.blocks.text.settings.text_style.label"
+    }
+  ]
+},
+{
+  "type": "title",
+  "name": "t:sections.main-product.blocks.title.name",
+  "limit": 1
+},
+{
+  "type": "price",
+  "name": "t:sections.main-product.blocks.price.name",
+  "limit": 1
+},
+{
+  "type": "quantity_selector",
+  "name": "t:sections.main-product.blocks.quantity_selector.name",
+  "limit": 1
+},
+{
+  "type": "variant_picker",
+  "name": "t:sections.main-product.blocks.variant_picker.name",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "select",
+      "id": "picker_type",
+      "options": [
+        {
+          "value": "dropdown",
+          "label": "t:sections.main-product.blocks.variant_picker.settings.picker_type.options__1.label"
+        },
+        {
+          "value": "button",
+          "label": "t:sections.main-product.blocks.variant_picker.settings.picker_type.options__2.label"
+        }
+      ],
+      "default": "button",
+      "label": "t:sections.main-product.blocks.variant_picker.settings.picker_type.label"
+    }
+  ]
+},
+{
+  "type": "buy_buttons",
+  "name": "t:sections.main-product.blocks.buy_buttons.name",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_dynamic_checkout",
+      "default": true,
+      "label": "t:sections.main-product.blocks.buy_buttons.settings.show_dynamic_checkout.label",
+      "info": "t:sections.main-product.blocks.buy_buttons.settings.show_dynamic_checkout.info"
+    }
+  ]
+},
+{
+  "type": "description",
+  "name": "t:sections.main-product.blocks.description.name",
+  "limit": 1
+},
+{
+  "type": "share",
+  "name": "t:sections.main-product.blocks.share.name",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "text",
+      "id": "share_label",
+      "label": "t:sections.main-product.blocks.share.settings.text.label",
+      "default": "Share"
+    },
+    {
+      "type": "paragraph",
+      "content": "t:sections.main-product.blocks.share.settings.featured_image_info.content"
+    },
+    {
+      "type": "paragraph",
+      "content": "t:sections.main-product.blocks.share.settings.title_info.content"
+    }
+  ]
+},
+{
+  "type": "custom_liquid",
+  "name": "t:sections.main-product.blocks.custom_liquid.name",
+  "settings": [
+    {
+      "type": "liquid",
+      "id": "custom_liquid",
+      "label": "t:sections.main-product.blocks.custom_liquid.settings.custom_liquid.label",
+      "info": "t:sections.main-product.blocks.custom_liquid.settings.custom_liquid.info"
+    }
+  ]
+},
+{
+  "type": "collapsible_tab",
+  "name": "t:sections.main-product.blocks.collapsible_tab.name",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "Collapsible row",
+      "info": "t:sections.main-product.blocks.collapsible_tab.settings.heading.info",
+      "label": "t:sections.main-product.blocks.collapsible_tab.settings.heading.label"
+    },
+    {
+      "type": "select",
+      "id": "icon",
+      "options": [
+        {
+          "value": "none",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__1.label"
+        },
+        {
+          "value": "apple",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__2.label"
+        },
+        {
+          "value": "banana",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__3.label"
+        },
+        {
+          "value": "bottle",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__4.label"
+        },
+        {
+          "value": "box",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__5.label"
+        },
+        {
+          "value": "carrot",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__6.label"
+        },
+        {
+          "value": "chat_bubble",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__7.label"
+        },
+        {
+          "value": "check_mark",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__8.label"
+        },
+        {
+          "value": "clipboard",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__9.label"
+        },
+        {
+          "value": "dairy",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__10.label"
+        },
+        {
+          "value": "dairy_free",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__11.label"
+        },
+        {
+          "value": "dryer",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__12.label"
+        },
+        {
+          "value": "eye",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__13.label"
+        },
+        {
+          "value": "fire",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__14.label"
+        },
+        {
+          "value": "gluten_free",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__15.label"
+        },
+        {
+          "value": "heart",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__16.label"
+        },
+        {
+          "value": "iron",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__17.label"
+        },
+        {
+          "value": "leaf",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__18.label"
+        },
+        {
+          "value": "leather",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__19.label"
+        },
+        {
+          "value": "lightning_bolt",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__20.label"
+        },
+        {
+          "value": "lipstick",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__21.label"
+        },
+        {
+          "value": "lock",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__22.label"
+        },
+        {
+          "value": "map_pin",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__23.label"
+        },
+        {
+          "value": "nut_free",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__24.label"
+        },
+        {
+          "value": "pants",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__25.label"
+        },
+        {
+          "value": "paw_print",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__26.label"
+        },
+        {
+          "value": "pepper",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__27.label"
+        },
+        {
+          "value": "perfume",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__28.label"
+        },
+        {
+          "value": "plane",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__29.label"
+        },
+        {
+          "value": "plant",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__30.label"
+        },
+        {
+          "value": "price_tag",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__31.label"
+        },
+        {
+          "value": "question_mark",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__32.label"
+        },
+        {
+          "value": "recycle",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__33.label"
+        },
+        {
+          "value": "return",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__34.label"
+        },
+        {
+          "value": "ruler",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__35.label"
+        },
+        {
+          "value": "serving_dish",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__36.label"
+        },
+        {
+          "value": "shirt",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__37.label"
+        },
+        {
+          "value": "shoe",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__38.label"
+        },
+        {
+          "value": "silhouette",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__39.label"
+        },
+        {
+          "value": "snowflake",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__40.label"
+        },
+        {
+          "value": "star",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__41.label"
+        },
+        {
+          "value": "stopwatch",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__42.label"
+        },
+        {
+          "value": "truck",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__43.label"
+        },
+        {
+          "value": "washing",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__44.label"
+        }
+      ],
+      "default": "check_mark",
+      "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.label"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "t:sections.main-product.blocks.collapsible_tab.settings.content.label"
+    },
+    {
+      "type": "page",
+      "id": "page",
+      "label": "t:sections.main-product.blocks.collapsible_tab.settings.page.label"
+    }
+  ]
+},
+{
+  "type": "popup",
+  "name": "t:sections.main-product.blocks.popup.name",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text",
+      "default": "Pop-up link text",
+      "label": "t:sections.main-product.blocks.popup.settings.link_label.label"
+    },
+    {
+      "id": "page",
+      "type": "page",
+      "label": "t:sections.main-product.blocks.popup.settings.page.label"
+    }
+  ]
+},
+{
+  "type": "rating",
+  "name": "t:sections.main-product.blocks.rating.name",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "t:sections.main-product.blocks.rating.settings.paragraph.content"
+    }
+  ]
+},
+{
+  "type": "complementary",
+  "name": "t:sections.main-product.blocks.complementary_products.name",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "t:sections.main-product.blocks.complementary_products.settings.paragraph.content"
+    },
+    {
+      "type": "text",
+      "id": "block_heading",
+      "default": "Pairs well with",
+      "label": "t:sections.main-product.blocks.complementary_products.settings.heading.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "make_collapsible_row",
+      "default": false,
+      "label": "t:sections.main-product.blocks.complementary_products.settings.make_collapsible_row.label"
+    },
+    {
+      "type": "select",
+      "id": "icon",
+      "options": [
+        {
+          "value": "none",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__1.label"
+        },
+        {
+          "value": "apple",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__2.label"
+        },
+        {
+          "value": "banana",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__3.label"
+        },
+        {
+          "value": "bottle",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__4.label"
+        },
+        {
+          "value": "box",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__5.label"
+        },
+        {
+          "value": "carrot",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__6.label"
+        },
+        {
+          "value": "chat_bubble",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__7.label"
+        },
+        {
+          "value": "check_mark",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__8.label"
+        },
+        {
+          "value": "clipboard",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__9.label"
+        },
+        {
+          "value": "dairy",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__10.label"
+        },
+        {
+          "value": "dairy_free",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__11.label"
+        },
+        {
+          "value": "dryer",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__12.label"
+        },
+        {
+          "value": "eye",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__13.label"
+        },
+        {
+          "value": "fire",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__14.label"
+        },
+        {
+          "value": "gluten_free",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__15.label"
+        },
+        {
+          "value": "heart",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__16.label"
+        },
+        {
+          "value": "iron",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__17.label"
+        },
+        {
+          "value": "leaf",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__18.label"
+        },
+        {
+          "value": "leather",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__19.label"
+        },
+        {
+          "value": "lightning_bolt",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__20.label"
+        },
+        {
+          "value": "lipstick",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__21.label"
+        },
+        {
+          "value": "lock",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__22.label"
+        },
+        {
+          "value": "map_pin",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__23.label"
+        },
+        {
+          "value": "nut_free",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__24.label"
+        },
+        {
+          "value": "pants",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__25.label"
+        },
+        {
+          "value": "paw_print",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__26.label"
+        },
+        {
+          "value": "pepper",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__27.label"
+        },
+        {
+          "value": "perfume",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__28.label"
+        },
+        {
+          "value": "plane",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__29.label"
+        },
+        {
+          "value": "plant",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__30.label"
+        },
+        {
+          "value": "price_tag",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__31.label"
+        },
+        {
+          "value": "question_mark",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__32.label"
+        },
+        {
+          "value": "recycle",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__33.label"
+        },
+        {
+          "value": "return",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__34.label"
+        },
+        {
+          "value": "ruler",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__35.label"
+        },
+        {
+          "value": "serving_dish",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__36.label"
+        },
+        {
+          "value": "shirt",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__37.label"
+        },
+        {
+          "value": "shoe",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__38.label"
+        },
+        {
+          "value": "silhouette",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__39.label"
+        },
+        {
+          "value": "snowflake",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__40.label"
+        },
+        {
+          "value": "star",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__41.label"
+        },
+        {
+          "value": "stopwatch",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__42.label"
+        },
+        {
+          "value": "truck",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__43.label"
+        },
+        {
+          "value": "washing",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__44.label"
+        }
+      ],
+      "default": "price_tag",
+      "info": "t:sections.main-product.blocks.complementary_products.settings.icon.info",
+      "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.label"
+    },
+    {
+      "type": "range",
+      "id": "product_list_limit",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "default": 10,
+      "label": "t:sections.main-product.blocks.complementary_products.settings.product_list_limit.label"
+    },
+    {
+      "type": "range",
+      "id": "products_per_page",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "default": 3,
+      "label": "t:sections.main-product.blocks.complementary_products.settings.products_per_page.label"
+    },
+    {
+      "type": "select",
+      "id": "pagination_style",
+      "options": [
+        {
+          "value": "dots",
+          "label": "t:sections.main-product.blocks.complementary_products.settings.pagination_style.options.option_1"
+        },
+        {
+          "value": "counter",
+          "label": "t:sections.main-product.blocks.complementary_products.settings.pagination_style.options.option_2"
+        },
+        {
+          "value": "numbers",
+          "label": "t:sections.main-product.blocks.complementary_products.settings.pagination_style.options.option_3"
+        }
+      ],
+      "label": "t:sections.main-product.blocks.complementary_products.settings.pagination_style.label",
+      "default": "counter"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.main-product.blocks.complementary_products.settings.product_card.heading"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "options": [
+        {
+          "value": "portrait",
+          "label": "t:sections.main-product.blocks.complementary_products.settings.image_ratio.options.option_1"
+        },
+        {
+          "value": "square",
+          "label": "t:sections.main-product.blocks.complementary_products.settings.image_ratio.options.option_2"
+        }
+      ],
+      "label": "t:sections.main-product.blocks.complementary_products.settings.image_ratio.label",
+      "default": "square"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_quick_add",
+      "label": "t:sections.main-product.blocks.complementary_products.settings.enable_quick_add.label",
+      "default": false
+    }
+  ]
+}
+],
+"settings": [
+{
+  "type": "checkbox",
+  "id": "enable_sticky_info",
+  "default": true,
+  "label": "t:sections.main-product.settings.enable_sticky_info.label"
+},
+{
+  "type": "header",
+  "content": "t:sections.main-product.settings.header.content",
+  "info": "t:sections.main-product.settings.header.info"
+},
+{
+  "type": "select",
+  "id": "media_position",
+  "options": [
+    {
+      "value": "left",
+      "label": "t:sections.main-product.settings.media_position.options__1.label"
+    },
+    {
+      "value": "right",
+      "label": "t:sections.main-product.settings.media_position.options__2.label"
+    }
+  ],
+  "default": "left",
+  "label": "t:sections.main-product.settings.media_position.label",
+  "info": "t:sections.main-product.settings.media_position.info"
+},
+{
+  "type": "select",
+  "id": "gallery_layout",
+  "options": [
+    {
+      "value": "stacked",
+      "label": "t:sections.main-product.settings.gallery_layout.options__1.label"
+    },
+    {
+      "value": "columns",
+      "label": "t:sections.main-product.settings.gallery_layout.options__2.label"
+    },
+    {
+      "value": "thumbnail",
+      "label": "t:sections.main-product.settings.gallery_layout.options__3.label"
+    },
+    {
+      "value": "thumbnail_slider",
+      "label": "t:sections.main-product.settings.gallery_layout.options__4.label"
+    }
+  ],
+  "default": "stacked",
+  "label": "t:sections.main-product.settings.gallery_layout.label"
+},
+{
+  "type": "select",
+  "id": "media_size",
+  "options": [
+    {
+      "value": "small",
+      "label": "t:sections.main-product.settings.media_size.options__1.label"
+    },
+    {
+      "value": "medium",
+      "label": "t:sections.main-product.settings.media_size.options__2.label"
+    },
+    {
+      "value": "large",
+      "label": "t:sections.main-product.settings.media_size.options__3.label"
+    }
+  ],
+  "default": "large",
+  "label": "t:sections.main-product.settings.media_size.label",
+  "info": "t:sections.main-product.settings.media_size.info"
+},
+{
+  "type": "select",
+  "id": "mobile_thumbnails",
+  "options": [
+    {
+      "value": "columns",
+      "label": "t:sections.main-product.settings.mobile_thumbnails.options__1.label"
+    },
+    {
+      "value": "show",
+      "label": "t:sections.main-product.settings.mobile_thumbnails.options__2.label"
+    },
+    {
+      "value": "hide",
+      "label": "t:sections.main-product.settings.mobile_thumbnails.options__3.label"
+    }
+  ],
+  "default": "hide",
+  "label": "t:sections.main-product.settings.mobile_thumbnails.label"
+},
+{
+  "type": "checkbox",
+  "id": "hide_variants",
+  "default": false,
+  "label": "t:sections.main-product.settings.hide_variants.label"
+},
+{
+  "type": "checkbox",
+  "id": "enable_video_looping",
+  "default": false,
+  "label": "t:sections.main-product.settings.enable_video_looping.label"
+},
+{
+  "type": "header",
+  "content": "t:sections.all.padding.section_padding_heading"
+},
+{
+  "type": "range",
+  "id": "padding_top",
+  "min": 0,
+  "max": 100,
+  "step": 4,
+  "unit": "px",
+  "label": "t:sections.all.padding.padding_top",
+  "default": 36
+},
+{
+  "type": "range",
+  "id": "padding_bottom",
+  "min": 0,
+  "max": 100,
+  "step": 4,
+  "unit": "px",
+  "label": "t:sections.all.padding.padding_bottom",
+  "default": 36
+}
+]
+}
+{% endschema %}

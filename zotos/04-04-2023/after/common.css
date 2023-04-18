@@ -1,0 +1,93 @@
+.learn-how-to-video { padding: 5.7rem 0  8rem; }
+.learn-how-to-video h2 { margin-bottom: 3rem; text-align: center; line-height: 0.7; }
+.learn-how-to-video .btn-wrapper { text-align: center; margin-top: 3.2rem; }
+.learn-how-to-video .learn-how-to-video-grid { display: flex; justify-content: space-between; margin: 0 -3.8rem; }
+.learn-how-to-video .learn-how-to-video-grid .learn-how-to-video-grid-item { flex: 0 0 33.33%; max-width: 33.33%; padding: 0 3.8rem; }
+.learn-how-to-video .learn-how-to-video-grid .learn-how-to-video-grid-item .grid-inner { position: relative; line-height: 0; }
+.learn-how-to-video .learn-how-to-video-grid .learn-how-to-video-grid-item .grid-inner a:before { content: url("{{ 'youtube-icon-red.svg' | asset_url }}"); display: block; left: 50%; position: absolute; top: 50%; -webkit-transform: translate3d(-50%, -50%, 0); transform: translate3d(-50%, -50%, 0); transition: transform .2s cubic-bezier(.785, .135, .15, .86); transition: transform .2s cubic-bezier(.785, .135, .15, .86), -webkit-transform .2s cubic-bezier(.785, .135, .15, .86); width: 4.9rem; z-index: 1; opacity: 1; }
+.learn-how-to-video .learn-how-to-video-grid .learn-how-to-video-grid-item .grid-inner a { padding-top: 57%; position: relative; width: 100%; overflow: hidden; }
+.learn-how-to-video .learn-how-to-video-grid .learn-how-to-video-grid-item .grid-inner a img { position: absolute; left: 0; top: 0; height: 100%; width: 100%; object-fit: cover; transition: transform .2s cubic-bezier(.785, .135, .15, .86), -webkit-transform .2s cubic-bezier(.785, .135, .15, .86); }
+.learn-how-to-video .learn-how-to-video-grid .learn-how-to-video-grid-item .grid-inner a:hover img, .learn-how-to-video .learn-how-to-video-grid .learn-how-to-video-grid-item .grid-inner a:focus img { transform: scale(1.05) }
+.learn-how-to-video .container { max-width: 1740px; }
+
+/* blog-and-technique  */
+.blog-and-technique { background-color: #f4f6f9; padding: 6.1rem 0 6.6rem; text-align: center; }
+.blog-and-technique h2, .visit-shade-chart h2 { margin-bottom: 3.4rem; line-height: 0.7; }
+.blog-and-technique .blog-grid-main { margin-bottom: 2.7rem; }
+.blog-and-technique .blog-grid-wrappper { display: flex; flex-wrap: wrap; margin: 0 -2.5rem -5rem; }
+.blog-and-technique .blog-grid-wrappper .blog-grid-item { max-width: 25%; flex: 0 0 25%; padding: 0 2.5rem 5rem; }
+.blog-and-technique .blog-grid-wrappper .blog-grid-item a { display: block; position: relative; overflow: hidden; }
+.blog-and-technique .blog-grid-wrappper .blog-grid-item a p { font-size: 2.5rem; font-family: helvetica-neue-condensed-bold, sans-serif, Open Sans; color: #fff; max-width: 25rem; text-transform: uppercase; position: absolute; left: 2.2rem; text-align: left; bottom: 1.3rem; right: 2.2rem; }
+.blog-and-technique .blog-grid-wrappper .blog-grid-item .blog-img { position: relative; padding-bottom: 118%; }
+.blog-and-technique .blog-grid-wrappper .blog-grid-item img { position: absolute; height: 100%; width: 100%; top: 0; left: 0; object-fit: cover; transition: all 0.2s; }
+.blog-and-technique .blog-grid-wrappper .blog-grid-item .blog-content { position: relative; z-index: 2; }
+.blog-and-technique .blog-grid-wrappper .blog-grid-item a:hover img, .blog-and-technique .blog-grid-wrappper .blog-grid-item a:focus img { transform: scale(1.05); }
+
+
+/* biotera-experts-section  */
+.biotera-experts-section.learn-how-to-video .learn-how-to-video-grid .learn-how-to-video-grid-item{max-width: inherit;}
+.biotera-experts-section.learn-how-to-video .learn-how-to-video-grid .slick-list{    margin: 0 -3.8rem;}
+.biotera-experts-section.learn-how-to-video .learn-how-to-video-grid{margin: 0;display: block;}
+/* biotera-blog-technique  */
+.biotera-blog-technique.blog-and-technique .blog-grid-wrappper .blog-grid-item .blog-img:after{
+    position: absolute;
+    left: 0;
+    top:0;
+    height: 100%;
+    width: 100%;
+    content: "";
+  background-image: url("{{ 'biotera-blog-technique-overlay.png' | asset_url }}");
+
+}
+
+
+@media(max-width:1820px) {
+	.learn-how-to-video .learn-how-to-video-grid { margin: 0 -2.4rem }
+    .learn-how-to-video .learn-how-to-video-grid .learn-how-to-video-grid-item { padding: 0 2.4rem }
+    .blog-and-technique .blog-grid-wrappper { margin: 0 -1.5rem -3rem }
+    .blog-and-technique .blog-grid-wrappper .blog-grid-item { padding: 0 1.5rem 3rem }
+    .biotera-experts-section.learn-how-to-video .learn-how-to-video-grid .slick-list{    margin: 0 -2.4rem;}
+}
+
+@media (max-width:1366px) {
+    .blog-and-technique .blog-grid-wrappper .blog-grid-item a p { font-size: 2.2rem; line-height: 1 }
+}
+
+@media(max-width:1199px) {
+	.learn-how-to-video h2 { margin-bottom: 1.8rem; }
+	.learn-how-to-video { padding: 5rem 0; }
+    .learn-how-to-video .learn-how-to-video-grid { margin: 0 -1.5rem }
+    .learn-how-to-video .learn-how-to-video-grid .learn-how-to-video-grid-item { padding: 0 1.5rem }
+	.blog-and-technique, .curl-with-confidence-section, .visit-shade-chart { padding: 4.5rem 0 }
+    .blog-and-technique .blog-grid-wrappper { margin: 0 -1rem -2rem }
+    .blog-and-technique .blog-grid-wrappper .blog-grid-item { padding: 0 1rem 2rem }
+    .blog-and-technique h2 { margin-bottom: 1.8rem }
+    .biotera-experts-section.learn-how-to-video .learn-how-to-video-grid .slick-list{    margin: 0 -1.5rem;}
+}
+
+@media(max-width:991px) {
+    .blog-and-technique .blog-grid-wrappper { margin: 0 -.5rem -1rem }
+    .blog-and-technique .blog-grid-wrappper .blog-grid-item { padding: 0 .5rem 1rem }
+    .blog-and-technique .blog-grid-wrappper .blog-grid-item a p{font-size: 2rem;}
+}
+
+@media(max-width:767px) {
+	.learn-how-to-video .learn-how-to-video-grid { flex-wrap: wrap; margin: 0 }
+    .learn-how-to-video .learn-how-to-video-grid .learn-how-to-video-grid-item { padding: 0; max-width: 100%; flex: 0 0 100% }
+    .learn-how-to-video .learn-how-to-video-grid .learn-how-to-video-grid-item:not(:last-child) { margin-bottom: 2rem }
+    .learn-how-to-video { padding: 4.2rem 0 3.7rem; }
+    .learn-how-to-video .container { padding: 0 2.8rem }
+    .learn-how-to-video .btn-wrapper { margin-top: 1.7rem; }
+    .blog-and-technique { padding: 3.6rem 0 4.5rem }
+    .blog-and-technique .blog-grid-wrappper .blog-grid-item .blog-img { padding-bottom: 120% }
+    .blog-and-technique .blog-grid-wrappper { display: flex; flex-wrap: wrap; margin: 0 -.5rem -1rem }
+    .blog-and-technique .blog-grid-wrappper .blog-grid-item { max-width: 50%; flex: 0 0 50%; padding: 0 .5rem 1rem }
+    .blog-and-technique .blog-grid-wrappper .blog-grid-item a p { left: 1.2rem; bottom: 1rem; right: 4rem; font-size: 1.8rem; }
+    .blog-and-technique .blog-grid-main { margin-bottom: 2rem }
+}
+
+@media (max-width:479px) {
+	.blog-and-technique .blog-grid-wrappper { margin: 0 -0.25rem -0.5rem; }
+    .blog-and-technique .blog-grid-wrappper .blog-grid-item { padding: 0 0.25rem 0.5rem; }
+    .blog-and-technique .container { padding: 0 0.75rem; }
+}

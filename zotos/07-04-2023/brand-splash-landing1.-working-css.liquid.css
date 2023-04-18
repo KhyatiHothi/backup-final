@@ -1,0 +1,110 @@
+.biotera-banner-section{position:relative;padding-bottom:31%;}
+.biotera-banner-section .banner-img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:-1;}
+.biotera-banner-section .container{position:absolute;top:0;left:0;right:0;height:100%;display:flex;align-items:center;}
+.biotera-banner-section h1>img{max-width:49.8rem;margin:0 auto;}
+.biotera-banner-section h1{letter-spacing: 1rem;font-family: "helvetica-neue-std";}
+.biotera-banner-section h1>sub{font-size: 1.7rem;
+    letter-spacing: 0;
+    font-family: "helvetica-neue-std";}
+.biotera-banner-section span{  font-family: "helvetica-neue-std";
+    font-size: 2.8rem;
+    letter-spacing: .18rem;
+    margin-bottom: 2.8rem;
+    display: block;
+    font-weight: 600;}
+.biotera-banner-section .biotera-banner-content-wrapper{text-align:center;}
+.biotera-banner-section .biotera-banner-content-wrapper p{padding:0rem 1.5rem;border:0.2rem solid #d08636;border-style:solid none solid none;color:#000;margin-bottom:2.5rem;text-transform:uppercase;font-size:2.5rem;font-family: "helvetica-neue-condensed";letter-spacing: -0.39px;max-width: 47.2rem;margin:0 auto 4.5rem;}
+.browse-assortment{margin:var(--section-space) 0;text-align:center;overflow: hidden;}
+.browse-assortment .browse-assortment-item{padding:0 3rem;}
+.browse-assortment .browse-assortment-slider-wrapper .slick-list{margin:0 -3rem;}
+.browse-assortment .browse-assortment-item a{display:block;}
+.browse-assortment .browse-assortment-item .img-wrapper{position:relative;padding-bottom:98.8%;width:100%;overflow:hidden;}
+.browse-assortment .browse-assortment-item .img-wrapper>img{position:absolute;left:0;top:0;height:100%;width:100%;object-fit:cover;transition:all .2s;}
+.browse-assortment .browse-assortment-item  h3{font-size:2.4rem;color:#000;letter-spacing:0.04rem;font-family:"helvetica-neue-condensed";font-weight:700;text-transform:uppercase;line-height:1.3;}
+.browse-assortment .browse-assortment-description{margin-bottom:3.1rem;font-size:2rem;}
+.browse-assortment .browse-assortment-item a:hover .img-wrapper img,.browse-assortment .browse-assortment-item a:focus .img-wrapper img{transform:scale(1.05);}
+.browse-assortment .browse-assortment-item a:hover h3,.browse-assortment .browse-assortment-item a:focus h3{color:var(--primary-color);}
+.browse-assortment  h2{line-height:1;margin-bottom:0.3rem;}
+.browse-assortment-slider .slick-prev,.browse-assortment-slider .slick-next{border:0.1rem solid transparent;top:calc(50% - 17px);}
+.browse-assortment-slider .slick-prev{left:-7rem;}
+.browse-assortment-slider .slick-next{right:-7rem;}
+.browse-assortment-slider{opacity: 0; transition: .3s;visibility: hidden;}
+.browse-assortment-slider.slick-initialized.slick-slider{opacity: 1;visibility: visible;}
+
+/* you-may-like-section */
+.you-may-like-section{margin:var(--section-space) 0;text-align:center}
+.you-may-like-section .script{font-size:8.7rem;line-height:.7}
+.you-may-like-section .collection-product-grid .collection-product-grid-item{height:inherit;padding-left:20.5px;padding-right:20.5px}
+.you-may-like-section .collection-product-grid{margin:8rem -2.4rem 0;padding:0 5rem}
+.you-may-like-section .collection-product-grid .collection-product-grid-item .product-link a h2{margin-bottom:0;letter-spacing:0}
+.you-may-like-section .collection-product-grid .collection-product-grid-item .product-button{margin-top:2rem;margin-bottom:5px;}
+.you-may-like-section .collection-product-grid .collection-product-grid-item .product-button .primary-btn{line-height:1;padding-left:1rem;padding-right:1rem}
+.you-may-like-section .collection-product-grid .collection-product-grid-item .product-thumbnail .hover-block img,.you-may-like-section .collection-product-grid .collection-product-grid-item .product-thumbnail .normal-block img{margin:0 auto;height:100%}
+.you-may-like-section.biotera-best-seller .btn-wrapper{margin-top:3rem;}
+
+/* media css  */
+@media (min-width:992px){
+
+    /* you-may-like-section */
+    .you-may-like-section .collection-product-grid{margin:8rem 0 0;padding:0 7.7rem}
+    .you-may-like-section .script{font-size:10rem}
+    .you-may-like-section .collection-product-grid .collection-product-grid-item .product-button .primary-btn{padding-left:1rem;padding-right:1rem}
+}
+@media (max-width:1820px){
+    .browse-assortment-slider .slick-prev,.browse-assortment-slider .slick-next{background-color:#fff;box-shadow:0 0 15px rgba(0,0,0,0.15);}
+    .browse-assortment-slider .slick-prev:hover,.browse-assortment-slider .slick-next:hover,.browse-assortment-slider .slick-prev:focus,.browse-assortment-slider .slick-next:focus{background-color:#fff;border-color:#212529;}
+    .browse-assortment-slider .slick-prev{left:0rem;}
+    .browse-assortment-slider .slick-next{right:-0.2rem;}
+}
+@media (max-width:1440px){
+    .browse-assortment .browse-assortment-item{padding:0 2rem;}
+    .browse-assortment .browse-assortment-slider-wrapper .slick-list{margin:0 -2rem;}
+    .biotera-banner-section h1>img { max-width: 42rem;}
+    .biotera-banner-section{padding-bottom:38%;}
+    .biotera-banner-section h1{font-size: 8rem;}
+    .biotera-banner-section span{      font-size: 2.4rem;}
+
+}
+@media (max-width:1199px){
+    .biotera-banner-section h1>img{max-width:34rem;}
+    .biotera-banner-section span{margin-bottom:2rem;}
+    .biotera-banner-section .biotera-banner-content-wrapper p{font-size:2rem;margin:0 auto 2rem; max-width: 31rem;}
+    .browse-assortment-description{font-size:2rem;margin-bottom:2rem;}
+}
+@media (max-width:991px){
+    .biotera-banner-section .biotera-banner-content-wrapper p{font-size:1.6rem;    max-width: 29.3rem;padding: 0;}
+    .browse-assortment-slider .slick-prev,.browse-assortment-slider .slick-next{top:calc(50% - 15px);}
+    .biotera-banner-section h1>img{max-width:23rem;}
+    .browse-assortment .browse-assortment-item{padding:0 1.5rem;}
+    .browse-assortment .browse-assortment-slider-wrapper .slick-list{margin:0 -1.5rem;}
+    .biotera-banner-section h1{    font-size: 5.7rem;    letter-spacing: 0.4rem;}
+    .biotera-banner-section span{font-size: 1.6rem;
+        letter-spacing: 0.1rem;    margin-bottom: 1rem;}
+
+}
+@media (max-width:767px){
+    .browse-assortment-slider .slick-prev,.browse-assortment-slider .slick-next{top:calc(50% - 14px);}
+    .you-may-like-section .collection-product-grid{padding:0 4rem;}
+    .biotera-banner-section .banner-img.mobile-banner{display:block;}
+    .biotera-banner-section .banner-img.desktop-banner{display:none;}
+    .biotera-banner-section .container{align-items:flex-start;justify-content:center;}
+    .biotera-banner-section{padding-bottom:96%;}
+    .biotera-banner-section .biotera-banner-content-wrapper{max-width:100%;padding-top:3.7rem;}
+    .biotera-banner-section h1>img{max-width:23rem;}
+    .biotera-banner-section h1{margin-bottom:1.1rem;}
+    .biotera-banner-section .biotera-banner-content-wrapper p{font-size:1.2rem;padding:0rem 0.8rem;;max-width:22.2rem;}
+    .browse-assortment .browse-assortment-item h3{font-size:2rem;}
+    .you-may-like-section.biotera-best-seller .btn-wrapper{margin-top:1.5rem;}
+    .browse-assortment-description{font-size:1.8rem;}
+    .biotera-banner-section .biotera-banner-content-wrapper p{margin-bottom: 1rem;}
+
+}
+@media (max-width:575px){
+    .biotera-banner-section{padding-bottom:133.5%;}
+    .biotera-banner-section h1>img{max-width:22.1rem;}
+    .biotera-banner-section h1{font-size: 5rem;}
+    .biotera-banner-section span{    font-size: 1.4rem;}
+}
+@media (max-width:374px){
+    .biotera-banner-section{padding-bottom:157%;}
+}

@@ -1,0 +1,347 @@
+/* blog-and-technique  */
+.blog-and-technique {
+  background-color: #f4f6f9;
+  padding: 6.1rem 0 6.6rem;
+  text-align: center;
+}
+.blog-and-technique h2,
+.visit-shade-chart h2 {
+  font-size: 11rem;
+  margin-bottom: 3.4rem;
+  line-height: 0.7;
+}
+.blog-and-technique .blog-grid-main {
+  margin-bottom: 2.7rem;
+}
+.blog-and-technique .blog-grid-wrappper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -2.5rem -5rem;
+}
+.blog-and-technique .blog-grid-wrappper .blog-grid-item {
+  max-width: 25%;
+  flex: 0 0 25%;
+  padding: 0 2.5rem 5rem;
+}
+.blog-and-technique .blog-grid-wrappper .blog-grid-item a {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+.blog-and-technique .blog-grid-wrappper .blog-grid-item a p {
+  font-size: 2.5rem;
+  font-family: helvetica-neue-condensed-bold, sans-serif, Open Sans;
+  color: #fff;
+  max-width: 25rem;
+  text-transform: uppercase;
+  position: absolute;
+  left: 2.2rem;
+  text-align: left;
+  bottom: 1.3rem;
+  right: 2.2rem;
+}
+.blog-and-technique .blog-grid-wrappper .blog-grid-item .blog-img {
+  position: relative;
+  padding-bottom: 118%;
+}
+.blog-and-technique .blog-grid-wrappper .blog-grid-item img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  transition: all 0.2s;
+}
+.blog-and-technique .blog-grid-wrappper .blog-grid-item .blog-content {
+  position: relative;
+  z-index: 2;
+}
+.blog-and-technique .blog-grid-wrappper .blog-grid-item a:hover img,
+.blog-and-technique .blog-grid-wrappper .blog-grid-item a:focus img {
+  transform: scale(1.05);
+}
+/* visit-shade-chart  */
+.visit-shade-chart {
+  padding: 8.8rem 0 6.6rem;
+  text-align: center;
+}
+.visit-shade-chart .container {
+  max-width: 93rem;
+}
+.visit-shade-chart h2 {
+  margin-bottom: 4rem;
+}
+.visit-shade-chart .visit-shade-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.visit-shade-chart .visit-shade-grid .visit-shade-item {
+  max-width: 50%;
+  flex: 0 0 50%;
+}
+.visit-shade-chart .visit-shade-grid .visit-shade-item img {
+  margin: 0 auto;
+}
+.visit-shade-chart .visit-shade-grid .visit-shade-item-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.visit-shade-chart .visit-shade-grid .visit-shade-item-inner .visit-shade-item-content{
+    margin-top: 0.7rem;
+}
+.visit-shade-chart
+  .visit-shade-grid
+  .visit-shade-item-inner
+  .visit-shade-item-content
+  p {
+  font-size: 2rem;
+  max-width: 40.1rem;
+  line-height: 1.2;
+  margin: 0 auto 1.6rem;
+}
+.visit-shade-chart
+  .visit-shade-grid
+  .visit-shade-item-inner
+  .visit-shade-item-inner-img {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.visit-shade-chart .visit-shade-grid .visit-shade-item .text-agebeautiful {
+  max-width: 182rem;
+  height: auto;
+}
+.visit-shade-chart .visit-shade-grid .visit-shade-item .text-curls {
+  max-width: 90rem;
+  height: auto;
+}
+.visit-shade-chart .visit-shade-grid .visit-shade-item .primary-btn {
+  padding: 1.1rem 2.5rem;
+}
+/* curl-with-confidence-section  */
+.curl-with-confidence-section {
+  position: relative;
+  padding: 6.7rem 0;
+}
+.curl-with-confidence-section .container {
+  position: relative;
+}
+.curl-with-confidence-section .curl-confidence-banner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.curl-with-confidence-section .curl-confidence-banner.mobile-img {
+  display: none;
+}
+.curl-with-confidence-section .curl-confidence-wrapper h2 {
+  font-size: 7.2rem;
+  margin-bottom: 1.4rem;
+  line-height: 0.7;
+}
+.curl-with-confidence-section .curl-confidence-wrapper p {
+  font-size: 2rem;
+  margin-bottom: 2.6rem;
+}
+.curl-with-confidence-section .curl-confidence-wrapper .primary-btn {
+  padding: 1.1rem 1.5rem;
+}
+.curl-with-confidence-section .curl-confidence-wrapper {
+  margin: 0 auto;
+  max-width: 46.8rem;
+  text-align: center;
+}
+
+/* media  */
+@media (max-width: 1800px) {
+  .blog-and-technique .blog-grid-wrappper {
+    margin: 0 -1.5rem -3rem;
+  }
+  .blog-and-technique .blog-grid-wrappper .blog-grid-item {
+    padding: 0 1.5rem 3rem;
+  }
+}
+@media (max-width: 1366px) {
+  .blog-and-technique .blog-grid-wrappper .blog-grid-item a p {
+    font-size: 2.2rem;
+    line-height: 1;
+  }
+}
+@media (max-width: 1199px) {
+  .visit-shade-chart,
+  .blog-and-technique,
+  .curl-with-confidence-section {
+    padding: 4.5rem 0;
+  }
+  .blog-and-technique .blog-grid-wrappper {
+    margin: 0 -1rem -2rem;
+  }
+  .blog-and-technique .blog-grid-wrappper .blog-grid-item {
+    padding: 0 1rem 2rem;
+  }
+  .blog-and-technique .blog-grid-wrappper .blog-grid-item a p,
+  .visit-shade-chart
+    .visit-shade-grid
+    .visit-shade-item-inner
+    .visit-shade-item-content
+    p,
+  .curl-with-confidence-section .curl-confidence-wrapper p {
+    font-size: 1.6rem;
+  }
+  .curl-with-confidence-section .curl-confidence-wrapper p {
+    margin-bottom: 1.5rem;
+  }
+  .blog-and-technique h2,
+  .visit-shade-chart h2 {
+    font-size: 7rem;
+    margin-bottom: 1.8rem;
+  }
+  .curl-with-confidence-section .curl-confidence-wrapper h2 {
+    font-size: 5rem;
+  }
+  .visit-shade-chart .visit-shade-grid .visit-shade-item .text-curls {
+    max-width: 12rem;
+  }
+  .visit-shade-chart .visit-shade-grid .visit-shade-item .text-agebeautiful {
+    max-width: 24rem;
+  }
+
+  .visit-shade-chart .visit-shade-grid .visit-shade-item .text-curls {
+    max-width: 12rem;
+  }
+}
+@media (max-width: 991px) {
+  .blog-and-technique .blog-grid-wrappper {
+    margin: 0 -0.5rem -1rem;
+  }
+  .blog-and-technique .blog-grid-wrappper .blog-grid-item {
+    padding: 0 0.5rem 1rem;
+  }
+  .blog-and-technique .blog-grid-wrappper .blog-grid-item a p {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 767px) {
+  .blog-and-technique {
+   padding: 3.6rem 0 4.5rem;
+  }
+  .blog-and-technique h2,
+  .visit-shade-chart h2 {
+    margin-bottom: 2.2rem;
+    font-size: 5.5rem;
+  }
+  .blog-and-technique .blog-grid-wrappper .blog-grid-item .blog-img {
+   padding-bottom: 125%;
+  }
+  .blog-and-technique .blog-grid-wrappper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -0.5rem -1rem;
+  }
+  .blog-and-technique .blog-grid-wrappper .blog-grid-item {
+    max-width: 50%;
+    flex: 0 0 50%;
+    padding: 0 0.5rem 1rem;
+  }
+  .blog-and-technique .primary-btn {
+    font-size: 1rem;
+    padding: 0.5rem 2.5rem;
+  }
+
+  .blog-and-technique .blog-grid-wrappper .blog-grid-item a p {
+    font-size: 1.2rem;
+    left: 1.2rem;
+    bottom: 1rem;
+    right: 4rem;
+
+  }
+  .blog-and-technique .blog-grid-main {
+    margin-bottom: 2rem;
+  }
+  .visit-shade-chart {
+       padding: 4.2rem 0 2.6rem;
+  }
+  .visit-shade-chart h2 {
+    margin-bottom: 3.3rem;
+  }
+  .visit-shade-chart .visit-shade-grid .visit-shade-item .text-agebeautiful {
+    max-width: 18.2rem;
+  }
+  .visit-shade-chart .visit-shade-grid .visit-shade-item-inner .visit-shade-item-content{
+    margin-top: 0.8rem;
+}
+  .visit-shade-chart
+    .visit-shade-grid
+    .visit-shade-item-inner
+    .visit-shade-item-content
+    p {
+    font-size: 1rem;
+    max-width: 24.2rem;
+    margin: 0 auto 1.4rem;
+  }
+  .visit-shade-chart .visit-shade-grid .visit-shade-item .text-curls {
+    max-width: 9rem;
+  }
+  .visit-shade-chart .visit-shade-grid .visit-shade-item {
+    max-width: 100%;
+    flex: 0 0 100%;
+    padding-bottom: 3.6rem;
+  }
+  .visit-shade-chart .visit-shade-grid .visit-shade-item:last-of-type {
+    padding-bottom: 0;
+  }
+  .curl-with-confidence-section .curl-confidence-banner.mobile-img {
+    display: block;
+  }
+  .curl-with-confidence-section .curl-confidence-banner.desktop-img {
+    display: none;
+  }
+  .curl-with-confidence-section {
+    padding: 2.6rem 0 50%;
+  }
+  .curl-with-confidence-section .curl-confidence-wrapper h2 {
+    font-size: 5.5rem;
+   margin-bottom: 1rem;
+  }
+  .curl-with-confidence-section .curl-confidence-wrapper p {
+    font-size: 1rem;
+    margin-bottom: 1.6rem;
+  }
+  .curl-with-confidence-section .curl-confidence-wrapper .primary-btn {
+    padding: 0.6rem 1.3rem;
+  }
+  .visit-shade-chart .visit-shade-grid .visit-shade-item .primary-btn {
+    padding: 0.5rem 1.4rem;
+    font-size: 1rem;
+  }
+  .curl-with-confidence-section .curl-confidence-wrapper .primary-btn {
+    padding: 0.6rem 0.5rem;
+    font-size: 1rem;
+  }
+  .blog-and-technique .primary-btn {
+    font-size: 1rem;
+    padding: 0.5rem 2.2rem;
+  }
+}
+@media (max-width: 479px) {
+  .blog-and-technique .blog-grid-wrappper {
+    margin: 0 -0.25rem -0.5rem;
+  }
+  .blog-and-technique .blog-grid-wrappper .blog-grid-item {
+    padding: 0 0.25rem 0.5rem;
+  }
+  .blog-and-technique .container {
+    padding: 0 0.75rem;
+  }
+   .curl-with-confidence-section {
+  padding: 2.3rem 0 60%;;
+  }
+}
+

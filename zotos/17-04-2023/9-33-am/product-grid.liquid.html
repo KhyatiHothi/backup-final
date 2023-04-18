@@ -1,0 +1,119 @@
+
+        {% assign current_variant = product.selected_or_first_available_variant %}
+
+
+          <div class="collection-product-grid-item {% if forloop.index >  section.settings.product_default_count %}{% endif %}" data-product-handle="{{ product.handle }}" data-product-sku="{{ current_variant.sku }}">
+              <div class="product-thumbnail">
+                  <a href="{{ product.url | within: collection }}" title="{{ product.title }}">
+                      {% if product.price < product.compare_at_price %}
+                        <ul class="badge-list-wrapper">
+                            <li><span class="primary-badge">SALE</span></li>
+                        </ul>
+                      {% endif %}
+                      <div class="product-thumbnail-inner">
+                        {% if product.media[0] != blank %}
+                          <div class="normal-block">
+                              <img src="{{ product.featured_media | img_url: 'master' }}" alt="{{ product.featured_media.alt | escape }}">
+                          </div>
+                          {% endif %}
+                          {% if product.media[1] != blank and product.media[1].media_type == 'image' %}
+                            <div class="hover-block">
+                              <img src="{{ product.media[1].src | img_url: 'master' }}" alt="{{ product.media[1].alt }}">
+                            </div>
+                          {% else %}
+                            <div class="hover-block has-no-image">
+                            </div>
+                           
+                          {% endif %}
+                      </div>
+                  </a>
+              </div>
+              <div class="product-link">
+                  <a href="{{ product.url | within: collection }}" title="{{ product.title }}">
+                      <h2>{{ product.title }}</h2>
+                  </a>
+              </div>
+
+
+              {% comment %}
+              
+              <p class="collection-price">
+                {% if product.price < product.compare_at_price %}
+                    <span class="crossed" id="crossed-span-grid-{{ addID }}{{ product.id }}"><del>{{ product.compare_at_price | money }}</del></span>
+                    <span id="span-grid-{{ addID }}{{ product.id }}">{{ product.price | money }}</span>
+                {% else %}
+                    <span id="span-grid-{{ addID }}{{ product.id }}">{{ product.price | money }}</span>
+                {% endif %}
+              </p>
+              {% endcomment %}
+              {% unless product.has_only_default_variant %}
+                  {% if product.options[0] == 'Color' or product.options[0] == 'color' %}
+                     <form>
+                     <div class="cart-dropdown-radio-wrapper">
+                        <div class="custom-radiobtn-wrapper">
+                   
+                          {% for variant in product.variants %}
+                            {% if variant.metafields.accentuate.swatch[0].src != blank %}
+                              <div class="custom-radiobtn-grp" data-input="{{ variant.title }}">
+                                <div class="custom-radio-btn-inner">
+                                 <input type="radio" name="color" value="{{ variant.title }}" variant-sku="{{ variant.sku }}" variant-availability="{{ variant.available }}" prod-id="{{ addID }}{{ product.id }}" variant-id="{{ variant.id }}" data-original_price="{{ variant.price | money }}" data-compare_at_price="{{ variant.compare_at_price | money }}" id="{{ variant.id }}" class="custom-radio-input">
+                                  <em class="dropdown-img-wrapper">
+                                    <img src="{{ variant.metafields.accentuate.swatch[0].src }}" alt="{{ variant.metafields.accentuate.swatch[0].alt }}">
+                                  </em>
+                                <label for="{{ variant.id }}" class="custom-radio-label" style="display:none">
+                                {{ variant.title }}
+                                </label>
+                                </div>
+                              </div>
+                            {% endif %}
+                          {% endfor %}
+                  
+                        </div>
+                        <span class="collection-screenreader collection-grid-title-{{ addID }}{{ product.id }}">{{ product.variants.size }} Shades</span>
+                      </div>
+                         </form>
+                  {% else %}
+                     <form >
+                      <div class="cart-dropdown-radio-wrapper collection-dropdown-wrapper no-space">
+                          <div class="custom-dropdown-wrapper">
+                            <div class="dropdown-toggle">Choose {{ product.options[0] }}</div>
+                            <div class="custom-dropdown-slidedown">
+                              <ul class="dropdown-menu-link" id="{{ addID }}{{ product.id }}">
+                                {% for variant in product.variants %}
+                                  <li data-filter="{{ variant.title }}" variant-sku="{{ variant.sku }}" variant-id="{{ variant.id }}" variant-availability="{{ variant.available }}" data-original_price="{{ variant.price | money }}" data-compare_at_price="{{ variant.compare_at_price | money }}">
+                                    {% if variant.image != blank %}
+                                    <em class="dropdown-img-wrapper">
+                                      <img src="{{ variant.image.src | img_url: 'master' }}" alt="{{ variant.image.alt | escape }}">
+                                    </em>
+                                    {% endif %}
+                                    <span>{{ variant.title }}</span> 
+                                  </li>
+                                {% endfor %}
+                              </ul>
+                            </div>
+                          </div>
+                       </div>
+                       </form>
+                  {% endif %}
+              {% endunless %}
+
+            <div class="product-button">
+               {% if product.metafields.seller.amazon_link != blank %}
+                <a href="{{  product.metafields.seller.amazon_link }}" target="_blank" rel="noopener noreferrer" class="primary-btn orange-btn" title="Buy from Amazon">Buy from Amazon</a>
+               {% endif %}
+               {% if product.metafields.seller.sally_beauty_link != blank %}
+                <a href="{{ product.metafields.seller.sally_beauty_link }}" target="_blank" rel="noopener noreferrer" class="primary-btn" title="Buy from Sally Beauty">Buy from Sally Beauty</a>
+               {% endif %}
+            </div>
+
+            {% comment %}
+              <div class="product-button {% if product.available  %}add-to-cart-grid {% else %} sold-out-btn {% endif %}" id="add-to-cart-{{ addID }}{{ product.id }}">
+                  <a href="javascript:void(0);" variant-id="{{ product.variants[0].id }}" class="primary-btn {% unless product.available %} Disabled {% endunless %}" title="{% if product.available  %}Add to Cart {% else %} Sold Out {% endif %}">{% if product.available  %}Add to Cart {% else %} Sold Out {% endif %}</a>
+              </div>
+              
+            <a href="{{ product.metafields.seller.amazon_link }}" target="_blank" class="product-amazon">Also Available at Amazon  <svg enable-background="new 0 0 11.4 10" viewBox="0 0 11.4 10"><g class="arrowpath"><path  d="m11.2 4.4-4.2-4.2c-.3-.3-.8-.3-1.1 0s-.3.8 0 1.1l2.8 2.8h-7.9c-.5 0-.8.3-.8.8s.4.8.8.8h8.1l-3 3c-.3.3-.3.8 0 1.1.1.1.3.2.5.2s.4-.1.6-.3l4.2-4.2c.3-.3.3-.8 0-1.1z" fill="#212529"></path></g></svg></a>
+           {% endcomment %}
+          
+          </div>
+          
+      

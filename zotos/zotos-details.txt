@@ -1,0 +1,67 @@
+Reference : https://zotosprofessional.com/
+
+Estimation Sheet: https://docs.google.com/spreadsheets/d/1NqoPSysTOrWsFEeA5RA0dFgj7e9fhFn8wRIRI4qVSSQ/edit#gid=1956316249
+
+
+
+Admin : https://zotos-dev-tatvasoft.myshopify.com/admin
+mailto:hetal.shah@sparsh-technologies.co.in
+Hetal@1311
+
+Frontend : https://zotos-dev-tatvasoft.myshopify.com/
+Pwd : zotos
+
+
+
+Below files are created 
+
+CSS files: 
+
+general.css.liquid
+homepage.css.liquid
+header.css.liquid
+footer.css.liquid
+-----------------------------------
+JS files: 
+general.js.liquid
+-----------------------------------
+Homepage Files : 
+
+header.liquid
+home-banner.liquid
+home-explore-brands.liquid
+home-browse-by-needs.liquid
+home-featured-logos.liquid
+home-blogpost-video.liquid
+home-contact.liquid
+footer.liquid
+
+
+
+About page : 
+
+link : https://zotos-dev-tatvasoft.myshopify.com/pages/about
+file : about-us.liquid
+css file : about-us.css.liquid
+
+
+Contact us page : 
+
+link : https://zotos-dev-tatvasoft.myshopify.com/pages/contact-us
+file : contact-us.liquid
+css file : contact-us.css.liquid
+
+
+
+04-04-2023  
+
+Theme :  ZP Theme v12 - Shoppable Blog/Brand landing page
+Url : https://zotosprofessional.com/pages/biotera-brand-splash-landing
+File : brand-landing-banner.liquid
+        brand-landing-collections.liquid
+        brand-landing-image-content.liquid
+        brand-landing-icons.liquid
+CSS : brand-splash-landing1.css.liquid
+         brand-splash-landing2.css.liquid
+figma :https://www.figma.com/file/8BUUM6hEamqbaKaydiIgKV/ZP-Brand-Splash-LPs?node-id=0-1&t=LZuSG9FZ1CCjbT5E-0
+zeplin :https://app.zeplin.io/project/6098cb305080b312a6e72c9a/screen/642bfee9eb344a73bb27600e

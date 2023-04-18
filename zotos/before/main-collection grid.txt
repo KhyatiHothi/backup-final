@@ -1,0 +1,610 @@
+{%- if section.settings.enable_quick_add -%}
+  <link rel="stylesheet" href="{{ 'quick-add.css' | asset_url }}" media="print" onload="this.media='all'">
+  <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
+
+
+<section class="collection-shop-section">
+    <div class="container">
+        <div class="breadcrumb-wrapper">
+            <ul>
+                <li><a href="/">Home</a><span class="breadcrumb-seprator">/</span></li>
+                <li><a href="/collections">Shop by collection</a><span class="breadcrumb-seprator">/</span></li>
+                <li><a aria-current="page" href="javascript:void(0);">{{ collection.handle }}</a></li>
+            </ul>
+        </div>
+        <div class="collection-grid-wrapper">
+            <button class="filter-btn-mble primary-btn border-btn">Filters <svg enable-background="new 0 0 18.6 15.5" viewBox="0 0 18.6 15.5"><g fill="#212529"><path d="m17.9 10.1h-4.7c-.4 0-.8.3-.8.8s.3.8.8.8h1.6v3.1c0 .4.3.8.8.8s.8-.3.8-.8v-3.1h1.6c.4 0 .8-.3.8-.8s-.5-.8-.9-.8z"></path><path d="m5.4 8.6h-4.6c-.5 0-.8.3-.8.7s.3.8.8.8h1.6v4.7c0 .4.3.8.8.8s.8-.3.8-.8v-4.7h1.6c.4 0 .8-.3.8-.8s-.6-.7-1-.7z"></path><path d="m9.3 7c-.4 0-.7.3-.7.8v7c0 .4.3.8.8.8s.8-.3.8-.8v-7c-.1-.5-.5-.8-.9-.8z"></path><path d="m11.6 3.9h-1.6v-3.1c.1-.5-.3-.8-.7-.8s-.7.3-.7.8v3.1h-1.6c-.4 0-.8.3-.8.8s.4.7.8.7h2.3s0 0 0 0h2.3c.4 0 .8-.3.8-.8s-.3-.7-.8-.7z"></path><path d="m15.5 8.5c.4 0 .8-.3.8-.8v-7c0-.4-.3-.8-.8-.8s-.8.3-.8.8v7c.1.5.4.8.8.8z"></path><path d="m3.1 6.9c.4 0 .8-.3.8-.8v-5.3c-.1-.5-.4-.8-.8-.8s-.8.3-.8.8v5.4c0 .4.4.7.8.7z"></path></g></svg></button>
+            <div class="filter-sidebar-wrapper">
+                <form action="">
+                    <div class="filter-sidebar-inner">
+                        <button class="filter-close-btn"><svg version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 20.4 20.4" xml:space="preserve"><path d="M11.6,10.2l8.5-8.5c0.4-0.4,0.4-1,0-1.4s-1-0.4-1.4,0l-8.5,8.5L1.7,0.3c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l8.5,8.5l-8.5,8.5
+                            c-0.4,0.4-0.4,1,0,1.4c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3l8.5-8.5l8.5,8.5c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3
+                            c0.4-0.4,0.4-1,0-1.4L11.6,10.2z"></path></svg>
+                        </button>
+                        <div class="filter-sidebar-heading">
+                            <h2 class="condensed">Filters</h2>
+                            <button class="filter-remove-btn"><svg enable-background="new 0 0 14.5 14.5" viewBox="0 0 14.5 14.5"><g fill="#212529"><path d="m7.2 0c-3.9 0-7.2 3.3-7.2 7.2s3.3 7.2 7.2 7.2 7.3-3.3 7.3-7.2-3.3-7.2-7.3-7.2zm0 13c-3.2 0-5.8-2.6-5.8-5.7s2.6-5.8 5.8-5.8 5.8 2.6 5.8 5.7-2.6 5.8-5.8 5.8z"></path><path d="m9.7 4.8c-.3-.3-.7-.3-1 0l-1.5 1.4-1.4-1.4c-.3-.3-.8-.3-1.1 0s-.3.8 0 1.1l1.4 1.4-1.3 1.4c-.3.3-.3.7 0 1 .1.1.3.2.5.2s.4-.1.5-.2l1.4-1.4 1.4 1.4c.2.2.4.2.6.2s.4-.1.5-.2c.3-.3.3-.7 0-1l-1.4-1.5 1.4-1.4c.3-.3.3-.7 0-1z"></path></g></svg>Remove All</button>
+                        </div>
+                        <div class="filter-sidebar-list">
+                            <div class="filter-sidebar-list-item">
+                                <div class="list-heading">
+                                    <button class="filter-name">Brands<span class="filter-count">(0)</span></button>
+                                    <button class="filter-clear">Clear</button>
+                                </div>
+                                <div class="list-content">
+                                    <ul class="checkbox-list-wrapper">
+                                        <li class="custom-checkbox">
+                                            <div class="custom-checkbox-inner">
+                                                <input type="checkbox" id="brand|ultra-bond">
+                                                <label for="brand|ultra-bond">Ultra Bond</label>
+                                            </div>
+                                        </li>
+                                        <li class="custom-checkbox">
+                                            <div class="custom-checkbox-inner">
+                                                <input type="checkbox" id="brand|root-touch-up">
+                                                <label for="brand|root-touch-up">Root Touch Up</label>
+                                            </div>
+                                        </li>
+                                        <li class="custom-checkbox">
+                                            <div class="custom-checkbox-inner">
+                                                <input type="checkbox" id="brand|all-about-curls">
+                                                <label for="brand|all-about-curls">All About Curls</label>
+                                            </div>
+                                        </li>
+                                        <li class="custom-checkbox">
+                                            <div class="custom-checkbox-inner">
+                                                <input type="checkbox" id="brand|agebeautiful">
+                                                <label for="brand|agebeautiful">AGEbeautiful</label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="filter-sidebar-list-item">
+                                <div class="list-heading">
+                                    <button class="filter-name">Collections<span class="filter-count">(0)</span></button>
+                                    <button class="filter-clear">Clear</button>
+                                </div>
+                                <div class="list-content">
+                                    <ul class="checkbox-list-wrapper">
+                                        <li class="custom-checkbox">
+                                            <div class="custom-checkbox-inner">
+                                                <input type="checkbox" id="collection|hair-color">
+                                                <label for="collection|hair-color">Hair Color</label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="filter-sidebar-list-item">
+                                <div class="list-heading">
+                                    <button class="filter-name">Product Type<span class="filter-count">(0)</span></button>
+                                    <button class="filter-clear">Clear</button>
+                                </div>
+                                <div class="list-content">
+                                    <ul class="checkbox-list-wrapper">
+                                        <li class="custom-checkbox">
+                                            <div class="custom-checkbox-inner">
+                                                <input type="checkbox" name="type|temporary-color"id="type|temporary-color"/>
+                                                <label for="type|temporary-color">Temporary Color </label>
+                                            </div>
+                                          </li>
+                                          <li class="custom-checkbox">
+                                            <div class="custom-checkbox-inner">
+                                                <input type="checkbox" name="type|lighteners-bleach"id="type|lighteners-bleach"/>
+                                                <label for="type|lighteners-bleach">Lighteners/Bleach </label>
+                                            </div>
+                                          </li>
+                                          <li class="custom-checkbox">
+                                            <div class="custom-checkbox-inner">
+                                                <input type="checkbox" name="type|high-lift-permanent-color"id="type|high-lift-permanent-color"/>
+                                                <label for="type|high-lift-permanent-color">High-Lift Permanent Color </label>
+                                            </div>
+                                          </li>
+                                          <li class="custom-checkbox">
+                                            <div class="custom-checkbox-inner">
+                                                <input type="checkbox" name="type|developers" id="type|developers"/>
+                                                <label for="type|developers">Developers</label>
+                                            </div>
+                                          </li>
+                                          <li class="custom-checkbox">
+                                            <div class="custom-checkbox-inner">
+                                                <input type="checkbox" name="type|color-for-curls"id="type|color-for-curls"/>
+                                                <label for="type|color-for-curls">Color for Curls </label>
+                                            </div>
+                                          </li>
+                                          <li class="custom-checkbox">
+                                            <div class="custom-checkbox-inner">
+                                                <input type="checkbox" name="type|brass-reducing-toners"id="type|brass-reducing-toners"/>
+                                                <label for="type|brass-reducing-toners">Brass Reducing Toners </label>
+                                            </div>
+                                          </li>
+                                          <li class="custom-checkbox">
+                                            <div class="custom-checkbox-inner">
+                                                <input type="checkbox" name="type|anti-aging-permanent-color"id="type|anti-aging-permanent-color"/>
+                                                <label for="type|anti-aging-permanent-color">Anti-Aging Permanent Color </label>
+                                            </div>
+                                          </li>
+                                    </ul>
+                                    
+                                </div>
+                            </div>
+                            <div class="filter-sidebar-list-item">
+                                <div class="list-heading">
+                                    <button class="filter-name">Need<span class="filter-count">(0)</span></button>
+                                    <button class="filter-clear">Clear</button>
+                                </div>
+                                <div class="list-content">
+                                    <ul class="checkbox-list-wrapper">
+                                        <li class="custom-checkbox">
+                                            <div class="custom-checkbox-inner">
+                                                <input type="checkbox" name="need|confident-mixing" id="need|confident-mixing"/>
+                                                <label for="need|confident-mixing">Confident Mixing</label>
+                                            </div>
+                                          </li>
+                                          <li class="custom-checkbox">
+                                            <div class="custom-checkbox-inner">
+                                                <input type="checkbox" name="need|go-from-brunette-to-blonde" id="need|go-from-brunette-to-blonde"/>
+                                                <label for="need|go-from-brunette-to-blonde">Go from Brunette to Blonde</label>
+                                            </div>
+                                          </li>
+                                          <li class="custom-checkbox">
+                                            <div class="custom-checkbox-inner">
+                                                <input type="checkbox" name="need|quenching-color-for-curls" id="need|quenching-color-for-curls"/>
+                                                <label for="need|quenching-color-for-curls">Quenching Color For Curls</label>
+                                            </div>
+                                          </li>
+                                          <li class="custom-checkbox">
+                                            <div class="custom-checkbox-inner">
+                                                <input type="checkbox" name="need|bleach-shy" id="need|bleach-shy"/>
+                                                <label for="need|bleach-shy">Bleach Shy</label>
+                                            </div>
+                                          </li>
+                                          <li class="custom-checkbox">
+                                            <div class="custom-checkbox-inner">
+                                                <input type="checkbox" name="need|temporary-root-concealer" id="need|temporary-root-concealer"/>
+                                                <label for="need|temporary-root-concealer">Temporary Root Concealer</label>
+                                            </div>
+                                          </li>
+                                          <li class="custom-checkbox">
+                                            <div class="custom-checkbox-inner">
+                                                <input type="checkbox" name="need|unwanted-orange-tones" id="need|unwanted-orange-tones"/>
+                                                <label for="need|unwanted-orange-tones">Unwanted Orange Tones</label>
+                                            </div>
+                                          </li>
+                                          <li class="custom-checkbox">
+                                            <div class="custom-checkbox-inner">
+                                                <input type="checkbox" name="need|aging-gray-hair" id="need|aging-gray-hair"/>
+                                                <label for="need|aging-gray-hair">Aging Gray Hair</label>
+                                            </div>
+                                          </li>
+                                          <li class="custom-checkbox">
+                                            <div class="custom-checkbox-inner">
+                                                <input type="checkbox" name="need|confident-mixing-predictable" id="need|confident-mixing-predictable"/>
+                                                <label for="need|confident-mixing-predictable">Confident Mixing + Predictable</label>
+                                            </div>
+                                          </li>                                        
+                                    </ul>
+                                    
+                                </div>
+                            </div>
+                            <div class="filter-sidebar-list-item">
+                                <div class="list-heading">
+                                    <button class="filter-name">Desired Shade<span class="filter-count">(0)</span></button>
+                                    <button class="filter-clear">Clear</button>
+                                </div>
+                                <div class="list-content">
+                                    <ul class="checkbox-list-wrapper">
+                                        <li class="custom-checkbox">
+                                            <div class="custom-checkbox-inner">
+                                                <input type="checkbox" name="shade|black" id="shade|black" />
+                                                <label for="shade|black">Black</label>
+                                            </div>
+                                        </li>
+                                        <li class="custom-checkbox">
+                                            <div class="custom-checkbox-inner">
+                                                <input type="checkbox" name="shade|brunette" id="shade|brunette" />
+                                                <label for="shade|brunette">Brunette</label>
+                                            </div>
+                                        </li>
+                                        <li class="custom-checkbox">
+                                            <div class="custom-checkbox-inner">
+                                                <input type="checkbox" name="shade|blonde" id="shade|blonde" />
+                                                <label for="shade|blonde">Blonde</label>
+                                            </div>
+                                        </li>
+                                        <li class="custom-checkbox">
+                                            <div class="custom-checkbox-inner">
+                                                <input type="checkbox" name="shade|red" id="shade|red" />
+                                                <label for="shade|red">Red</label>
+                                            </div>
+                                        </li>
+                                        <li class="custom-checkbox">
+                                            <div class="custom-checkbox-inner">
+                                                <input type="checkbox" name="shade|ultra-light-hi-lift-blonde" id="shade|ultra-light-hi-lift-blonde">
+                                                <label for="shade|ultra-light-hi-lift-blonde">Ultra-Light; Hi-Lift Blonde</label>
+                                            </div>
+                                        </li>
+                                        <li class="custom-checkbox">
+                                            <div class="custom-checkbox-inner">
+                                                <input type="checkbox" name="shade|lightener-bleach" id="shade|lightener-bleach">
+                                                <label for="shade|lightener-bleach">Lightener/Bleach</label>
+                                            </div>
+                                        </li>                                  
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="filter-sidebar-list-item">
+                                <div class="list-heading">
+                                    <button class="filter-name">Ingredient Preference<span class="filter-count">(0)</span></button>
+                                    <button class="filter-clear">Clear</button>
+                                </div>
+                                <div class="list-content">
+                                    <ul class="checkbox-list-wrapper">
+                                        <li class="custom-checkbox">
+                                            <div class="custom-checkbox-inner">
+                                                <input type="checkbox" name="ingredient_preference|biotin" id="ingredient_preference|biotin"/>
+                                                <label for="ingredient_preference|biotin">Biotin</label>
+                                            </div>
+                                          </li>
+                                          <li class="custom-checkbox">
+                                            <div class="custom-checkbox-inner">
+                                                <input type="checkbox" name="ingredient_preference|ppd-free" id="ingredient_preference|ppd-free"/>
+                                                <label for="ingredient_preference|ppd-free">PPD Free</label>
+                                            </div>
+                                          </li>
+                                          <li class="custom-checkbox">
+                                            <div class="custom-checkbox-inner">
+                                                <input type="checkbox" name="ingredient_preference|built-in-bonding" id="ingredient_preference|built-in-bonding"/>
+                                                <label for="ingredient_preference|built-in-bonding">Built-In Bonding</label>
+                                            </div>
+                                          </li>
+                                                                         
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="filter-sidebar-list-item">
+                                <div class="list-heading">
+                                    <button class="filter-name">Hair Type<span class="filter-count">(0)</span></button>
+                                    <button class="filter-clear">Clear</button>
+                                </div>
+                                <div class="list-content">
+                                    <ul class="checkbox-list-wrapper">
+                                        <li class="custom-checkbox">
+                                            <div class="custom-checkbox-inner">
+                                                <input type="checkbox" name="hair_type|wavy" id="hair_type|wavy" />
+                                                <label for="hair_type|wavy">Wavy</label>
+                                            </div>
+                                          </li>
+                                          <li class="custom-checkbox">
+                                            <div class="custom-checkbox-inner">
+                                                <input type="checkbox" name="hair_type|curly" id="hair_type|curly"/>
+                                                <label for="hair_type|curly">Curly</label>
+                                            </div>
+                                          </li>
+                                          <li class="custom-checkbox">
+                                            <div class="custom-checkbox-inner">
+                                                <input type="checkbox" name="hair_type|coily" id="hair_type|coily"/>
+                                                <label for="hair_type|coily">Coily</label>
+                                            </div>
+                                          </li>
+                                          <li class="custom-checkbox">
+                                            <div class="custom-checkbox-inner">
+                                                <input type="checkbox" name="hair_type|fine-thinning-flat" id="hair_type|fine-thinning-flat"/>
+                                                <label for="hair_type|fine-thinning-flat">Fine/Thinning/Flat</label>
+                                            </div>
+                                          </li>
+                                          <li class="custom-checkbox">
+                                            <div class="custom-checkbox-inner">
+                                                <input type="checkbox" name="hair_type|coarse-thick" id="hair_type|coarse-thick"/>
+                                                <label for="hair_type|coarse-thick">Coarse/Thick</label>
+                                            </div>
+                                          </li>
+                                          <li class="custom-checkbox">
+                                            <div class="custom-checkbox-inner">
+                                                <input type="checkbox" name="hair_type|unruly" id="hair_type|unruly"/>
+                                                <label for="hair_type|unruly">Unruly</label>
+                                            </div>
+                                          </li>
+                                          <li class="custom-checkbox">
+                                            <div class="custom-checkbox-inner">
+                                                <input type="checkbox" name="hair_type|fly-away-frizz" id="hair_type|fly-away-frizz"/>
+                                                <label for="hair_type|fly-away-frizz">Fly-Away + Frizz</label>
+                                            </div>
+                                          </li>
+                                          <li class="custom-checkbox">
+                                            <div class="custom-checkbox-inner">
+                                                <input type="checkbox" name="hair_type|straight" id="hair_type|straight"/>
+                                                <label for="hair_type|straight">Straight</label>
+                                            </div>
+                                          </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="filter-sidebar-list-item">
+                                <div class="list-heading">
+                                    <button class="filter-name">Hair Condition<span class="filter-count">(0)</span></button>
+                                    <button class="filter-clear">Clear</button>
+                                </div>
+                                <div class="list-content">
+                                    <ul class="checkbox-list-wrapper">
+                                        <li class="custom-checkbox">
+                                            <div class="custom-checkbox-inner">
+                                                <input type="checkbox" name="hair_condition|normal-average-cond" id="hair_condition|normal-average-cond"/>
+                                                <label for="hair_condition|normal-average-cond">Normal/average cond</label>
+                                            </div>
+                                          </li>
+                                          <li class="custom-checkbox">
+                                            <div class="custom-checkbox-inner">
+                                                <input type="checkbox" name="hair_condition|dry" id="hair_condition|dry"/>
+                                                <label for="hair_condition|dry">Dry</label>
+                                            </div>
+                                          </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter-sidebar-footer">
+                              <button class="primary-btn">Apply</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="applied-filters-mble">
+                <div class="result">
+                    <strong>38</strong> results
+                </div>
+                <h2>Filters selected:</h2>
+                <div class="applied-filter-list-wrap">
+                <ul class="applied-filter-list">
+                    <li>
+                        <span>Ultra Bond</span>
+                        <button>
+                            <svg enable-background="new 0 0 14.5 14.5" viewBox="0 0 14.5 14.5"><g fill="#212529"><path d="m7.2 0c-3.9 0-7.2 3.3-7.2 7.2s3.3 7.2 7.2 7.2 7.3-3.3 7.3-7.2-3.3-7.2-7.3-7.2zm0 13c-3.2 0-5.8-2.6-5.8-5.7s2.6-5.8 5.8-5.8 5.8 2.6 5.8 5.7-2.6 5.8-5.8 5.8z"></path> <path d="m9.7 4.8c-.3-.3-.7-.3-1 0l-1.5 1.4-1.4-1.4c-.3-.3-.8-.3-1.1 0s-.3.8 0 1.1l1.4 1.4-1.3 1.4c-.3.3-.3.7 0 1 .1.1.3.2.5.2s.4-.1.5-.2l1.4-1.4 1.4 1.4c.2.2.4.2.6.2s.4-.1.5-.2c.3-.3.3-.7 0-1l-1.4-1.5 1.4-1.4c.3-.3.3-.7 0-1z"></path></g></svg>
+                        </button>
+                    </li>
+                    <li>
+                        <span>Root Touch Up</span>
+                        <button>
+                            <svg enable-background="new 0 0 14.5 14.5" viewBox="0 0 14.5 14.5"><g fill="#212529"><path d="m7.2 0c-3.9 0-7.2 3.3-7.2 7.2s3.3 7.2 7.2 7.2 7.3-3.3 7.3-7.2-3.3-7.2-7.3-7.2zm0 13c-3.2 0-5.8-2.6-5.8-5.7s2.6-5.8 5.8-5.8 5.8 2.6 5.8 5.7-2.6 5.8-5.8 5.8z"></path> <path d="m9.7 4.8c-.3-.3-.7-.3-1 0l-1.5 1.4-1.4-1.4c-.3-.3-.8-.3-1.1 0s-.3.8 0 1.1l1.4 1.4-1.3 1.4c-.3.3-.3.7 0 1 .1.1.3.2.5.2s.4-.1.5-.2l1.4-1.4 1.4 1.4c.2.2.4.2.6.2s.4-.1.5-.2c.3-.3.3-.7 0-1l-1.4-1.5 1.4-1.4c.3-.3.3-.7 0-1z"></path></g></svg>
+                        </button>
+                    </li>
+                    <li>
+                        <span>All About Curls</span>
+                        <button>
+                            <svg enable-background="new 0 0 14.5 14.5" viewBox="0 0 14.5 14.5"><g fill="#212529"><path d="m7.2 0c-3.9 0-7.2 3.3-7.2 7.2s3.3 7.2 7.2 7.2 7.3-3.3 7.3-7.2-3.3-7.2-7.3-7.2zm0 13c-3.2 0-5.8-2.6-5.8-5.7s2.6-5.8 5.8-5.8 5.8 2.6 5.8 5.7-2.6 5.8-5.8 5.8z"></path> <path d="m9.7 4.8c-.3-.3-.7-.3-1 0l-1.5 1.4-1.4-1.4c-.3-.3-.8-.3-1.1 0s-.3.8 0 1.1l1.4 1.4-1.3 1.4c-.3.3-.3.7 0 1 .1.1.3.2.5.2s.4-.1.5-.2l1.4-1.4 1.4 1.4c.2.2.4.2.6.2s.4-.1.5-.2c.3-.3.3-.7 0-1l-1.4-1.5 1.4-1.4c.3-.3.3-.7 0-1z"></path></g></svg>
+                        </button>
+                    </li>
+                    <li>
+                        <span>AGEbeautiful</span>
+                        <button>
+                            <svg enable-background="new 0 0 14.5 14.5" viewBox="0 0 14.5 14.5"><g fill="#212529"><path d="m7.2 0c-3.9 0-7.2 3.3-7.2 7.2s3.3 7.2 7.2 7.2 7.3-3.3 7.3-7.2-3.3-7.2-7.3-7.2zm0 13c-3.2 0-5.8-2.6-5.8-5.7s2.6-5.8 5.8-5.8 5.8 2.6 5.8 5.7-2.6 5.8-5.8 5.8z"></path> <path d="m9.7 4.8c-.3-.3-.7-.3-1 0l-1.5 1.4-1.4-1.4c-.3-.3-.8-.3-1.1 0s-.3.8 0 1.1l1.4 1.4-1.3 1.4c-.3.3-.3.7 0 1 .1.1.3.2.5.2s.4-.1.5-.2l1.4-1.4 1.4 1.4c.2.2.4.2.6.2s.4-.1.5-.2c.3-.3.3-.7 0-1l-1.4-1.5 1.4-1.4c.3-.3.3-.7 0-1z"></path></g></svg>
+                        </button>
+                    </li>
+                    <li>
+                        <span>Hair Color</span>
+                        <button>
+                            <svg enable-background="new 0 0 14.5 14.5" viewBox="0 0 14.5 14.5"><g fill="#212529"><path d="m7.2 0c-3.9 0-7.2 3.3-7.2 7.2s3.3 7.2 7.2 7.2 7.3-3.3 7.3-7.2-3.3-7.2-7.3-7.2zm0 13c-3.2 0-5.8-2.6-5.8-5.7s2.6-5.8 5.8-5.8 5.8 2.6 5.8 5.7-2.6 5.8-5.8 5.8z"></path> <path d="m9.7 4.8c-.3-.3-.7-.3-1 0l-1.5 1.4-1.4-1.4c-.3-.3-.8-.3-1.1 0s-.3.8 0 1.1l1.4 1.4-1.3 1.4c-.3.3-.3.7 0 1 .1.1.3.2.5.2s.4-.1.5-.2l1.4-1.4 1.4 1.4c.2.2.4.2.6.2s.4-.1.5-.2c.3-.3.3-.7 0-1l-1.4-1.5 1.4-1.4c.3-.3.3-.7 0-1z"></path></g></svg>
+                        </button>
+                    </li>
+                </ul>
+                </div>
+            </div>
+            <div class="collection-product-wrapper">
+                <div class="collection-product-top">
+                    <p><strong>{{ collection.all_products_count }}</strong> results</p>
+                    <div class="custom-dropdown-wrapper">
+                        <label for="sort-by">Sort By:</label>
+                        <select name="sort-by" id="sort-by">
+                            <option value="best-sellers">Best Sellers</option>
+                            <option value="price-low-high">Price Low to High</option>
+                            <option value="price-high-low">Price High to Low</option>
+                            <option value="reviews">Avg. Customer Reviews</option>
+                            <option value="new">New</option>
+                          </select>
+                    </div>
+                </div>
+                <div class="collection-product-grid">
+                  {% for product in collection.products %}
+                    <div class="collection-product-grid-item hii">
+                        <div class="product-thumbnail">
+                            <a href="{{ product.url }}">
+                                <div class="product-thumbnail-inner">
+                                    {% if product.media[0] != blank %}
+                                    <div class="normal-block">
+                                        <img src="{{ product.featured_media | img_url: 'master' }}" alt="{{ product.featured_media.alt | escape }}">
+                                    </div>
+                                    {% endif %}
+                                    {% if product.media[1] != blank and product.media[1].media_type != 'video' and product.media[1].media_type != 'external_video' %}
+                                      <div class="hover-block">
+                                        <img src="{{ product.media[1].src | img_url: 'master' }}" alt="{{ product.media[1].alt }}">
+                                      </div>
+                                    {% else %}
+                                      <div class="hover-block has-no-image">
+                                      </div>
+                                    {% endif %}
+                                </div>
+                            </a>
+                        </div>
+                        <div class="product-link">
+                            <a href="{{ product.url }}">
+                                <h2>{{ product.title }}</h2>
+                            </a>
+                        </div>
+                        <div class="product-button">
+                            <a href="#" class="primary-btn orange-btn">Buy from Amazon</a>
+                            <a href="#" class="primary-btn">Buy from Sally Beauty</a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="collection-product-pagination">
+                    <p>1-12 of 38 Results</p>
+                    <a href="#" class="primary-btn border-btn">Show More Products</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+{% schema %}
+{
+  "name": "t:sections.main-collection-product-grid.name",
+  "class": "section",
+  "settings": [
+    {
+      "type": "range",
+      "id": "products_per_page",
+      "min": 8,
+      "max": 24,
+      "step": 4,
+      "default": 16,
+      "label": "t:sections.main-collection-product-grid.settings.products_per_page.label"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "default": 4,
+      "label": "t:sections.main-collection-product-grid.settings.columns_desktop.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.main-collection-product-grid.settings.header__3.content"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "t:sections.main-collection-product-grid.settings.image_ratio.options__1.label"
+        },
+        {
+          "value": "portrait",
+          "label": "t:sections.main-collection-product-grid.settings.image_ratio.options__2.label"
+        },
+        {
+          "value": "square",
+          "label": "t:sections.main-collection-product-grid.settings.image_ratio.options__3.label"
+        }
+      ],
+      "default": "adapt",
+      "label": "t:sections.main-collection-product-grid.settings.image_ratio.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_secondary_image",
+      "default": false,
+      "label": "t:sections.main-collection-product-grid.settings.show_secondary_image.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_vendor",
+      "default": false,
+      "label": "t:sections.main-collection-product-grid.settings.show_vendor.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_rating",
+      "default": false,
+      "label": "t:sections.main-collection-product-grid.settings.show_rating.label",
+      "info": "t:sections.main-collection-product-grid.settings.show_rating.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_quick_add",
+      "default": false,
+      "label": "t:sections.main-collection-product-grid.settings.enable_quick_buy.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.main-collection-product-grid.settings.header__1.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_filtering",
+      "default": true,
+      "label": "t:sections.main-collection-product-grid.settings.enable_filtering.label",
+      "info": "t:sections.main-collection-product-grid.settings.enable_filtering.info"
+    },
+    {
+      "type": "select",
+      "id": "filter_type",
+      "options": [
+        {
+          "value": "horizontal",
+          "label": "t:sections.main-collection-product-grid.settings.filter_type.options__1.label"
+        },
+        {
+          "value": "vertical",
+          "label": "t:sections.main-collection-product-grid.settings.filter_type.options__2.label"
+        },
+        {
+          "value": "drawer",
+          "label": "t:sections.main-collection-product-grid.settings.filter_type.options__3.label"
+        }
+      ],
+      "default": "horizontal",
+      "label": "t:sections.main-collection-product-grid.settings.filter_type.label",
+      "info": "t:sections.main-collection-product-grid.settings.filter_type.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_sorting",
+      "default": true,
+      "label": "t:sections.main-collection-product-grid.settings.enable_sorting.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.main-collection-product-grid.settings.header_mobile.content"
+    },
+    {
+      "type": "select",
+      "id": "columns_mobile",
+      "default": "2",
+      "label": "t:sections.main-collection-product-grid.settings.columns_mobile.label",
+      "options": [
+        {
+          "value": "1",
+          "label": "t:sections.main-collection-product-grid.settings.columns_mobile.options__1.label"
+        },
+        {
+          "value": "2",
+          "label": "t:sections.main-collection-product-grid.settings.columns_mobile.options__2.label"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ]
+}
+{% endschema %}

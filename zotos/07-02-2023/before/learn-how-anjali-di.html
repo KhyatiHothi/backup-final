@@ -1,0 +1,190 @@
+<section class="learn-more-take-quiz">
+    <div class="container">
+        <h2 class="script">Take Our Quizzes </h2>
+        <div class="take-quiz-grid-wrapper">
+            <div class="grid-item">
+                <div class="image-block">
+                    <img src="{{ 'take-quiz-img1.jpg' | asset_url }}" alt="Color Quiz">
+                </div>
+                <div class="content-block">
+                    <h3 class="script">What haircolor <span>shade is right for you?</span></h3>
+                    <p>Get customized formula from our experts in 2 minutes or less.</p>
+                    <a href="#" class="primary-btn" title="Take the Color Quiz">Take the Color Quiz</a>
+                </div>
+            </div>
+            <div class="grid-item reverse-order-mobile">
+                <div class="image-block">
+                    <img src="{{ 'take-quiz-img2.jpg' | asset_url }}" alt="Curly Quiz">
+                </div>
+                <div class="content-block">
+                    <h3 class="script">What products are <span>right for your curls?</span></h3>
+                    <p>Pro recommendations to nourish, define & defrizz in XYZ steps or less.</p>
+                    <a href="#" class="primary-btn" title="Take the Curly Quiz">Take the Curly Quiz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="virtual-chat-section">
+    <img src="{{ 'virtual-chat-bg-img-desktop.jpg' | asset_url }}" alt="Virtual chat bg" class="virtual-chat-bg-img desktop-img">
+    <img src="{{ 'virtual-chat-bg-img-mobile.jpg' | asset_url }}" alt="Virtual chat bg" class="virtual-chat-bg-img mobile-img">
+    <div class="container">
+        <div class="virtual-chat-content-block">
+            <h2 class="script">1:1 Virtual Chat for Expert Advice</h2>
+            <p>Depending on what you need, We’re Hair for you! Speak with a licensed stylist Mon – Fri 9 am-8pm EST</p>
+            <a href="#" class="site-border-btn" title="Try It Out">Try It Out</a>
+        </div>
+    </div>
+</section>
+
+
+
+{% schema %}
+  {
+    "name": "Learn How",
+    "class": "learn-how-template",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Banner Section"
+      },
+      {
+        "type": "text",
+        "id": "Page_title",
+        "label": "Page Title",
+        "default": "All Access Pass to Professional"
+      },
+      {
+        "type": "textarea",
+        "id": "content",
+        "label": "Content",
+        "default": "We Provide You The Tools To Create Salon-Worthy Looks At Home – No Appointment Required"
+      },
+      {
+        "type": "text",
+        "id": "search_placeholder",
+        "label": "Search Placeholder Text",
+        "default": "Search our DIY Resources..."
+      },
+      {
+        "type": "text",
+        "id": "sort_by_label",
+        "label": "Sort By Label",
+        "default": "Sort By Category:"
+      },
+      {
+        "type": "textarea",
+        "id": "sort_by_Tags",
+        "label": "Sort By Tags",
+        "default": "All, Reference, Perms, Techniques, Color, Style, Treatment, Uncategorized",
+        "info": "Comma seperated"
+      },
+      {
+        "type": "header",
+        "content": "Video Section"
+      },
+      {
+        "type": "text",
+        "id": "video_title",
+        "label": "Video Title",
+        "default": "How-To Videos"
+      },
+      {
+        "type": "textarea",
+        "id": "video_content",
+        "label": "Video Content",
+        "default": "We're by your side so you can...DO IT WITH CONFIDENCE"
+      },
+      {
+         "type": "text",
+         "id": "desc_btn_title",
+         "label": "Video Description Button Title",
+         "default": "View Instructions"
+      },
+      {
+        "type": "text",
+        "id": "btn_text",
+        "label": "Button Text",
+        "default": "View More videos"
+      },
+      {
+        "type": "paragraph",
+        "content": "Slider videos are entered through blocks below, all other videos displayed in this page are entered through metafields. "
+      },
+      {
+      "type": "number",
+      "id": "pagination_count",
+      "label": "Add items count to be displayed.",
+      "info": "Add Count of items to be displays in pagination.",
+      "default": 3
+      }
+    ],
+    "blocks": [
+    {
+         "name": "Video slider",
+         "type": "video-slider",
+         "settings": [
+           {
+              "type": "url",
+              "id": "post_video_link",
+              "label": "Youtube Video Link"
+           },
+           {
+              "type": "image_picker",
+              "id": "post_image",
+              "label": "Video Placeholder Image"
+           },
+           {
+              "type": "text",
+              "id": "post_title",
+              "label": "Video Title",
+              "default": "Towel Blotting Technique: Perm Pillar #2"
+           },
+           {
+             "type":"paragraph",
+             "content":"If the post contains any tags, add them below."
+           },
+           {
+             "type": "textarea",
+             "id": "tags",
+             "label": "Add Tags"  
+           },
+           {
+             "type":"header",
+             "content":"For description on popup"
+           },
+           {
+             "type": "checkbox",
+             "id": "show_instructions",
+             "label": "Show Video Instructions",
+             "default": false
+           },
+           {
+             "type": "text",
+             "id": "content_title",
+             "label": "Video Description Title"
+           },
+           {
+             "type": "html",
+             "id": "post_content",
+             "label": "Video Description"
+           }
+           
+         ] 
+      }
+    ],
+    "presets":
+    [
+      {
+        "name": "Learn How"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

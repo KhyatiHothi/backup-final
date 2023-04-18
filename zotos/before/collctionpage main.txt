@@ -1,0 +1,392 @@
+
+{% if section.blocks.size > 0 %}
+<section class="collection-banner-section shop-brand-banner">
+    <div class="container">
+        <div class="collection-inner-wrapper">
+            <div class="collection-banner-slider">
+              {% for block in section.blocks %}
+                {% case block.type %}
+                {% when 'right-content-banner' %}
+                    <div class="collection-banner-item one-image-content" {% if block.settings.banner_bg_color != blank %}style="background-color:{{ block.settings.banner_bg_color }};"{% endif %}>
+                        <div class="container">
+                            <div class="collection-slide-content right-content">
+                                {% if block.settings.image !=  blank %}
+                                  <div class="collection-slide-img">
+                                      <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt | escape }}">
+                                  </div>
+                                {% endif %}
+                                {% if block.settings.heading !=  blank or block.settings.sub_heading !=  blank or block.settings.sub_text !=  blank or block.settings.content !=  blank or block.settings.btn_text !=  blank %}
+                                  <div class="collection-slide-content-inner" {% if block.settings.banner_text_color != blank %}style="color:{{ block.settings.banner_text_color }};"{% endif %}>
+                                      <div class="top-content">
+                                          {% if block.settings.heading != blank %}
+                                            <h2 class="script">{{ block.settings.heading }}</h2>
+                                          {% endif %}
+                                          {% if block.settings.sub_heading != blank %}
+                                            <h3 class="script condensed">{{ block.settings.sub_heading }}</h3>
+                                          {% endif %}
+                                          {% if block.settings.sub_text != blank %}
+                                            <p class="condensed">{{ block.settings.sub_text }}</p>
+                                          {% endif %}
+                                          {{ block.settings.content }}
+                                      </div>
+                                      {% if block.settings.btn_link != blank and block.settings.btn_text != blank %}
+                                        <a href="{{ block.settings.btn_link }}" class="primary-btn {% if block.settings.btn_color == 'white' %}white-btn{% endif %}" title="{{ block.settings.btn_text }}" {% if block.settings.open_new_tab  == 'new_tab' %}target="_blank"{% endif %}>{{ block.settings.btn_text }}</a>
+                                      {% endif %}
+                                      <div class="slider-dots">
+                                      </div>
+                                  </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                {% when 'two-image-banner' %}
+                    <div class="collection-banner-item two-image-content">
+                        <div class="container">
+                            <div class="collection-slide-content center-content">
+                                {% if block.settings.image1 != blank %}
+                                  <div class="collection-slide-img left">
+                                      <img src="{{ block.settings.image1 | img_url: 'master' }}" alt="{{ block.settings.image1.alt | escape }}">
+                                  </div>
+                                {% endif %}
+                                {% if block.settings.heading !=  blank or block.settings.sub_heading !=  blank or block.settings.sub_text !=  blank or block.settings.content !=  blank or block.settings.btn_text !=  blank %}
+                                  <div class="collection-slide-content-inner">
+                                      <div class="top-content">
+                                          {% if block.settings.heading != blank %}
+                                            <h2 class="script">{{ block.settings.heading }}</h2>
+                                          {% endif %}
+                                          {% if block.settings.sub_heading != blank %}
+                                            <h3 class="script condensed">{{ block.settings.sub_heading }}</h3>
+                                          {% endif %}
+                                          {% if block.settings.sub_text != blank %}
+                                            <p class="condensed">{{ block.settings.sub_text }}</p>
+                                          {% endif %}
+                                          {{ block.settings.content }}
+                                      </div>
+                                      {% if block.settings.btn_link != blank and block.settings.btn_text != blank %}
+                                        <a href="{{ block.settings.btn_link }}" class="primary-btn {% if block.settings.btn_color == 'white' %}no-bg{% endif %}" title="{{ block.settings.btn_text }}" {% if block.settings.open_new_tab  == 'new_tab' %}target="_blank"{% endif %}>{{ block.settings.btn_text }}</a>
+                                      {% endif %}
+                                      <div class="slider-dots">
+                                      </div>
+                                  </div>
+                                {% endif %}
+                                {% if block.settings.image2 != blank %}
+                                  <div class="collection-slide-img right">
+                                      <img src="{{ block.settings.image2 | img_url: 'master' }}" alt="{{ block.settings.image2.alt | escape }}">
+                                  </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                {% when 'center-content-banner' %}
+                    <div class="collection-banner-item">
+                        {% if block.settings.image != blank and block.settings.mob_image != blank %}
+                          <div class="collection-banner-bg desktop-img">
+                              <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt | escape }}">
+                          </div>
+                          <div class="collection-banner-bg mble-img">
+                              <img src="{{ block.settings.mob_image | img_url: 'master' }}" alt="{{ block.settings.mob_image.alt | escape }}">
+                          </div>
+                        {% endif %}
+                        {% if block.settings.heading !=  blank or block.settings.sub_heading !=  blank or block.settings.sub_text !=  blank or block.settings.content !=  blank or block.settings.btn_text !=  blank %}
+                          <div class="container">
+                              <div class="collection-slide-content center-content" {% if block.settings.banner_text_color != blank %}style="color:{{ block.settings.banner_text_color }};"{% endif %}>
+                                  <div class="collection-slide-content-inner">
+                                      <div class="top-content">
+                                          {% if block.settings.heading != blank %}
+                                              <h2 class="script">{{ block.settings.heading }}</h2>
+                                            {% endif %}
+                                            {% if block.settings.sub_heading != blank %}
+                                              <h3 class="script condensed">{{ block.settings.sub_heading }}</h3>
+                                            {% endif %}
+                                            {% if block.settings.sub_text != blank %}
+                                              <p class="condensed">{{ block.settings.sub_text }}</p>
+                                            {% endif %}
+                                            {{ block.settings.content }}
+                                     </div>
+                                     {% if block.settings.btn_link != blank and block.settings.btn_text != blank %}
+                                        <a href="{{ block.settings.btn_link }}" class="primary-btn {% if block.settings.btn_color == 'white' %}white-btn{% endif %}" title="{{ block.settings.btn_text }}" {% if block.settings.open_new_tab  == 'new_tab' %}target="_blank"{% endif %}>{{ block.settings.btn_text }}</a>
+                                     {% endif %}
+                                      <div class="slider-dots">
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                        {% endif %}
+                    </div>
+                {% endcase %}
+              {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}
+
+
+{% schema %}
+{
+  "name": "t:sections.main-collection-banner.name",
+  "class": "section",
+  "settings": [],
+  "blocks": [
+      {
+        "type": "right-content-banner",
+        "name": "Right side content banner",
+        "settings" : [
+          {
+            "type": "image_picker",
+            "id": "image", 
+            "label": "Banner Image"
+          },
+          {
+            "type": "color",
+            "id": "banner_bg_color", 
+            "label": "Background color",
+            "default": "rgb(249, 63, 41)"
+          },
+          {
+            "type": "color",
+            "id": "banner_text_color", 
+            "label": "Text color",
+            "default": "#fff"
+          },
+          {
+            "type": "text",
+            "id": "heading", 
+            "label": "Banner Heading",
+            "default": "Salon Worthy Results"
+          },
+          {
+            "type": "text",
+            "id": "sub_heading", 
+            "label": "Sub Heading",
+            "default": "Proven to Fight all 5 Signs of Aging Hair™"
+          },
+          {
+            "type": "text",
+            "id": "sub_text", 
+            "label": "Sub text",
+            "default": "At Home"
+          },
+          {
+            "type": "html",
+            "id": "content", 
+            "label": "Content"
+          },
+          {
+            "type": "text",
+            "id": "btn_text", 
+            "label": "Button text",
+            "default": "Shop Now"
+          },
+          {
+            "type": "url",
+            "id": "btn_link", 
+            "label": "Button link"
+          },
+          {
+            "type": "select",
+            "id": "btn_color",
+            "label": "Select Button",
+            "options": [
+              {
+                "value": "white",
+                "label": "White"
+              },
+              {
+                "value": "black",
+                "label": "Black"
+              }
+            ],
+            "default": "white"
+          },
+          {
+            "type": "select",
+            "id": "open_new_tab",
+            "label": "Open Link in...",
+            "options": [
+              {
+                "value": "same_tab",
+                "label": "Same Tab"
+              },
+              {
+                "value": "new_tab",
+                "label": "New Tab"
+              }
+            ],
+            "default": "same_tab"
+          }
+        ]
+      },
+      {
+        "type": "two-image-banner",
+        "name": "Two Image banner",
+        "settings" : [
+          {
+            "type": "image_picker",
+            "id": "image1", 
+            "label": "Left Banner Image"
+          },
+          {
+            "type": "image_picker",
+            "id": "image2", 
+            "label": "Right Banner Image"
+          },
+          {
+            "type": "text",
+            "id": "heading", 
+            "label": "Banner Heading",
+            "default": "Salon Worthy Results"
+          },
+          {
+            "type": "text",
+            "id": "sub_heading", 
+            "label": "Sub Heading",
+            "default": "Proven to Fight all 5 Signs of Aging Hair™"
+          },
+          {
+            "type": "text",
+            "id": "sub_text", 
+            "label": "Sub text",
+            "default": "At Home"
+          },
+          {
+            "type": "html",
+            "id": "content", 
+            "label": "Content"
+          },
+          {
+            "type": "text",
+            "id": "btn_text", 
+            "label": "Button text",
+            "default": "Shop Now"
+          },
+          {
+            "type": "url",
+            "id": "btn_link", 
+            "label": "Button link"
+          },
+          {
+            "type": "select",
+            "id": "btn_color",
+            "label": "Select Button",
+            "options": [
+              {
+                "value": "white",
+                "label": "White"
+              },
+              {
+                "value": "black",
+                "label": "Black"
+              }
+            ],
+            "default": "white"
+          },
+          {
+            "type": "select",
+            "id": "open_new_tab",
+            "label": "Open Link in...",
+            "options": [
+              {
+                "value": "same_tab",
+                "label": "Same Tab"
+              },
+              {
+                "value": "new_tab",
+                "label": "New Tab"
+              }
+            ],
+            "default": "same_tab"
+          }
+        ]
+      },
+      {
+        "type": "center-content-banner",
+        "name": "Center content banner",
+        "settings" : [
+          {
+            "type": "image_picker",
+            "id": "image", 
+            "label": "Banner Image(For Desktop)"
+          },
+          {
+            "type": "image_picker",
+            "id": "mob_image", 
+            "label": "Banner Image(For Mobile)"
+          },
+          {
+            "type": "color",
+            "id": "banner_text_color", 
+            "label": "Text color",
+            "default": "#fff"
+          },
+          {
+            "type": "text",
+            "id": "heading", 
+            "label": "Banner Heading",
+            "default": "Salon Worthy Results"
+          },
+          {
+            "type": "text",
+            "id": "sub_heading", 
+            "label": "Sub Heading",
+            "default": "Proven to Fight all 5 Signs of Aging Hair™"
+          },
+          {
+            "type": "text",
+            "id": "sub_text", 
+            "label": "Sub text",
+            "default": "At Home"
+          },
+          {
+            "type": "html",
+            "id": "content", 
+            "label": "Content"
+          },
+          {
+            "type": "text",
+            "id": "btn_text", 
+            "label": "Button text",
+            "default": "Shop Now"
+          },
+          {
+            "type": "url",
+            "id": "btn_link", 
+            "label": "Button link"
+          },
+          {
+            "type": "select",
+            "id": "btn_color",
+            "label": "Select Button",
+            "options": [
+              {
+                "value": "white",
+                "label": "White"
+              },
+              {
+                "value": "black",
+                "label": "Black"
+              }
+            ],
+            "default": "white"
+          },
+          {
+            "type": "select",
+            "id": "open_new_tab",
+            "label": "Open Link in...",
+            "options": [
+              {
+                "value": "same_tab",
+                "label": "Same Tab"
+              },
+              {
+                "value": "new_tab",
+                "label": "New Tab"
+              }
+            ],
+            "default": "same_tab"
+          }
+        ]
+      }
+    ]
+}
+{% endschema %}

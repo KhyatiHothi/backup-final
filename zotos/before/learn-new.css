@@ -1,0 +1,362 @@
+/*learn-how-form-section*/
+.learn-how-form-section { border-top: 0.1rem solid #e5e5e5; margin-bottom: 5rem; text-align: center; }
+.learn-how-form-section .title-block { line-height: 1.5; margin: 7rem auto 6rem; max-width: 100%; width: 76.8rem; text-align: center; }
+.learn-how-form-section .custom-form { margin: 0 auto; }
+.learn-how-form-section h1 { margin-bottom: 1.5rem; }
+
+/* how to videos section*/
+.how-to-videos-section { background: #f4f6f9; margin-bottom: 6rem; padding: 6rem 0 2rem; }
+.how-to-videos-section .how-to-video-grid { align-items: center; margin-bottom: 4rem; }
+.how-to-videos-section .how-to-video-grid .content-block { margin-bottom: 4.5rem; text-align: center; }
+.how-to-videos-section .how-to-video-grid .content-block p { font-size: 1.6rem; line-height: 1.5; margin: 0.8rem 0 2.5rem; }
+.how-to-videos-section .how-to-video-grid .video-block { flex: 1 1; margin: 0 -2.4rem; padding: 0 5.4rem; }
+.how-to-videos-section .how-to-video-grid .video-block a { background: 0 0; border: none; color: inherit; font-family: inherit; font-size: inherit; font-weight: inherit; letter-spacing: normal; line-height: inherit; padding: 0; text-align: initial; text-transform: inherit; text-align: center; width: 100%; }
+.how-to-videos-section .how-to-video-grid .video-block a .image-wrapper { margin-bottom: 1.8rem; background-color: rgba(33, 37, 41, .2); flex: 1 1; overflow: hidden; position: relative; }
+.how-to-videos-section .how-to-video-grid .video-block a .image-block { position: relative; padding-bottom: 56.25%;overflow:hidden;}
+.how-to-videos-section .how-to-video-grid .video-block a .image-block::before{
+    content: url({{ 'youtube-icon-black.svg' | asset_url }});
+    display: block;
+    height: 4.3rem;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate3d(-50%,-50%,0);
+    transform: translate3d(-50%,-50%,0);
+    transition: -webkit-transform .2s cubic-bezier(.785,.135,.15,.86);
+    transition: transform .2s cubic-bezier(.785,.135,.15,.86);
+    transition: transform .2s cubic-bezier(.785,.135,.15,.86),-webkit-transform .2s cubic-bezier(.785,.135,.15,.86);
+    width: 6.3rem;
+    z-index: 8;  
+    box-sizing:border-box;
+}
+.how-to-videos-section .how-to-video-grid .video-block a .image-block img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .2s cubic-bezier(.785,.135,.15,.86),-webkit-transform .2s cubic-bezier(.785,.135,.15,.86);}
+.how-to-videos-section .how-to-video-grid .video-block a ul { color: rgba(33, 37, 41, .6); display: flex; flex-wrap: wrap; font-size: 1.4rem; list-style: none; margin: 0 0 0.7rem; padding-left: 0; justify-content: center; }
+.how-to-videos-section .how-to-video-grid .video-block a ul li { margin-right: 0.5rem; position: relative; }
+.how-to-videos-section .how-to-video-grid .video-block a ul li::after { content:","; }
+.how-to-videos-section .how-to-video-grid .video-block a h3 { font-size: 1.6rem; margin-bottom: 0.5rem; font-family: 'helvetica-neue-std-black', Open Sans,Arial,sans-serif;; }
+.how-to-videos-section .how-to-video-grid .video-block .slick-list { margin: 0 -12px; }
+.how-to-videos-section .how-to-video-grid .video-block .slider-item { padding: 0 12px; }
+
+.how-to-videos-section .how-to-video-grid .video-block a:hover .image-block::before,.how-to-videos-section .how-to-video-grid .video-block a:focus .image-block::before{transform: translate3d(-50%,-50%,0) scale(1.1);}
+.how-to-videos-section .how-to-video-grid .video-block a:hover .image-block img,.how-to-videos-section .how-to-video-grid .video-block a:focus .image-block img{transform:scale(1.1);}
+.how-to-videos-section .how-to-video-grid .video-block a:hover h3,.how-to-videos-section .how-to-video-grid .video-block a:focus h3{color:#b30013;}
+
+/*article-gallary-section*/
+.article-gallary-section .title-block-wrapper { position: relative; }
+.article-gallary-section .title-block { margin: 0 auto 3rem; max-width: 100%; text-align: center; width: 78rem; text-align: center; }
+.article-gallary-section .title-block p { font-size: 1.6rem; line-height: 1.5; margin-top: 1.5rem; }
+.article-gallary-section h2 { font-size: 8.7rem; line-height: .8;}
+
+/*pop-up css*/
+.custom-popup .popup-dialog .popup-content .popup-content-inner.has-text .video-title{padding: 2.5rem 2.4rem 0;}
+.custom-popup .popup-dialog .popup-content .popup-content-inner.has-text .video-title-wrapper {padding: 0 2.4rem 2.5rem;}
+
+
+@media(min-width:992px) {
+
+  /* how to videos section*/
+  .how-to-videos-section { margin-bottom: 9rem; padding: 9rem 0 2rem; }
+  .how-to-videos-section .how-to-video-grid { grid-column-gap: 5rem; display: grid; grid-template-columns: minmax(0, 35rem) minmax(0, auto); margin-bottom: 6rem; }
+  .how-to-videos-section .how-to-video-grid .video-block { margin: 0; padding: 0 5rem; }
+
+  /*article-gallary-section*/
+  .article-gallary-section .title-block { margin: 0 auto 6rem; }
+  .article-gallary-section h2 { font-size: 10rem; line-height: 1; }
+  
+}
+
+@media(min-width:1200px){
+  .how-to-videos-section .how-to-video-grid .video-block .slick-next { right: -5rem; }
+  .how-to-videos-section .how-to-video-grid .video-block .slick-prev { left: -5rem; }  
+}
+
+@media(max-width:1199px){
+  .how-to-videos-section .how-to-video-grid .video-block .slick-prev{left:-3rem;}
+  .how-to-videos-section .how-to-video-grid .video-block .slick-next{right:-3rem;}
+}
+
+
+/* 07-02-2023 css start  */
+
+
+.learn-more-take-quiz {
+    padding: 7.8rem 0 9.2rem;
+  background:#fff;
+}
+.learn-more-take-quiz h2 {
+    text-align: center;
+    line-height: 0.7;
+    margin-bottom: 3rem;
+}
+.learn-more-take-quiz .take-quiz-grid-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 2.4rem -6rem 0;
+}
+.learn-more-take-quiz .container {
+   max-width:1750px;
+ }
+.learn-more-take-quiz .take-quiz-grid-wrapper .take-quiz-grid-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0 6rem;
+}
+.learn-more-take-quiz .take-quiz-grid-wrapper .take-quiz-grid-item .image-block {
+  position:relative;
+  padding-top:69.3%;
+}
+.learn-more-take-quiz .take-quiz-grid-wrapper .take-quiz-grid-item .image-block img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.learn-more-take-quiz .take-quiz-grid-wrapper .take-quiz-grid-item .content-block {
+    margin: 2.4rem  auto 0;
+    text-align: center;
+}
+.learn-more-take-quiz .take-quiz-grid-wrapper .take-quiz-grid-item .content-block h3 {
+    font-size: 7.2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    line-height: 0.75;
+}
+.learn-more-take-quiz .take-quiz-grid-wrapper .take-quiz-grid-item .content-block h3 span {
+    display: block;
+}
+.learn-more-take-quiz .take-quiz-grid-wrapper .take-quiz-grid-item .content-block .primary-btn {
+    margin-top: 2.4rem;
+}
+
+
+.virtual-chat-section {
+    position: relative;
+    padding: 5.7rem 0 7.3rem;
+}
+.virtual-chat-section .virtual-chat-bg-img.mobile-img {
+    display: none;
+}
+.virtual-chat-section .virtual-chat-bg-img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.virtual-chat-section .container {
+    max-width: 1396px;
+}
+.virtual-chat-section .virtual-chat-content-block {
+    max-width: 62.7rem;
+    margin-left: auto;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+.virtual-chat-section .virtual-chat-content-block h2 {
+    line-height: 0.7;
+    margin-bottom: 1.6rem;
+}
+.virtual-chat-section .virtual-chat-content-block  p {
+    max-width: 80%;
+    margin: 0 auto 2rem;
+    font-size: 1.8rem;
+}
+.learn-how-to-video {
+    padding: 5.7rem 0  8rem;
+}
+.learn-how-to-video h2 {
+    margin-bottom: 3rem;
+    text-align: center;
+    line-height: 0.7;
+}
+.learn-how-to-video .btn-wrapper {
+    text-align: center;
+    margin-top: 3.2rem;
+}
+.learn-how-to-video .learn-how-to-video-grid {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -3.8rem;
+}
+.learn-how-to-video .learn-how-to-video-grid .learn-how-to-video-grid-item {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;   
+    padding: 0 3.8rem;
+}
+.learn-how-to-video .learn-how-to-video-grid .learn-how-to-video-grid-item .grid-inner {
+    position: relative;
+  line-height:0;
+}
+.learn-how-to-video .learn-how-to-video-grid .learn-how-to-video-grid-item .grid-inner a:before {
+    content: url("{{ 'youtube-icon-red.svg' | asset_url }}");;
+    display: block;
+    height: 4.9rem;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate3d(-50%,-50%,0);
+    transform: translate3d(-50%,-50%,0);
+    transition: transform .2s cubic-bezier(.785,.135,.15,.86);
+    transition: transform .2s cubic-bezier(.785,.135,.15,.86),-webkit-transform .2s cubic-bezier(.785,.135,.15,.86);
+    width: 6.9rem;
+    z-index: 1;
+  opacity:0;
+}
+.learn-how-to-video .learn-how-to-video-grid .learn-how-to-video-grid-item .grid-inner a {
+  padding-top:57%;
+  position:relative;
+  width:100%;
+  overflow:hidden;
+}
+.learn-how-to-video .learn-how-to-video-grid .learn-how-to-video-grid-item .grid-inner a img {
+  position: absolute;
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  object-fit:cover;
+  transition:transform .2s cubic-bezier(.785,.135,.15,.86),-webkit-transform .2s cubic-bezier(.785,.135,.15,.86);
+}
+.learn-how-to-video .learn-how-to-video-grid .learn-how-to-video-grid-item .grid-inner a:hover img ,
+.learn-how-to-video .learn-how-to-video-grid .learn-how-to-video-grid-item .grid-inner a:focus img {
+  transform:scale(1.05)
+}
+.learn-how-to-video .container {
+    max-width: 1740px;
+}
+/* blog-and-technique  */
+.blog-and-technique { background-color: #f4f6f9; padding: 6.1rem 0 6.6rem; text-align: center; }
+.blog-and-technique h2, .visit-shade-chart h2 {  margin-bottom: 3.4rem; line-height: 0.7; }
+.blog-and-technique .blog-grid-main { margin-bottom: 2.7rem; }
+.blog-and-technique .blog-grid-wrappper { display: flex; flex-wrap: wrap; margin: 0 -2.5rem -5rem; }
+.blog-and-technique .blog-grid-wrappper .blog-grid-item { max-width: 25%; flex: 0 0 25%; padding: 0 2.5rem 5rem; }
+.blog-and-technique .blog-grid-wrappper .blog-grid-item a { display: block; position: relative; overflow: hidden; }
+.blog-and-technique .blog-grid-wrappper .blog-grid-item a p { font-size: 2.5rem; font-family: helvetica-neue-condensed-bold, sans-serif, Open Sans; color: #fff; max-width: 25rem; text-transform: uppercase; position: absolute; left: 2.2rem; text-align: left; bottom: 1.3rem; right: 2.2rem; }
+.blog-and-technique .blog-grid-wrappper .blog-grid-item .blog-img { position: relative; padding-bottom: 118%; }
+.blog-and-technique .blog-grid-wrappper .blog-grid-item img { position: absolute; height: 100%; width: 100%; top: 0; left: 0; object-fit: cover; transition: all 0.2s; }
+.blog-and-technique .blog-grid-wrappper .blog-grid-item .blog-content { position: relative; z-index: 2; }
+.blog-and-technique .blog-grid-wrappper .blog-grid-item a:hover img, .blog-and-technique .blog-grid-wrappper .blog-grid-item a:focus img { transform: scale(1.05); }
+
+/* visit-shade-chart  */
+.visit-shade-chart { padding: 8.8rem 0 6.6rem; text-align: center; }
+.visit-shade-chart .container { max-width: 93rem; }
+.visit-shade-chart .visit-shade-grid { display: flex; flex-wrap: wrap; justify-content: space-between; }
+.visit-shade-chart .visit-shade-grid .visit-shade-item { max-width: 50%; flex: 0 0 50%; }
+.visit-shade-chart .visit-shade-grid .visit-shade-item img { margin: 0 auto; }
+.visit-shade-chart .visit-shade-grid .visit-shade-item-inner { display: flex; flex-direction: column; justify-content: space-between; height: 100%; }
+.visit-shade-chart .visit-shade-grid .visit-shade-item-inner .visit-shade-item-content { margin-top: 0.7rem; }
+.visit-shade-chart .visit-shade-grid .visit-shade-item-inner .visit-shade-item-content p {  max-width: 40.1rem;  margin: 0 auto 2rem; }
+.visit-shade-chart .visit-shade-grid .visit-shade-item-inner .visit-shade-item-inner-img { display: flex; align-items: center; height: 100%; }
+.visit-shade-chart .visit-shade-grid .visit-shade-item .text-agebeautiful { max-width: 182rem; height: auto; }
+.visit-shade-chart .visit-shade-grid .visit-shade-item .text-curls { max-width: 90rem; height: auto; }
+
+/* curl-with-confidence-section  */
+.curl-with-confidence-section { position: relative; padding: 6.7rem 0; }
+.curl-with-confidence-section .container { position: relative; }
+.curl-with-confidence-section .curl-confidence-banner { position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: cover; }
+.curl-with-confidence-section .curl-confidence-banner.mobile-img { display: none; }
+.curl-with-confidence-section .curl-confidence-wrapper h2 {  margin-bottom: 1.4rem; line-height: 0.7; }
+.curl-with-confidence-section .curl-confidence-wrapper p { margin-bottom: 2.6rem; }
+.curl-with-confidence-section .curl-confidence-wrapper { margin: 0 auto; max-width: 46.8rem; text-align: center; }
+@media(max-width:1820px) {
+  .learn-more-take-quiz .take-quiz-grid-wrapper { margin:2.4rem -2.4rem 0 }
+  .learn-more-take-quiz .take-quiz-grid-wrapper .take-quiz-grid-item { padding:0 2.4rem}
+  .learn-how-to-video .learn-how-to-video-grid { margin:0 -2.4rem}
+  .learn-how-to-video .learn-how-to-video-grid .learn-how-to-video-grid-item { padding:0 2.4rem }
+   .blog-and-technique .blog-grid-wrappper{margin:0 -1.5rem -3rem}
+  .blog-and-technique .blog-grid-wrappper .blog-grid-item{padding:0 1.5rem 3rem}
+}
+@media (max-width:1366px){
+.blog-and-technique .blog-grid-wrappper .blog-grid-item a p{font-size:2.2rem;line-height:1}
+}
+@media(max-width:1199px) {
+.learn-how-to-video h2 {
+margin-bottom: 1.8rem;
+}
+  .learn-more-take-quiz .take-quiz-grid-wrapper .take-quiz-grid-item .content-block h3 { font-size:5rem}
+  .learn-more-take-quiz { padding:4.5rem 0;}
+  .learn-more-take-quiz .take-quiz-grid-wrapper .take-quiz-grid-item { padding:0 1.5rem}
+  .learn-more-take-quiz .take-quiz-grid-wrapper { margin:1.5rem -1.5rem 0;}
+  .virtual-chat-section { padding:5rem 0;}
+  .virtual-chat-section .virtual-chat-content-block { max-width:48rem}
+  .virtual-chat-section .virtual-chat-content-block p { max-width:100%;}
+  .learn-how-to-video { padding:5rem 0;}
+  .learn-how-to-video .learn-how-to-video-grid { margin:0 -1.5rem}
+  .learn-how-to-video .learn-how-to-video-grid .learn-how-to-video-grid-item { padding:0 1.5rem }
+  .learn-how-to-video .learn-how-to-video-grid .learn-how-to-video-grid-item .grid-inner a:before { width:3rem;height:2.3rem }
+  .blog-and-technique,.curl-with-confidence-section,.visit-shade-chart{padding:4.5rem 0}
+.blog-and-technique .blog-grid-wrappper{margin:0 -1rem -2rem}
+.blog-and-technique .blog-grid-wrappper .blog-grid-item{padding:0 1rem 2rem}
+.curl-with-confidence-section .curl-confidence-wrapper p{margin-bottom:1.5rem}
+.blog-and-technique h2,.visit-shade-chart h2{margin-bottom:1.8rem}
+.visit-shade-chart .visit-shade-grid .visit-shade-item .text-agebeautiful{max-width:24rem}
+.visit-shade-chart .visit-shade-grid .visit-shade-item .text-curls{max-width:12rem}
+}
+@media(max-width:991px) {
+ .blog-and-technique .blog-grid-wrappper{margin:0 -.5rem -1rem}
+.blog-and-technique .blog-grid-wrappper .blog-grid-item{padding:0 .5rem 1rem}
+}
+@media(max-width:767px) {
+ 
+  .learn-more-take-quiz .take-quiz-grid-wrapper { flex-wrap:wrap;margin:1.3rem -2.4rem 0}
+  .learn-more-take-quiz .take-quiz-grid-wrapper .take-quiz-grid-item { padding:0;max-width:100%;flex:0 0 100%;order:2;}
+  .learn-more-take-quiz .take-quiz-grid-wrapper .take-quiz-grid-item.reverse-order-mobile { order:1;margin-bottom:3.8rem }
+  .learn-more-take-quiz { padding:3.7rem 0 4.7rem}
+  .learn-more-take-quiz .take-quiz-grid-wrapper .take-quiz-grid-item .image-block { padding-top:75.3%}
+  .learn-more-take-quiz .take-quiz-grid-wrapper .take-quiz-grid-item .content-block { margin-top:1.3rem;padding:0 15px}
+  .learn-more-take-quiz .take-quiz-grid-wrapper .take-quiz-grid-item .content-block h3 { font-size:3.8rem;}
+  .learn-more-take-quiz .take-quiz-grid-wrapper .take-quiz-grid-item .content-block .primary-btn { margin-top: 1.3rem; }
+  .virtual-chat-section .virtual-chat-bg-img.desktop-img { display:none;}
+  .virtual-chat-section .virtual-chat-bg-img.mobile-img { display:block;}
+  .virtual-chat-section .virtual-chat-content-block { max-width:100%;}
+  .virtual-chat-section { padding:1.8rem 0 70%}
+  .virtual-chat-section .virtual-chat-content-block p { max-width:80%;margin-bottom:1rem}
+  .learn-how-to-video .learn-how-to-video-grid { flex-wrap:wrap;margin:0}
+  .learn-how-to-video .learn-how-to-video-grid .learn-how-to-video-grid-item { padding:0;max-width:100%;flex:0 0 100%}
+  .learn-how-to-video .learn-how-to-video-grid .learn-how-to-video-grid-item:not(:last-child) { margin-bottom:2rem}
+  .learn-how-to-video { padding:4.2rem 0 3.7rem;}
+  .learn-how-to-video .container { padding:0 2.8rem}
+  .learn-how-to-video .btn-wrapper { margin-top:1.7rem;}
+  .blog-and-technique{padding:3.6rem 0 4.5rem}
+.blog-and-technique .blog-grid-wrappper .blog-grid-item .blog-img{padding-bottom:120%}
+.blog-and-technique .blog-grid-wrappper{display:flex;flex-wrap:wrap;margin:0 -.5rem -1rem}
+.blog-and-technique .blog-grid-wrappper .blog-grid-item{max-width:50%;flex:0 0 50%;padding:0 .5rem 1rem}
+.blog-and-technique .blog-grid-wrappper .blog-grid-item a p{left:1.2rem;bottom:1rem;right:4rem;font-size:1.8rem;}
+.blog-and-technique .blog-grid-main{margin-bottom:2rem}
+.visit-shade-chart{padding:4.2rem 0 3.7rem}
+.visit-shade-chart .visit-shade-grid .visit-shade-item .text-agebeautiful{max-width:18.2rem}
+.visit-shade-chart .visit-shade-grid .visit-shade-item-inner .visit-shade-item-content{margin-top:1.2rem}
+.visit-shade-chart .visit-shade-grid .visit-shade-item-inner .visit-shade-item-content p{max-width:24.2rem;}
+.visit-shade-chart .visit-shade-grid .visit-shade-item .text-curls{max-width:9rem}
+.visit-shade-chart .visit-shade-grid .visit-shade-item{max-width:100%;flex:0 0 100%;padding-bottom:3.6rem}
+.visit-shade-chart .visit-shade-grid .visit-shade-item:last-of-type{padding-bottom:0}
+.curl-with-confidence-section .curl-confidence-banner.mobile-img{display:block}
+.curl-with-confidence-section .curl-confidence-banner.desktop-img{display:none}
+.curl-with-confidence-section{padding:2.6rem 0 50%}
+.curl-with-confidence-section .curl-confidence-wrapper h2{margin-bottom:1rem}
+}
+@media(max-width:575px) {
+  .curl-with-confidence-section {
+    padding: 2.6rem 0 58%;
+}
+  .virtual-chat-section {
+    padding:1.8rem 0 140%
+  }
+}
+@media (max-width:479px) {
+  .blog-and-technique .blog-grid-wrappper { margin: 0 -0.25rem -0.5rem; }
+  .blog-and-technique .blog-grid-wrappper .blog-grid-item { padding: 0 0.25rem 0.5rem; }
+  .blog-and-technique .container { padding: 0 0.75rem; }
+  .curl-with-confidence-section {   padding: 2.3rem 0 57.1%; }
+}
+@media (max-width:374px) {
+.curl-with-confidence-section {padding: 2.3rem 0 128%;}
+.virtual-chat-section {
+  padding: 1.8rem 0 152%;
+}
+}
+/* 07-02-2023 css end  */

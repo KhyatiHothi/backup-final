@@ -1,0 +1,62 @@
+@font-face {
+  font-family: "summer-loving";
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: url('{{ "SummerLovingSolid-Regular.eot" | file_url }}') format("embedded-opentype"),
+       url('{{ "SummerLovingSolid-Regular.woff" | file_url }}') format("woff"),
+       url('{{ "SummerLovingSolid-Regular.woff2" | file_url }}') format("woff2"),
+       url('{{ "SummerLovingSolid-Regular.ttf" | file_url }}') format("truetype"),
+       url('{{ "SummerLovingSolid-Regular.svg" | file_url }}') format("svg");
+}
+
+@font-face {
+  font-family: "helvetica-neue-condensed-bold";
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+  src: url('{{ "HelveticaNeueLTStd-BdCn.eot" | file_url }}') format("embedded-opentype"),
+       url('{{ "HelveticaNeueLTStd-BdCn.woff" | file_url }}') format("woff"),
+       url('{{ "HelveticaNeueLTStd-BdCn.woff2" | file_url }}') format("woff2"),
+       url('{{ "HelveticaNeueLTStd-BdCn.ttf" | file_url }}') format("truetype"),
+       url('{{ "HelveticaNeueLTStd-BdCn.svg" | file_url }}') format("svg");
+}
+   
+  
+@font-face {
+  font-family: "helvetica-neue-condensed";
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: url('{{ "HelveticaNeueLTStd-Cn.eot" | file_url }}') format("embedded-opentype"),
+       url('{{ "HelveticaNeueLTStd-Cn.woff2" | file_url }}') format("woff2"),
+       url('{{ "HelveticaNeueLTStd-Cn.woff" | file_url }}') format("woff"),
+       url('{{ "HelveticaNeueLTStd-Cn.ttf" | file_url }}') format("truetype"),
+       url('{{ "HelveticaNeueLTStd-Cn.eot" | file_url }}') format("embedded-opentype"),
+       url('{{ "HelveticaNeueLTStd-Cn.svg" | file_url }}') format("svg");
+}
+  
+@font-face {
+    font-family: "helvetica-neue-std";
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    src: url('{{ "HelveticaNeueLTStd-Roman.eot" | file_url }}') format("embedded-opentype"),
+         url('{{ "HelveticaNeueLTStd-Roman.woff2" | file_url }}') format("woff2"),
+         url('{{ "HelveticaNeueLTStd-Roman.woff" | file_url }}') format("woff"),
+         url('{{ "HelveticaNeueLTStd-Roman.ttf" | file_url }}') format("truetype"),
+         url('{{ "HelveticaNeueLTStd-Roman.svg" | file_url }}') format("svg");
+}
+  
+@font-face {
+    font-family: "helvetica-neue-std-black";
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+    src: url('{{ "HelveticaNeueLTStd-Hv.eot" | file_url }}') format("embedded-opentype"),
+         url('{{ "HelveticaNeueLTStd-Hv.woff2" | file_url }}') format("woff2"),
+         url('{{ "HelveticaNeueLTStd-Hv.woff" | file_url }}') format("woff"),
+         url('{{ "HelveticaNeueLTStd-Hv.ttf" | file_url }}') format("truetype"),
+         url('{{ "HelveticaNeueLTStd-Hv.svg" | file_url }}') format("svg");
+}
+  

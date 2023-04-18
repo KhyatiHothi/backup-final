@@ -1,0 +1,527 @@
+<section class="productpage-main-section">
+    <div class="container">
+      <div class="single-breadcrumb">
+        <div class="breadcrumb">
+          {% if collection %}
+          <a href="{{ collection.url }}" class="breadcrumb-back" title="Back">
+            <svg enable-background="new 0 0 11.4 10" viewBox="0 0 11.4 10">
+              <path
+                d="m11.2 4.4-4.2-4.2c-.3-.3-.8-.3-1.1 0s-.3.8 0 1.1l2.8 2.8h-7.9c-.5 0-.8.3-.8.8s.4.8.8.8h8.1l-3 3c-.3.3-.3.8 0 1.1.1.1.3.2.5.2s.4-.1.6-.3l4.2-4.2c.3-.3.3-.8 0-1.1z"
+                ></path>
+            </svg>
+            Back to shop
+          </a>
+            {% endif %}
+          <div class="breadcrumb-wrapper start">
+            <ul class="breadcrumb-list">
+              <li class="breadcrumb-item">
+                <a href="#" title="Home" class="breadcrumb-item-link change-link">Home</a>
+                <span class="breadcrumb-item-separator">/</span>
+              </li>
+              {% if collection.url %}
+                  <li class="breadcrumb-item">
+                    <a href="{{ collection.url }}" title="Shop" class="breadcrumb-item-link">{{ collection.title }}</a>
+                    <span class="breadcrumb-seprator">/</span>
+                  </li>
+                {% endif %}
+              <li class="breadcrumb-item">
+                <a aria-current="page" href="#" class="breadcrumb-item-link">{{ product.title }}</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="productpage-main-inner">
+        {% if product.vendor != blank or product.title != blank  %}
+            <div class="productpage-titlecontent productpage-titlecontent-mobile">
+              {% if product.vendor != blank %}
+                  <p class="productpage-vendor">{{ product.vendor }}</p>
+              {% endif %}
+              {% if product.title != blank %}
+                  <h1 class="productpage-title">{{ product.title }}</h1>
+              {% endif %}
+            </div>
+        {% endif %}
+        
+     
+        {% if product.media.size > 0 %}
+             <div class="productpage-gallery">
+                <div class="slider productpage-gallery-thumbnails thumb-image">
+  
+  
+         
+                  {% for variant in product.variants %}
+  
+                  {%  comment  %}
+                show each variant's main image
+                  {% endcomment %}
+                    
+                        <div class="thumbnail-image variant {% if product.selected_variant == variant %}variant-default{% endif %}" data-target="{{ variant.title }}">
+                          <a  href="javascript:void(0)" class="thumbnail-image-inner">
+                           <div class="thumbImg">
+                             <img src="{{ variant.featured_media.preview_image | img_url: '1500x1500',  crop: 'center' }}" alt="{{ variant.featured_media.alt | escape }}">
+                           </div>
+                         </a>
+                        </div>
+  
+               {%  comment  %}
+                show the variants custom images
+               {% endcomment %}
+  
+  
+                  {% for image in variant.metafields.accentuate.pdp_images %}
+                    <div class="thumbnail-image variant {% if product.selected_variant == variant %}variant-default{% endif %}" data-target="{{ variant.title }}">
+                          <a  href="javascript:void(0)" class="thumbnail-image-inner">
+                           <div class="thumbImg">
+                             <img src="{{ image.src | append: '&transform=resize=1500x1500'  }}" alt="{{ image.alt | escape }}">
+                           </div>
+                         </a>
+                        </div>
+  
+                    
+                  {% endfor %}
+                  
+              {% endfor %}
+                  
+                    
+                   
+  
+  
+                    {%- assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' -%}
+  
+          
+                  {% for media in product.media %}
+  
+                     {% unless variant_images contains media.src  %}
+  
+                       
+                    {% case media.media_type %}
+                      {% when 'image' %}
+                        <div class="thumbnail-image always {{ media.attached_to_variant }}">
+                          <a  href="javascript:void(0)" class="thumbnail-image-inner">
+                           <div class="thumbImg">
+                             <img src="{{ media.preview_image | img_url: '1500x1500',  crop: 'center' }}" alt="{{ media.alt | escape }}">
+                           </div>
+                         </a>
+                        </div>
+                      {% when 'video' %}
+                         <div class="thumbnail-image with-video  always" data-target="{{ media.id }}">
+                           <a href="javascript:void(0)" class="thumbnail-image-inner">
+                              <div class="thumbImg">
+                                <img src="{{ media | img_url: '1500x1500',  crop: 'center' }}" alt="{{ media.alt | escape }}">
+                              </div>
+                            </a>
+                        </div>
+                  {% when 'external_video' %}
+                         <div class="thumbnail-image with-video  always" data-target="{{ media.id }}">
+                           <a href="javascript:void(0)" class="thumbnail-image-inner">
+                              <div class="thumbImg">
+                                <img src="{{ media | img_url: '1500x1500',  crop: 'center' }}" alt="{{ media.alt | escape }}">
+                              </div>
+                            </a>
+                        </div>
+  
+  
+                  
+                      {% endcase %}
+                    {% endunless %}
+                       
+                  {% endfor %}
+                </div>
+  
+  
+  
+  
+               
+                <div class="slider productpage-gallery-featured">
+  
+           {% for variant in product.variants %}
+  
+                  {%  comment  %}
+                show each variant's main image
+                  {% endcomment %}
+                    
+                        <div class="slider-banner-image variant {% if product.selected_variant == variant %}variant-default{% endif %}" data-target="{{ variant.title }}">
+                          <a  href="javascript:void(0)" class="">
+                           <div class="thumbImg">
+                             <img src="{{ variant.featured_media.preview_image | img_url: '1500x1500',  crop: 'center' }}" alt="{{ variant.featured_media.alt | escape }}">
+                           </div>
+                         </a>
+                        </div>
+  
+               {%  comment  %}
+                show the variants custom images
+               {% endcomment %}
+  
+  
+                  {% for image in variant.metafields.accentuate.pdp_images %}
+                    <div class="slider-banner-image variant {% if product.selected_variant == variant %}variant-default{% endif %}" data-target="{{ variant.title }}">
+                          <a  href="javascript:void(0)" class="">
+                           <div class="thumbImg">
+                             <img src="{{ image.src  | append: '&transform=resize=1500x1500' }}" alt="{{ image.alt | escape }}">
+                           </div>
+                         </a>
+                        </div>
+  
+                    
+                  {% endfor %}
+                  
+              {% endfor %}
+  
+  
+    {%- assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' -%}
+          
+                   {% for media in product.media %}
+                      {% unless variant_images contains media.src  %}
+                     {% case media.media_type %}
+                      {% when 'image' %}
+                        <div class="slider-banner-image  always">
+                          <img src="{{ media | img_url: '1500x1500', crop: 'center' }}" alt="{{ media.alt | escape }}"> 
+                        </div>
+                      {% when 'video' %}
+                        <div class="slider-banner-image with-video-main  always" data-target="{{ media.id }}">  
+                          <img class="slider-banner-placeholder-img" src="{{ media | img_url: '1500x1500',  crop: 'center' }}" alt="{{ media.alt | escape }}">  
+                          <video class="productpage-gallery-featured-video" src="{{ media.sources[1].url }}" controls=""></video>         
+                       </div>
+                {% when 'external_video' %}
+    <div class="slider-banner-image with-video-main  always" data-target="{{ media.id }}">  
+                          <div class="containerVideo" style="position: relative;overflow: hidden;padding-top: 100%;">
+                            <iframe src="{{ media | external_video_url }}" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" style="position: absolute;top: 0;left: 0;bottom: 0;right: 0;width: 100%;height: 100%;" width="560" height="315" frameborder="0">
+                              
+                            </iframe></div>     
+                       </div>
+                  
+                    {% endcase %}
+                       {% endunless %}
+                 {% endfor %}
+                </div>
+              </div>
+        {% endif %}
+        
+        <div class="productpage-content">
+          {% if product.vendor != blank or product.title != blank  %}
+              <div class="productpage-titlecontent productpage-titlecontent-desktop">
+                {% if product.vendor != blank %}
+                  <p class="productpage-vendor">{{ product.vendor }}</p>
+                {% endif %}
+                {% if product.title != blank %}
+                  <h1 class="productpage-title">{{ product.title }}</h1>
+                {% endif %}
+              </div>
+          {% endif %}
+          {% if product.metafields.product_content.short_description != blank %}
+            <div class="productpage-summary productpage-summary-desktop">
+              {{ product.metafields.product_content.short_description.html | newline_to_br  }}
+            </div>
+            {% endif %}
+  
+  
+  
+  
+  
+  
+          
+  
+  
+  
+          
+       {% unless product.has_only_default_variant %}
+          <div class="custom-dropdown-wrapper">
+              {% for option in product.options_with_values %}
+                      <button tabindex="0" class="dropdown-toggle"><ul class="dropdown-menu-link">{% for variant in product.variants %}{% if product.selected_variant == variant %}<li><div class="dropdown-img-wrapper"><img src="{% if option.name == 'color' or option.name == 'Color' %}{{ variant.metafields.accentuate.swatch[0].src }}{% else %}{{ variant.image | img_url:"master" }}{% endif %}" alt="drop-down image"></div><span>{{ variant.title }}</span></li>{% endif %}{% endfor %}</ul> {% unless product.selected_variant %}Search for or select a {% if option.name == 'color' or option.name == 'Color' %}shade{% else %}{{ option.name }}{% endif %}{% endunless %}</button>
+                       <div class="custom-dropdown-slidedown">
+                        <div class="custom-dropdown-search">
+                          <label for="color-search" class="dropdown-label">Search for or select a {% if option.name == 'color' or option.name == 'Color' %}shade{% else %}{{ option.name }}{% endif %}</label>
+                          <input id="color-search" name="colorsearch" class="dropdown-input" type="text"
+                            placeholder="Search..." autocomplete="off">
+                          <svg enable-background="new 0 0 20.2 20.2" viewBox="0 0 20.2 20.2">
+                            <path
+                              d="m20 18.9-6-6c1.1-1.4 1.8-3.1 1.8-5 0-4.4-3.5-7.9-7.9-7.9s-7.9 3.5-7.9 7.9 3.5 7.9 7.9 7.9c1.9 0 3.7-.7 5-1.8l6 6c.1.1.3.2.5.2s.4-.1.5-.2c.4-.3.4-.8.1-1.1zm-18.5-11c0-3.5 2.9-6.4 6.4-6.4s6.4 2.9 6.4 6.4-2.9 6.4-6.4 6.4-6.4-2.9-6.4-6.4z"
+                              fill="#212529"></path>
+                          </svg>
+                        </div>
+                        <ul id="myList" class="dropdown-menu-link">
+                               {% for variant in product.variants %}
+                                      <li tabindex="0" id="{{ variant.id }}" data-filter="{{ variant.title }}" quantity="{{ variant.inventory_quantity }}" prod-id="{{ product.id }}" variant-availability="{{ variant.available }}" data-original_price="{{ variant.price | money }}" data-compare_at_price="{{ variant.compare_at_price | money }}">
+                                        <div class="dropdown-img-wrapper">
+                                           <img src="{% if option.name == 'color' or option.name == 'Color' %}{{ variant.metafields.accentuate.swatch[0].src }}{% else %}{{ variant.image | img_url:"master" }}{% endif %}" alt="{{ variant.image.alt | escape }}">
+                                        </div>
+                                        <span>{{ variant.title }}</span>
+                                      </li>
+                                 {% endfor %}
+                        </ul>
+                      </div>
+            
+                    {% if option.name == 'color' or option.name == 'Color' %}
+                          <div class="custom-radiobtn-wrapper">
+                            {% for variant in product.variants %}
+                                  {% if variant.metafields.accentuate.swatch[0].src != blank %}
+                                    <div class="custom-radiobtn-grp" data-input="{{ variant.title }}" tabindex="0">
+                                      <label for="custom-radio{{ forloop.index }}" class="custom-radio-label">
+                                        <input fetch="{{ variant.id }}" quantity="{{ variant.inventory_quantity }}"  variant-availability="{{ variant.available }}"  prod-id="{{ product.id }}" data-original_price="{{ variant.price | money }}" data-compare_at_price="{{ variant.compare_at_price | money }}" type="radio"  name="color" value="custom-radio{{ forloop.index }}" id="custom-radio1"
+                                          class="custom-radio-input" tabindex="-1"  title="{{ variant.title }}">
+                                        <div class="dropdown-img-wrapper swatch-style"{% if product.selected_variant == variant %}style="border-color: #212529;"{% endif %}>
+                                          <img src="{{ variant.metafields.accentuate.swatch[0].src }}" alt="{{ variant.metafields.accentuate.swatch[0].alt |escape }}">
+                                        </div>
+                                        <span class="screenreader">{{ variant.title }}</span>
+                                      </label>
+                                    </div>
+                                  {% endif %}
+                              {% endfor %}
+                          </div>
+                      {% endif %}
+               {% endfor %}
+                {% comment %}
+                          <p class="collection-price" id="price-update">
+                            {% if product.selected_or_first_available_variant.price < product.selected_or_first_available_variant.compare_at_price %}
+                                <span class="crossed" id="crossed-span-grid-{{ product.id }}"><del>{{ product.selected_or_first_available_variant.compare_at_price | money }}</del></span>
+                                <span id="span-grid-{{ product.id }}">{{ product.selected_or_first_available_variant.price | money }}</span>
+                           <span>{{ product.selected_or_first_available_variant.id.price}}</span>
+                            {% else %}
+                                <span id="span-grid-{{ product.id }}">{{ product.selected_or_first_available_variant.price | money }}</span>
+                            {% endif %}
+                          </p>
+  
+         {% endcomment %}
+          </div>
+         {% endunless %}
+  
+           {% comment %}
+  
+           
+         <div id="formclass">
+         <form method="post"  action="/cart/add">
+            <input id="add-cart-value" type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" />
+          <div class="add-to-cart-block" id="managebtn" >
+            <quantity-input class="quantity">
+                                  <button class="quantity__button no-js-hidden"  name="minus" type="button" {% if product.selected_variant != blank %}{% if product.selected_variant.available == false %}disabled{% endif %}{% else %}{% if product.first_available_variant.available == false %}disabled{% endif %}{% endif %}>
+                                    <span class="visually-hidden">Decrease quantity for {{ product.title }}</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="presentation" class="icon icon-minus" fill="none" viewBox="0 0 10 2">
+                                      <path fill-rule="evenodd" clip-rule="evenodd" d="M.5 1C.5.7.7.5 1 .5h8a.5.5 0 110 1H1A.5.5 0 01.5 1z" fill="currentColor">
+                                      </path></svg>
+                                  </button>
+          
+                                  <input id="quantity" name="quantity" {% if product.selected_variant != blank %}{% if product.selected_variant.available == false %}disabled{% endif %}{% else %}{% if product.first_available_variant.available == false %}disabled{% endif %}{% endif %} class="quantity__input" type="number" value="1" min="1" aria-label="Quantity for {{ product.title }}" id="Quantity-1" data-index="1">
+          
+                                  <button class="quantity__button no-js-hidden" name="plus" type="button" {% if product.selected_variant != blank %}{% if product.selected_variant.available == true %}{% else %}disabled{% endif %}{% else %}{% if product.first_available_variant.available == true %}Add to cart{% else %}disabled{% endif %}{% endif %}>
+                                    <span class="visually-hidden">Increase quantity for {{ product.title }}</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="presentation" class="icon icon-plus" fill="none" viewBox="0 0 10 10">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1 4.51a.5.5 0 000 1h3.5l.01 3.5a.5.5 0 001-.01V5.5l3.5-.01a.5.5 0 00-.01-1H5.5L5.49.99a.5.5 0 00-1 .01v3.5l-3.5.01H1z" fill="currentColor">
+                                        </path></svg>
+                                  </button>
+          
+              </quantity-input>
+            <button id="add-to-cart" type="submit" value="Add to cart" {% if product.selected_variant != blank %}{% if product.selected_variant.available == false %}disabled{% endif %}{% else %}{% if product.first_available_variant.available == false %}disabled{% endif %}{% endif %} class="add-cart-button">{% if product.selected_variant != blank %}{% if product.selected_variant.available == true %}Add to Cart{% else %}Sold out{% endif %}{% else %}{% if product.first_available_variant.available == true %}Add to cart{% else %}Sold out{% endif %}{% endif %}</button>
+          </div>
+           </form>
+           </div>
+  
+          <a class="date-time" href="{{ product.metafields.seller.amazon_link }}" target="_blank">Also Available at <img style="display:inline-block;" src="https://cdn.shopify.com/s/files/1/0564/8436/4349/files/amazon-logo.png?v=1669063668" width="45" /></a>
+  {% endcomment %}
+  
+  
+  
+  
+                  <div class="product-button">
+                 {% if product.metafields.seller.amazon_link != blank %}
+                <a href="{{  product.metafields.seller.amazon_link }}" target="_blank" rel="noopener noreferrer" class="primary-btn orange-btn">Buy from Amazon</a>
+               {% endif %}
+               {% if product.metafields.seller.sally_beauty_link != blank %}
+                <a href="{{ product.metafields.seller.sally_beauty_link }}" target="_blank" rel="noopener noreferrer" class="primary-btn">Buy from Sally Beauty</a>
+              {% endif %}
+              </div>
+  
+  
+  
+          
+          
+  <!--         <p class="date-time"><span class="bold-text">Fastest Delivery </span> Wednesday, 29 December | Order within <span class="red-text">22 Hrs 26 Mins </span></p>
+          <div class="free-shipping">
+            <p><span class="bold-text">FREE</span> Shipping on orders $30+</p> 
+          </div> -->
+         
+          <div class="custom-accordion-wrapper productpage-tabs">
+            {% if product.description != blank %}
+              <div class="accordion-content-wrapper">
+                <button class="accordion-title" tabindex="0">
+                  <h4 class="accordion-head">{{ section.settings.details_1 }}</h4>
+                </button>
+                <div class="accordion-content">
+                  {{ product.description }}
+                </div>
+              </div>
+            {% endif %}
+            {% if product.metafields.product_content.ingredients != blank %}
+               <div class="accordion-content-wrapper">
+                <button class="accordion-title" tabindex="0">
+                  <h4 class="accordion-head">{{ section.settings.details_2 }}</h4>
+                </button>
+                <div class="accordion-content">
+                  {{ product.metafields.product_content.ingredients.html | newline_to_br }}
+                </div>
+              </div> 
+            {% endif %}
+            {% if product.metafields.product_content.how_to_use %}
+                <div class="accordion-content-wrapper">
+                  <button class="accordion-title" tabindex="0">
+                    <h4 class="accordion-head">{{ section.settings.details_3 }}</h4>
+                  </button>
+                  <div class="accordion-content">
+                    {{ product.metafields.product_content.how_to_use.html | newline_to_br }}
+                  </div>
+                </div>
+             {% endif %}
+            {% if product.metafields.product_content.pro_tips != blank %}
+                <div class="accordion-content-wrapper">
+                  <button class="accordion-title" tabindex="0">
+                    <h4 class="accordion-head">{{ section.settings.details_4 }}</h4>
+                  </button>
+                  <div class="accordion-content">
+                    {{ product.metafields.product_content.pro_tips.html  }}
+                  </div>
+                </div>
+            {% endif %}
+            {% if product.metafields.product_content.faqs %}
+                <div class="accordion-content-wrapper">
+                  <button class="accordion-title" tabindex="0">
+                    <h4 class="accordion-head">{{ section.settings.details_5 }}</h4>
+                  </button>
+                  <div class="accordion-content">
+                    {{ product.metafields.product_content.faqs.html }}
+                  </div>
+                </div>
+           {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </section>
+    
+    
+    {%- if product.media.size > 0 -%}
+    <script src="{{ 'product-modal.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'media-gallery.js' | asset_url }}" defer="defer"></script>
+    {%- endif -%}
+    
+    {%- if first_3d_model -%}
+    <script type="application/json" id="ProductJSON-{{ product.id }}">
+    {{ product.media | where: 'media_type', 'model' | json }}
+    </script>
+    <script src="{{ 'product-model.js' | asset_url }}" defer></script>
+    {%- endif -%}
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    function isIE() {
+    const ua = window.navigator.userAgent;
+    const msie = ua.indexOf('MSIE ');
+    const trident = ua.indexOf('Trident/');
+    
+    return (msie > 0 || trident > 0);
+    }
+    
+    if (!isIE()) return;
+    const hiddenInput = document.querySelector('#{{ product_form_id }} input[name="id"]');
+    const noScriptInputWrapper = document.createElement('div');
+    const variantSwitcher = document.querySelector('variant-radios[data-section="{{ section.id }}"]') || document.querySelector('variant-selects[data-section="{{ section.id }}"]');
+    noScriptInputWrapper.innerHTML = document.querySelector('.product-form__noscript-wrapper-{{ section.id }}').textContent;
+    variantSwitcher.outerHTML = noScriptInputWrapper.outerHTML;
+    
+    document.querySelector('#Variants-{{ section.id }}').addEventListener('change', function(event) {
+    hiddenInput.value = event.currentTarget.value;
+    });
+    });
+    </script>
+    
+    {%- liquid
+    if product.selected_or_first_available_variant.featured_media
+    assign seo_media = product.selected_or_first_available_variant.featured_media
+    else
+    assign seo_media = product.featured_media
+    endif
+    -%}
+    
+    <script type="application/ld+json">
+    {
+    "@context": "http://schema.org/",
+    "@type": "Product",
+    "name": {{ product.title | json }},
+    "url": {{ request.origin | append: product.url | json }},
+    {% if seo_media -%}
+    "image": [
+      {{ seo_media | image_url: width: seo_media.preview_image.width | prepend: "https:" | json }}
+    ],
+    {%- endif %}
+    "description": {{ product.description | strip_html | json }},
+    {% if product.selected_or_first_available_variant.sku != blank -%}
+    "sku": {{ product.selected_or_first_available_variant.sku | json }},
+    {%- endif %}
+    "brand": {
+    "@type": "Brand",
+    "name": {{ product.vendor | json }}
+    },
+    "offers": [
+    {%- for variant in product.variants -%}
+      {
+        "@type" : "Offer",
+        {%- if variant.sku != blank -%}
+          "sku": {{ variant.sku | json }},
+        {%- endif -%}
+        {%- if variant.barcode.size == 12 -%}
+          "gtin12": {{ variant.barcode }},
+        {%- endif -%}
+        {%- if variant.barcode.size == 13 -%}
+          "gtin13": {{ variant.barcode }},
+        {%- endif -%}
+        {%- if variant.barcode.size == 14 -%}
+          "gtin14": {{ variant.barcode }},
+        {%- endif -%}
+        "availability" : "http://schema.org/{% if variant.available %}InStock{% else %}OutOfStock{% endif %}",
+        "price" : {{ variant.price | divided_by: 100.00 | json }},
+        "priceCurrency" : {{ cart.currency.iso_code | json }},
+        "url" : {{ request.origin | append: variant.url | json }}
+      }{% unless forloop.last %},{% endunless %}
+    {%- endfor -%}
+    ]
+    }
+    </script>
+    </section>
+    
+    {% schema %}
+     {
+      "name": "Product Page",
+      "settings": [
+        {
+          "type": "text",
+          "id": "details_1",
+          "label": "Add Detail Title",
+          "default": "Description"
+        },
+        {
+          "type": "text",
+          "id": "details_2",
+          "label": "Add Detail Title",
+          "default": "Ingredients"
+        },
+        {
+          "type": "text",
+          "id": "details_3",
+          "label": "Add Detail Title",
+          "default": "How To Use"
+        },
+        {
+          "type": "text",
+          "id": "details_4",
+          "label": "Add Detail Title",
+          "default": "Pro Tips"
+        },
+        {
+          "type": "text",
+          "id": "details_5",
+          "label": "Add Detail Title",
+          "default": "FAQs"
+        }
+      ]
+    }
+    {% endschema %}
