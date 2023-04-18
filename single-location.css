@@ -1,0 +1,103 @@
+.inner-page-banner.about .banner-text h1{line-height:.8}
+.inner-page-banner.about .banner-text h2{font-size:5vw;margin-top:3vw;font-family:'helvetica-neue-condensed-bold',sans-serif,Menlo,Impact;color:#fff}
+.inner-page-banner.about .banner-text p{font-size:4vw;margin:4vw auto;max-width:100%;letter-spacing:0}
+.inner-page-banner.about .banner-text .content-wrapper{margin:0 auto}
+.about-grid-section{padding:3rem 0 0}
+.zotos-grid-row{margin-bottom:4.5rem;grid-row-gap:3rem;display:flex;flex-direction:column;text-align:center}
+.zotos-grid-row .grid-img-wrapper{flex:3 1;flex-shrink:0}
+.zotos-grid-row .grid-img-wrapper .grid-video{height:0;padding-top:56.25%;position:relative}
+.zotos-grid-row .grid-img-wrapper .grid-video iframe{height:100%;left:0;position:absolute;top:0;width:100%}
+.zotos-grid-row .grid-text-wrapper{flex:4 1}
+.zotos-grid-row h2{letter-spacing:0;line-height:.7;margin-bottom:3rem;font-family:'summer-loving',Cezanne,Gabriola,cursive,sans-serif;color:var(--text-color)}
+.seperator{background-image:url("{{ 'seperator.svg' | asset_url }}");background-size:auto 1.4rem;height:1.4rem;width:100%}
+.about-professional{padding:var(--section-space) 0;background-color:var(--lightbg)}
+.about-professional .zotos-grid-row .grid-text-wrapper{flex:3 1}
+.about-professional .zotos-grid-row .grid-img-wrapper{flex:3 1;flex-shrink:0}
+.about-certificatation-inner{grid-gap:2rem;display:flex;flex-direction:column;padding:2rem 0 5rem}
+.about-certificatation-img{grid-row-gap:1rem;align-items:center;display:flex;flex:1 1;flex-direction:column;justify-content:center;width:100%}
+.about-certificatation-text{display:flex;flex:1 1;flex-direction:column;justify-content:center}
+.about-certificatation-img-inner{max-width:32rem;padding:1rem 4rem 1rem 0;position:relative}
+.about-contact-section{padding:var(--section-space) 0;padding-bottom:0;text-align:center}
+.about-contact-section h2{line-height:.7;margin-bottom:3rem;font-family:"summer-loving",Cezanne,Gabriola,cursive,sans-serif;font-weight:400;font-size:8rem}
+.about-contact-section .about-contact-para-wrapper{margin:2rem auto 5.5rem;max-width:100%;width:91rem}
+.about-cta-section{padding:var(--section-space) 0}
+.about-cta-section .seperator{background-size:auto 1.4rem;width:100%}
+.about-cta-section .about-cta-main{align-items:stretch;display:flex}
+.about-cta-section .about-cta-main .about-cta-bg{background-image:url("{{ 'bg-flip.svg' | asset_url }}");background-position:0;background-repeat:no-repeat;background-size:cover;flex:1 1}
+.about-cta-section .about-cta-main .about-cta-bg.cta-bg-left{transform:rotate(180deg)}
+.about-cta-section .about-cta-main .about-cta-wrapper{grid-column-gap:3.5rem;background-color:#fddd3e;flex:100% 1;margin:0 -.1rem;max-width:82rem;padding:1.6rem 2.4rem 4.5rem;text-align:center}
+.about-cta-section .about-cta-main .about-cta-wrapper h2{font-family:'helvetica-neue-condensed-bold',sans-serif,Menlo,Impact;letter-spacing:.2rem;text-transform:uppercase;font-size:2.2rem}
+.about-cta-section .about-cta-main .about-cta-wrapper h2>span{font-family:"summer-loving",Cezanne,Gabriola,cursive,sans-serif;font-weight:400;margin-left:1.2rem;font-size:6.8rem;text-transform:none}
+.about-cta-section .about-cta-main .about-cta-wrapper .about-cta-description{font-size:1.6rem;margin-bottom:2rem}
+
+.banner-image.desktop-banner{display:none}
+.banner-image.mobile-banner{display:block}
+.inner-page-banner.about:before{display:none}
+.about-contact-section .about-slider-wrapper{align-items:stretch;height:100%;backface-visibility:hidden;display:flex;flex-wrap:nowrap;list-style:none;margin:0;padding:0;position:relative;touch-action:pan-Y;-webkit-transform-style:preserve-3d;transform-style:preserve-3d;white-space:nowrap;width:100%;will-change:transform;}
+.about-contact-section .about-slider-wrapper .slider-item{height:auto;-webkit-touch-callout:none;-webkit-tap-highlight-color:transparent;flex-shrink:0;height:100%;white-space:normal;width:100%;}
+.about-contact-section .about-slider-wrapper .slider-item a{border:.1rem solid var(--primary-color);display:block;flex:1 1;padding:2.5rem;text-align:center;text-decoration:none;width:100%}
+.about-contact-section .about-slider-wrapper .slider-item .svg-wrapper svg{display:block;height:3rem;margin:0 auto 1.4rem;width:3.3rem}
+.about-contact-section .about-slider-wrapper .slider-item .svg-wrapper svg path{fill:var(--primary-color)}
+.about-contact-section .about-slider-wrapper .slider-item .about-slider-content p{font-size:1.6rem;line-height:1.25;font-family:'helvetica-neue-std',Open Sans,Arial,sans-serif}
+.about-contact-section .about-slider-wrapper .slider-item span.slider-link{color:var(--primary-color);display:inline-block;margin-top:1rem;text-decoration:none}
+.about-contact-section .about-slider-wrapper .slider-item span.slider-link svg{display:inline-block;margin-left:.8rem;transition:transform .2s cubic-bezier(.785,.135,.15,.86),-webkit-transform .2s cubic-bezier(.785,.135,.15,.86);width:1.1rem;}
+.about-contact-section .about-slider-wrapper .slider-item span.slider-link svg path{fill:var(--primary-color)}
+.about-contact-section .about-slider-wrapper .slider-item h4{font-family: 'helvetica-neue-std-black', sans-serif;}
+.about-contact-section .about-slider-wrapper .slider-item h4>span{display:block}
+@media (min-width: 1550px){
+.about-contact-section .about-slider-wrapper .slider-item span.slider-link{font-size:2rem;margin-top:0;padding:1rem}
+}
+@media(max-width:1199px){
+.inner-page-banner.about{padding-top:40rem}
+}
+@media (min-width: 768px){
+.about-certificatation-inner{padding:5rem 0}
+.about-certificatation-img{flex-direction:row;width:auto}
+.about-certificatation-img-inner{padding:1rem 4.5rem}
+.about-certificatation-img-inner:not(:last-child):before{background-color:#2125291a;content:"";display:block;height:100%;left:100%;position:absolute;top:0;width:.1rem}
+
+}
+@media (min-width: 576px) and (max-width: 991px){
+.inner-page-banner.about .banner-text h1{font-size:10vw}
+.inner-page-banner.about .banner-text p{font-size:2.35vw;margin:2vw auto 2.6vw}
+.inner-page-banner.about .banner-text h2{font-size:3.1vw}
+}
+@media (min-width: 992px){
+.inner-page-banner.about .banner-text{max-width:45vw;padding:0 4vw}
+.inner-page-banner.about .banner-text h1{font-size:7.65vw}
+.inner-page-banner.about .banner-text h2{font-size:1.75vw;margin-top:1.5vw}
+.inner-page-banner.about .banner-text p{font-size:1.2vw;margin:1.3vw auto;width:31vw}
+.inner-page-banner.about .banner-text p:first-of-type{margin-top:1.4vw}
+.inner-page-banner.about .banner-text p:last-of-type{margin-bottom:1.4vw}
+.banner-image.desktop-banner{display:block}
+.banner-image.mobile-banner{display:none}
+.about-grid-section{padding:8rem 0 0}
+.zotos-grid-row{margin-bottom:11rem;grid-column-gap:7.5rem;align-items:center;flex-direction:row}
+.zotos-grid-wrapper .zotos-grid-row:nth-child(2n){flex-direction:row-reverse}
+.zotos-grid-row h2,.about-contact-section h2{font-size:10rem}
+.about-cta-section .seperator{display:none}
+.about-cta-section .about-cta-main .about-cta-wrapper{align-items:center;display:flex;padding:2.38rem 4rem;text-align:left}  
+.inner-page-banner.about{padding-top:35%}
+.about-contact-section .about-slider-wrapper .slider-item a{border:none;border-left:none;padding:2rem 4.5rem 1rem}
+.about-contact-section .about-slider-wrapper .slider-item .svg-wrapper svg{margin:0 auto 3rem}
+.about-contact-section .about-slider-wrapper .slider-item .about-slider-title{margin-bottom:2.5rem}
+}
+@media (min-width: 992px) and (max-width: 1549px){
+    .about-contact-section .about-slider-wrapper .slider-item a {padding-right:2.6rem;padding-left: 2.6rem;}
+}
+@media (max-width:991px){
+.about-contact-section .about-slider-wrapper .slider-item .about-slider-content,.about-contact-section .about-slider-wrapper .slider-item span.slider-link{display:none!important}
+.about-contact-section .slick-prev{left:.4rem;top:-5px}
+.about-contact-section .slick-next{right:.4rem;top:-5px}
+.about-contact-section .about-slider-wrapper{ padding: 0.2rem 2rem;}
+}
+@media (min-width: 1200px){
+.about-grid-section,.about-contact-section,.about-professional,.about-gallery-grid{padding:11rem 0 0}
+.about-contact-section{padding-bottom:0}
+.about-cta-section{padding:5rem 0 0}
+.about-certificatation-inner{grid-gap:5rem;flex-direction:row}
+.about-certificatation-text{padding-right:9rem}
+.about-cta-section .about-cta-main .about-cta-wrapper{max-width:100rem;padding:1.6rem 8rem}
+.about-cta-section .about-cta-main .about-cta-wrapper h2{font-size:2.4rem}
+.about-cta-section .about-cta-main .about-cta-wrapper h2>span{font-size:7.3rem}
+}

@@ -1,0 +1,443 @@
+/* @import url(./single-location1.css); */
+
+/* orage page menu bar start*/
+
+.page-menu.fixed { position: fixed; left: 0; right: 0; width: 100%; }
+.page-menu { background-color: #e86404; z-index: 8; }
+.page-menu h2 { color: #fff; font-size: 20px; text-transform: uppercase; }
+.page-menu .page-menu-wrapper { display: flex; align-items: center; justify-content: space-between; padding: 5px 0; }
+.page-menu .page-menu-wrapper .menu-links-wrapper .hamburger-menu { display: none; padding: 5px 10px; }
+.downloadables-section h2 { text-align: center; margin-bottom: 30px; }
+.downloadables-section { padding: 0 0 50px; }
+.downloadables-section .custom-card-body { padding: 14px 20px 0; display: none; }
+.downloadables-section .custom-card-header { background-color: #f8f8f8; padding: 10px 20px; cursor: pointer; }
+.downloadables-section .custom-card-body h2 { text-align: left; font-size: 28px; margin-bottom: 12px; }
+.downloadables-section .custom-card-body ul ul { margin-bottom: 8px; margin-top: 10px; }
+.downloadables-section .custom-card-header a { color: #e86404; }
+.downloadables-section .custom-card { border: 1px solid #f0f0f0; border-radius: 5px; }
+.no-touchevents .downloadables-section .custom-card-body p a:hover { text-decoration: underline; }
+.downloadables-section .custom-card-body p a { color: #e86404; margin-left: 2px; }
+.downloadables-section .custom-card+.custom-card { margin-top: 5px; }
+.page-menu .page-menu-wrapper .menu-links-wrapper .hamburger-menu i { color: #fff; }
+.page-menu .page-menu-wrapper .menu-links-wrapper ul { display: flex; justify-content: space-between; margin: 0 -20px; }
+.page-menu .page-menu-wrapper .menu-links-wrapper ul li { padding: 4px 10px; }
+.page-menu .page-menu-wrapper .menu-links-wrapper ul li:last-child { padding-right: 0; }
+.page-menu .page-menu-wrapper .menu-links-wrapper ul li a { padding: 4px 15px 5px; color: #fff; border-radius: 20px; font-size: 14px; }
+.page-menu .page-menu-wrapper .menu-links-wrapper ul li a.active { background-color: rgba(0, 0, 0, .15); }
+.page-menu .page-menu-wrapper .menu-links-wrapper ul li a:hover { background-color: rgba(0, 0, 0, .15); }
+
+/* orage page menu bar end*/
+
+/*location image section start*/
+
+.location-page-image-section { padding: 50px 0; }
+.location-page-image-section .location-page-image-inner { display: flex; margin: 0 -15px; align-items: center; }
+.location-page-image-section .location-page-image-inner+.location-page-image-inner { padding: 60px 0 0; }
+.location-page-image-section .location-page-image-inner.has-right-image .image-block { order: 2; }
+.location-page-image-section .location-page-image-inner.has-right-image .content-block { order: 1; }
+.location-page-image-section .location-page-image-inner .image-block { flex: 0 0 50%; max-width: 50%; padding: 0 15px; }
+.location-page-image-section .location-page-image-inner .content-block { flex: 0 0 50%; max-width: 50%; padding: 0 15px; }
+.location-page-image-section .location-page-image-inner .content-block p { margin: 0 0 25px; }
+.location-page-image-section .location-page-image-inner .subtitle { font-size: 16px; font-family: raleway, sans-serif; color: #444; padding: 0 0 18px; position: relative; margin: 0 0 15px; }
+.location-page-image-section .location-page-image-inner .subtitle:after { content: ''; position: absolute; height: 2px; width: 10%; background-color: #2a2a2a; left: 0; top: 100%; }
+
+/*location image section end*/
+
+/* faq section start*/
+
+.location-faq-section { padding: 50px 0 80px; }
+.location-faq-section h2 { margin-bottom: 30px; text-align: center; }
+.location-faq-section .faq-button-wrapper { display: flex; justify-content: center; margin: 0 -10px 25px; }
+.location-faq-section .faq-button-wrapper p { padding: 0 10px; }
+.location-faq-section .faq-type-wrapper { display: flex; justify-content: space-between; }
+.location-faq-section .faq-type-wrapper .faq-wrapper { flex: 0 0 calc(50% - 15px); max-width: calc(50% - 15px); }
+.location-faq-section .faq-type-wrapper .faq-wrapper h3 { font-size: 20px; margin-bottom: 30px; margin-top: 5px; display: inline-flex; align-items: center; }
+.location-faq-section .faq-type-wrapper .faq-wrapper h3 span { font-size: 75%; margin-left: 5px; color: #777; }
+.location-faq-section .faq-type-wrapper .faq-wrapper .accordian-wrap { margin-bottom: 5px; }
+.location-faq-section .faq-type-wrapper .faq-wrapper .accordian-wrap .accordian-head { font-size: 13px; border: 1px solid #666; color: #666; border-radius: 5px; padding: 15px; display: inline-flex; width: 100%; align-items: baseline; cursor: pointer; transition: all 0.3s; }
+.location-faq-section .faq-type-wrapper .faq-wrapper .accordian-wrap.active .accordian-head { border-bottom-left-radius: 0; border-bottom-right-radius: 0;    /*border-bottom-color: transparent;*/ }
+.location-faq-section .faq-type-wrapper .faq-wrapper .accordian-wrap .accordian-head i { width: 20px; margin-right: 5px; }
+.location-faq-section .faq-type-wrapper .faq-wrapper .accordian-wrap .accordian-body { padding: 15px; border-radius: 0 0 5px 5px; border: 1px solid #666; border-top-color: transparent; display: none; margin-top: -5px; }
+
+/* learn more block start*/
+.learn-more-block .learn-more-wrapper p a { color: #e86404; }
+.learn-more-block .learn-more-wrapper p a:hover { text-decoration: underline; }
+
+/* learn more block end*/
+
+/* location map block start*/
+
+.location-map-section { padding: 60px 0; }
+.location-map-section .map-wraper .acf-map { height: 300px; }
+.location-map-section p+p { margin-top: 25px; }
+.location-map-section p.new_directioin_text { font-weight: 400; }
+.location-map-section p { margin-top: 10px; font-weight: 600; }
+.location-map-section .map-wraper iframe { width: 100%; }
+.location-map-section h2 { text-align: center; margin-bottom: 30px; }
+
+/* location map block end*/
+.why-choose-alocc-section.ils-great-section .why-choose-alocc-wrapper { padding: 0; }
+.map-section-wrapper { display: flex; flex-wrap: wrap; }
+.map-section-wrapper .map-wraper { max-width: 60%; flex: 0 0 60%; }
+.map-section-wrapper .how-to-find-section { max-width: 40%; flex: 0 0 40%; padding-left: 40px; }
+
+/* Training Courses Page css Start*/
+.courses-section { padding: 0 0 80px; }
+.courses-section .courses-section-wrapper { display: flex; }
+.courses-section .courses-section-wrapper .content-block { flex: 0 0 calc(100% - 280px); max-width: calc(100% - 280px); padding-right: 30px; padding-top: 80px; }
+.courses-section .courses-section-wrapper .form-block { flex: 0 0 280px; max-width: 280px; padding-left: 30px; padding-top: 80px; }
+.courses-section .courses-section-wrapper .content-block .course-wrapper h2 span { font-size: 18px; color: #777; font-weight: 600; display: inline-block; vertical-align: middle; }
+.courses-section .courses-section-wrapper .content-block .course-wrapper h2 { padding-bottom: 10px; border-bottom: 2px solid #e86404; margin-bottom: 30px; }
+.courses-section .courses-section-wrapper .content-block .course-wrapper .apply-btn-wrapper { margin-bottom: 60px; }
+.courses-section .courses-section-wrapper .content-block .course-wrapper:last-of-type .apply-btn-wrapper { margin-bottom: 0; }
+.courses-section .courses-section-wrapper .content-block .course-wrapper .course-details-wrapper>ul { margin-bottom: 25px; }
+.courses-section .courses-section-wrapper .content-block .course-wrapper .course-details-wrapper>ul li { position: relative; padding-left: 20px; margin-bottom: 9px; }
+.courses-section .courses-section-wrapper .content-block .course-wrapper .course-details-wrapper>ul li:before { position: absolute; content: ''; left: 0; top: 11px; height: 5px; width: 5px; background-color: #e86404; border-radius: 50%; }
+.courses-section .courses-section-wrapper .content-block .course-wrapper .course-details-wrapper p { margin-bottom: 15px; }
+.courses-section .courses-section-wrapper .content-block .course-wrapper .course-details-wrapper .accordian-wrap { margin-bottom: 5px; }
+.courses-section .courses-section-wrapper .content-block .course-wrapper .course-details-wrapper .accordian-wrap:last-of-type { margin-bottom: 25px; }
+.courses-section .courses-section-wrapper .content-block .course-wrapper .course-details-wrapper .accordian-wrap .accordian-head { font-size: 16px; padding: 15px 15px 15px 25px; background-color: #eee; cursor: pointer; }
+.courses-section .courses-section-wrapper .content-block .course-wrapper .course-details-wrapper .accordian-wrap .accordian-head i { width: 25px; }
+.courses-section .courses-section-wrapper .content-block .course-wrapper .course-details-wrapper .accordian-wrap .accordian-head i.far.fa-times-circle { display: none; }
+.courses-section .courses-section-wrapper .content-block .course-wrapper .course-details-wrapper .accordian-wrap.active .accordian-head i.far.fa-check-circle { display: none; }
+.courses-section .courses-section-wrapper .content-block .course-wrapper .course-details-wrapper .accordian-wrap.active .accordian-head i.far.fa-times-circle { display: inline-block; }
+.courses-section .courses-section-wrapper .content-block .course-wrapper .course-details-wrapper .accordian-wrap .accordian-body { font-size: 16px; padding: 15px 15px 15px 40px; display: none; }
+.courses-section .courses-section-wrapper .content-block .course-wrapper .course-details-wrapper .accordian-wrap .accordian-body li { display: flex; align-items: baseline; position: relative; margin-bottom: 3px; }
+.courses-section .courses-section-wrapper .content-block .course-wrapper .course-details-wrapper .accordian-wrap .accordian-body li i { color: #e86404; width: 15px; margin-right: 15px; }
+
+/* Contact Form Css */
+.courses-section .courses-section-wrapper .form-block .contact-form-wrapper .contact-form iframe { width: 100%; height: 620px; }
+.courses-section .courses-section-wrapper .form-block .contact-form-wrapper .title-wrapper { margin-bottom: 30px; }
+.courses-section .courses-section-wrapper .form-block .contact-form-wrapper .title-wrapper h2 { margin-bottom: 10px; }
+
+/* Contact Form Css End */
+
+/* Training Courses Page css End*/
+
+/* Downloadables cms css*/
+
+.downloadables-section .custom-card-body h3 { font-size: 26px; margin-bottom: 10px; }
+.downloadables-section .custom-card-body h4 { font-size: 24px; margin-bottom: 10px; }
+.downloadables-section .custom-card-body h5 { font-size: 22px; margin-bottom: 10px; }
+.downloadables-section .custom-card-body h6 { font-size: 20px; margin-bottom: 10px; }
+.downloadables-section .custom-card-body p { margin-bottom: 25px; }
+.downloadables-section .custom-card-body ul { margin-bottom: 20px; padding-left: 30px; }
+.downloadables-section .custom-card-body ul li { position: relative; }
+.downloadables-section .custom-card-body ul li:before { position: absolute; content: ''; left: 0; top: 10px; width: 7px; height: 7px; border-radius: 50%; background-color: #e86404; }
+.downloadables-section .custom-card-body ol { list-style: decimal; margin: 0 0 20px 47px; }
+.downloadables-section .custom-card-body ul li { padding-left: 15px; }
+.downloadables-section .custom-card-body ul li+li, .downloadables-section .custom-card-body ol li+li { margin-top: 5px; }
+.downloadables-section .custom-card-body ol li { padding-left: 5px; }
+.find-out-section h2 { text-align: center; margin-bottom: 30px; }
+.find-out-section { padding: 30px 0 50px; }
+.no-touchevents .find-out-section a:hover { text-decoration: underline; }
+.find-out-section a { color: #e86404; }
+.find-out-section h2 span { color: #e86404; }
+.single-location .learn-more-block.inner-page-learn-more-block { background-color: transparent; }
+.single-location .learn-more-block.inner-page-learn-more-block { background-color: transparent; color: #333; padding-top: 0 !important; }
+.single-location .learn-more-block.inner-page-learn-more-block .container { max-width: 1210px; }
+.single-location .learn-more-block.inner-page-learn-more-block .call-us-wrapper { border: 1px solid rgba(0, 0, 0, 0.1); padding: 30px 25px; }
+.no-touchevents .single-location .learn-more-block .btn-wrapper .white-btn:hover { background-color: rgba(232, 100, 4, 0.9); }
+.single-location .learn-more-block .btn-wrapper .white-btn { color: #fff; background-color: #e86404; }
+.single-location .learn-more-block.inner-page-learn-more-block h2 { font-weight: 600; }
+.single-location .why-choose-alocc-section { padding-bottom: 0; }
+.single-location .why-choose-alocc-section .container:before { display: none; }
+.single-location .learn-more-block.inner-page-learn-more-block h2 a { color: #e86404; font-weight: inherit; }
+
+/* re-design-css */
+
+/* banner-page-section */
+.inner-page-banner-section.halifax-career-banner { padding: 11.57% 0px 11.59%;}
+.halifax-career-page .hellifax-bg-img { position: absolute; left: 0; top: 0; height: 100%; width: 100%; z-index: -1; object-fit: cover; }
+.halifax-career-page .halifax-career-banner .container { max-width: 1340px; }
+.halifax-career-banner h1 {text-transform: none; position: relative; font-weight: 700; font-size: 81px; margin-bottom: 22px; }
+.halifax-career-banner h1 span { font-size: 16px; font-weight: 400; }
+.halifax-career-banner p { font-size: 16px; margin-bottom: 25px; }
+.halifax-career-banner .halifax-btn-wrapper { display: flex; flex-wrap: wrap; }
+.halifax-career-banner .halifax-btn-wrapper a { text-transform:uppercase; line-height: 37px; transition: all 0.3s; }
+.halifax-career-banner .halifax-btn-wrapper .orange-btn { margin-top: 0px; margin-right: 20px; }
+.halifax-career-banner .halifax-btn-wrapper .orange-btn:hover { background-color: #fff; color: #e86404; }
+.halifax-career-banner .halifax-btn-wrapper .white-btn { border: 1px solid #fff; color: #fff; background-color: transparent; }
+.halifax-career-banner .halifax-btn-wrapper .white-btn:hover { background-color: #e86404; border: 1px solid #e86404; }
+
+/* flexible-training */
+.halifax-career-page h2 { position: relative; font-size: 38px; font-weight: 700; margin-bottom: 37px; }
+.halifax-career-page h2::after { margin-top: 17px; }
+.halifax-career-page .container { max-width: 1540px; }
+.halifax-career-page .flexible-training h2 span { display: block; }
+.flexible-training { padding: 99px 0px 80px; }
+.flexible-training .flexible-training-wrapper { display: flex; flex-wrap: wrap; }
+.flexible-training .flexible-training-wrapper .flexible-training-text { max-width: 44%; flex: 0 0 44%; padding-right: 134px; }
+.flexible-training .flexible-training-wrapper .flexible-training-text p:not(:last-of-type) { margin-bottom: 33px; }
+.flexible-training .flexible-training-wrapper .flexible-training-img { max-width: 56%; flex: 0 0 56%; position: relative; }
+.flexible-training .flexible-training-wrapper .flexible-training-img img { height: 100%; width: calc(100% - 20px); }
+.flexible-training .flexible-training-wrapper .flexible-training-img:after { position: absolute; z-index: -1; width: 20%; height: 38%; background-color: #9bbf37; top: -18px; right: 0px; content: ""; }
+
+/* find-us-section  */
+.find-us-section { padding: 80px 0px; position: relative; }
+.find-us-section .find-us-section .container{max-width: 1522px;}
+.halifax-career-page .find-us-section h2:after{margin-top: 12px;}
+.find-us-section p { max-width: 541px; margin-bottom: 12px; }
+.find-us-section ul li:not(:last-of-type) { margin-bottom: 13px; }
+.find-us-section ul li a em { width: 24px; }
+.find-us-section ul li a { color: #333; font-size: 20px; font-weight: 600; display: flex; max-width: 710px; word-break: break-all; }
+.find-us-section ul li a span { margin-left: 24px; }
+.find-us-section ul li a.orange-text { color: #e86404; }
+.find-us-section ul li a.orange-text em { min-width: 25px }
+.find-us-section h2 span { color: #535353; font-size: 16px; font-weight: 400; display: block; margin-bottom: 10px; }
+
+/* alternative-option-text  */
+.alternative-option-text { padding: 72px 0px 42px }
+.alternative-option-text h2 { text-align: center; }
+.alternative-option-text h2:after { transform: translateX(-50%); left: 50%; margin-top: 11px;}
+.alternative-option-text .alternative-text-wrapper { display: flex; flex-wrap: wrap; margin: 0 -15px; }
+.alternative-option-text .alternative-text-wrapper .alternative-text-inner { padding: 0 15px; max-width: 50%; flex: 0 0 50%; }
+.alternative-option-text .alternative-text-wrapper .alternative-text-inner i { font-size: 20px; font-weight: 600; color: #000; }
+.alternative-option-text .alternative-text-wrapper .alternative-text-inner p { line-height: 1.8; }
+.alternative-option-text .alternative-text-wrapper .alternative-text-inner li { margin-bottom: 25px; list-style-type: none; }
+.alternative-option-text .alternative-text-wrapper .alternative-text-inner h3 { font-size: 20px; font-weight: 600; display: inline; }
+.alternative-option-text .alternative-text-wrapper .alternative-text-inner p a { color: #e86404; text-decoration: underline; }
+
+/* downloadables-section  */
+.hellifax-download.downloadables-section { padding: 74px 0px 87px; }
+.hellifax-download.downloadables-section h2:after { left: 50%; transform: translateX(-50%);margin-top:13px; }
+.hellifax-download.downloadables-section h2 { margin-bottom: 48px; }
+.hellifax-download.downloadables-section .custom-card+.custom-card { margin-top: 13px; }
+.hellifax-download.downloadables-section .custom-card-header { padding:15px 25px; }
+.hellifax-download.downloadables-section .custom-card-header a { font-size:20px; color: #ea6b0f; font-weight: 600; }
+
+/* hellifax-contact-form  */
+.hellifax-contact-form.contact-form-section { padding: 86px 0 99px; }
+.hellifax-contact-form.contact-form-section .title-wrapper { margin-bottom: 52px; }
+.hellifax-contact-form.contact-form-section .container { max-width: 1300px; }
+.hellifax-contact-form.contact-form-section h2:after { display: none; }
+.hellifax-contact-form.contact-form-section p{font-size: 20px;}
+.hellifax-contact-form.contact-form-section input { border: none !important }
+
+/* halifax-faq-section */
+.halifax-faq-section.location-faq-section { padding: 50px 0 69px; }
+.location-faq-section.halifax-faq-section h2:after { left: 50%; transform: translateX(-50%); }
+.location-faq-section.halifax-faq-section .faq-type-wrapper .faq-wrapper .accordian-wrap { margin-bottom: 9px; }
+.location-faq-section.halifax-faq-section .faq-type-wrapper .faq-wrapper .accordian-wrap .accordian-head { font-size: 16px; font-weight: 500; border: 1px solid #666; color: #333; border-radius: 7px; padding: 27px 31px; }
+.location-faq-section.halifax-faq-section .faq-type-wrapper .faq-wrapper h3 { font-size: 25px; }
+.location-faq-section.halifax-faq-section .faq-type-wrapper .faq-wrapper h3 span { font-size: 100%;color:#333; }
+
+/* halifax-why-choose-alocc */
+.halifax-why-choose-alocc.why-choose-alocc-section h2:after { left: 50%; transform: translateX(-50%); }
+.halifax-why-choose-alocc.why-choose-alocc-section .why-choose-alocc-wrapper h2 { margin-bottom: 53px; }
+.halifax-why-choose-alocc.why-choose-alocc-section .why-choose-alocc-wrapper .why-choose-content-wrapper li .why-choose-alocc-card { padding: 34px 32px 45px 27px; }
+.halifax-why-choose-alocc.why-choose-alocc-section { position: relative; padding: 71px 0px; }
+.halifax-why-choose-alocc.why-choose-alocc-section:after { position: absolute; bottom: 0; left: 0; height: 1px; width: 64%; background-color: rgba(102, 102, 102, 0.1); content: ""; left: 50%; transform: translateX(-50%); }
+
+/* aolcc images block */
+.halifax-career-page .aolcc-images-section .sub-grid, .halifax-career-page .aolcc-images-section .images-grid { display: flex; flex-wrap: wrap; width: 100%; }
+.halifax-career-page .aolcc-images-section .images-grid { margin: 0 -2px; }
+.halifax-career-page .aolcc-images-section .sub-grid .sub-grid-item, .halifax-career-page .aolcc-images-section .images-grid .images-grid-item { flex: 0 0 50%; max-width: 50%; }
+.halifax-career-page .aolcc-images-section .images-grid .images-grid-item { padding: 0 2px; }
+/* .halifax-career-page .aolcc-images-section .sub-grid .sub-grid-item:not(:last-child) { padding-right: 4px; } */
+.halifax-career-page .aolcc-images-section .sub-grid{ margin:0 -2px }
+.halifax-career-page .aolcc-images-section .sub-grid .sub-grid-item{ padding:0 2px }
+.halifax-career-page .aolcc-images-section .sub-grid.top { margin: 0;margin-bottom: 4px;justify-content: space-between;height:56.654%;}
+.halifax-career-page .aolcc-images-section .sub-grid.top .sub-grid-item { max-width: calc(50% - 2px);padding: 0;}
+.halifax-career-page .aolcc-images-section .images-grid .img-wrapper { position: relative; max-width: 100%; }
+.halifax-career-page .aolcc-images-section .images-grid .img-wrapper.left-top-left {height: 100%;}
+.halifax-career-page .aolcc-images-section .images-grid .img-wrapper.left-top-right {height: 100%; }
+.halifax-career-page .aolcc-images-section .images-grid .img-wrapper.left-bottom { height:calc(43.346% - 4px);}
+.halifax-career-page .aolcc-images-section .images-grid .img-wrapper.right-left { height: 100%; }
+.halifax-career-page .aolcc-images-section .images-grid .img-wrapper.right-right-top { height:56.654%;margin-bottom: 4px; }
+.halifax-career-page .aolcc-images-section .images-grid .img-wrapper.right-right-bottom {height:calc(43.346% - 4px);}
+.halifax-career-page .aolcc-images-section .images-grid .img-wrapper img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
+.halifax-career-page .aolcc-images-section { position: relative;padding-bottom: 34.9%;overflow: hidden;}
+.halifax-career-page .aolcc-images-section .images-grid { position: absolute;left: -2px;top: 0;height: 100%;width: calc(100% + 10px);}
+.halifax-career-page .aolcc-images-section .right .sub-grid { height: 100%;}
+
+/* FUN FACTS STYLES */
+.halifax-career-page .fun-facts-section { padding: 74px 0 80px; background-color: #535353; text-align: center; }
+.halifax-career-page .fun-facts-section h2 { color: #FFF; margin-bottom: 40px; display: inline-block; }
+.halifax-career-page .fun-facts-section h2::after { background-color: #FFF; bottom: -20px; left: 50%; transform: translateX(-50%); }
+.halifax-career-page .fun-facts-section .content-block { max-width: 708px; margin: 0 auto; }
+.halifax-career-page .fun-facts-section .content-block p { color: #FFF; font-size: 18px; line-height: 1.33; margin-bottom: 24px; }
+.halifax-career-page .fun-facts-section .content-block .site-white-btn { font-size: 16px; font-weight: 800; text-transform: capitalize; color: #333333; height: 40px; line-height: 40px; border-radius: 3px; background-color: #FFF; box-shadow: 1.5px 2.6px 8px 0 rgba(0, 0, 0, 0.9); padding: 0 20px; }
+.halifax-career-page .fun-facts-section .content-block .site-white-btn:hover {background-color: rgba(255, 255, 255, 0.9); }
+
+/* MEET DIRECTOR SECTION */
+.halifax-career-page .meet-director-section { padding: 70px 0 77px; }
+.halifax-career-page .meet-director-section h2 { text-align: center; margin-bottom: 77px; }
+.halifax-career-page .meet-director-section h2:after { left: 50%; transform: translateX(-50%); margin: 0; bottom: -19px; }
+.halifax-career-page .meet-director-section .meet-director-grid { display: flex; flex-wrap: wrap; }
+.halifax-career-page .meet-director-section .meet-director-grid .grid-item-left { flex: 0 0 65.27%; max-width: 65.27%; padding-right: 90px; }
+.halifax-career-page .meet-director-section .meet-director-grid .grid-item-right { flex: 0 0 34.72%; max-width: 34.72%; }
+
+/*flex-left */
+.halifax-career-page .meet-director-section .meet-director-grid .grid-item-left .content-block span { display: block; font-family: "Raleway", sans-serif; font-weight: 600; font-size: 20px; line-height: 1.4; color: #333333; }
+.halifax-career-page .meet-director-section .meet-director-grid .grid-item-left .content-block p { font-size: 16px; line-height: 1.75; color: #333333; margin-bottom: 28px; }
+.halifax-career-page .meet-director-section .meet-director-grid .grid-item-left .content-block i { font-weight: 600; display: block; margin-bottom: 27px; font-size: 20px; }
+.halifax-career-page .meet-director-section .meet-director-grid .grid-item-left .content-block .orange-btn { text-transform: capitalize; font-size: 14px; padding: 0 27px; }
+.halifax-career-page .meet-director-section .meet-director-grid .grid-item-left .content-block .designation { display: flex; flex-wrap: wrap; margin-bottom: 28px; }
+.halifax-career-page .meet-director-section .meet-director-grid .grid-item-left .content-block .designation li { font-family: "Raleway", sans-serif; font-weight: 600; font-size: 20px; color: #333333; position: relative; display: inline-block; white-space: nowrap; }
+.halifax-career-page .meet-director-section .meet-director-grid .grid-item-left .content-block .designation li:not(:last-child) { margin-right: 6px;padding-right: 7px;}
+.halifax-career-page .meet-director-section .meet-director-grid .grid-item-left .content-block .designation li:not(:last-child)::after { position: absolute; content: ""; height: 18px; width: 2px; background-color: #333333;right: 0; top: 8px;}
+
+/* flex-right */
+.halifax-career-page .meet-director-section .meet-director-grid .grid-item-right .img-wrapper { position: relative; max-width: 100%; padding-bottom: 102%; }
+.halifax-career-page .meet-director-section .meet-director-grid .grid-item-right .img-wrapper img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
+@media (max-width:1199px) {
+    .location-faq-section { padding: 40px 0 50px; }
+    /* alocc-images-grid */
+    
+
+    /* Training Courses Page css */
+    .location-page-image-section { padding: 50px 0 20px; }
+    .courses-section { padding: 50px 0; }
+
+    /* banner-page-section */
+    .halifax-career-banner h1 { font-size: 76px; }
+    .flexible-training .flexible-training-wrapper .flexible-training-text { padding-right: 70px; }
+    .halifax-career-page h2 { font-size: 34px; }
+
+    /* FUN FACTS STYLES */
+    .halifax-career-page .fun-facts-section h2 { margin-bottom: 30px; }
+    .halifax-career-page .fun-facts-section h2::after { height: 4px; width: 75px; bottom: -15px; }
+    .halifax-career-page .fun-facts-section { padding: 50px 0; }
+
+    /* meet director section */
+    .halifax-career-page .meet-director-section { padding: 50px 0; }
+    .halifax-career-page .meet-director-section .meet-director-grid .grid-item-left { padding-right: 45px; }
+    .halifax-career-page .meet-director-section h2 { margin-bottom: 65px; }
+    .halifax-career-page .meet-director-section .meet-director-grid .grid-item-left .content-block .designation { margin-bottom: 18px; }
+    .halifax-career-page .meet-director-section .meet-director-grid .grid-item-left .content-block span, .halifax-career-page .meet-director-section .meet-director-grid .grid-item-left .content-block .designation li { font-size: 18px; }
+    .halifax-career-page .meet-director-section .meet-director-grid .grid-item-left .content-block p { margin-bottom: 22px; }
+    .halifax-career-page .meet-director-section .meet-director-grid .grid-item-left .content-block i { margin-bottom: 18px; font-size: 18px; }
+    .halifax-career-page .meet-director-section .meet-director-grid .grid-item-left .content-block .orange-btn { padding: 0 17px; }
+}
+@media(max-width:991px) {
+    .single-location .learn-more-block.inner-page-learn-more-block { padding-bottom: 0 !important; }
+
+    /* orange page menu bar start*/
+    .page-menu .page-menu-wrapper { padding: 0; }
+    .page-menu .page-menu-wrapper .menu-links-wrapper .hamburger-menu { display: inline-flex; align-items: center; justify-content: center; height: 45px; padding: 10px; cursor: pointer; }
+    .page-menu .page-menu-wrapper .menu-links-wrapper { position: relative; }
+    .page-menu .page-menu-wrapper .menu-links-wrapper .menu-links { position: absolute; margin: 0; background: #fff; right: 0; top: 100%; width: 200px; flex-wrap: wrap; opacity: 0; visibility: hidden; z-index: 1; transition: all 0.3s; }
+    .page-menu .page-menu-wrapper .menu-links-wrapper .menu-links.menu-open { opacity: 1; visibility: visible; }
+    .page-menu .page-menu-wrapper .menu-links-wrapper ul li { width: 100%; padding: 0; }
+    .page-menu .page-menu-wrapper .menu-links-wrapper ul li a { width: 100%; border-radius: 0; padding: 6px 10px; color: #333; }
+    .page-menu .page-menu-wrapper .menu-links-wrapper ul li a:hover, .page-menu .page-menu-wrapper .menu-links-wrapper ul li a.active { color: #e86404; background-color: rgba(232, 100, 4, 0.1); }
+
+    /* orange page menu bar end*/
+
+    /* Training Courses Page css */
+    .courses-section .courses-section-wrapper .content-block { padding-right: 15px; }
+    .courses-section .courses-section-wrapper .form-block { padding-left: 15px; }
+
+    /* contact-form */
+    .hellifax-contact-form.contact-form-section { padding: 60px 0 40px;}
+
+    /* banner-page-section */
+    .halifax-career-banner h1 { font-size: 70px; }
+    .flexible-training .flexible-training-wrapper .flexible-training-img, .flexible-training .flexible-training-wrapper .flexible-training-text { max-width: 100%; flex: 0 0 100%; padding-right: 0px; }
+    .flexible-training .flexible-training-wrapper .flexible-training-text { margin-bottom: 30px; }
+
+    /* meet director */
+    .halifax-career-page .meet-director-section .meet-director-grid .grid-item-left, .halifax-career-page .meet-director-section .meet-director-grid .grid-item-right { flex: 0 0 100%; max-width: 100%; padding: 0; }
+    .halifax-career-page .meet-director-section .meet-director-grid .grid-item-right { order: 1; margin-bottom: 15px; }
+    .halifax-career-page .meet-director-section .meet-director-grid .grid-item-left { order: 2; }
+    .halifax-career-page .meet-director-section .meet-director-grid .grid-item-left .content-block .designation li:not(:last-child)::after {top:5px;}
+}
+@media(max-width:767px) {
+    .location-map-section { padding: 50px 0; }
+    .downloadables-section .custom-card-body ul { padding-left: 0; }
+    .downloadables-section .custom-card-body ol { margin: 0 0 20px 17px; }
+    .find-out-section { padding: 30px 0 10px; }
+    .location-page-image-section .location-page-image-inner { flex-wrap: wrap; margin: 0; }
+    .map-section-wrapper .map-wraper, .map-section-wrapper .how-to-find-section, .location-page-image-section .location-page-image-inner .image-block, .location-page-image-section .location-page-image-inner .content-block { flex: 0 0 100%; max-width: 100%; }
+    .map-section-wrapper .how-to-find-section { padding-left: 0; margin-top: 30px; }
+    .location-map-section .map-wraper .acf-map { height: 250px; }
+    .location-page-image-section .location-page-image-inner .image-block { margin-bottom: 30px; }
+    /* .location-page-image-section .location-page-image-inner .content-block{
+        text-align: center;
+    } */
+    .location-page-image-section .location-page-image-inner.has-right-image .image-block { order: 1; }
+    .location-page-image-section .location-page-image-inner+.location-page-image-inner { padding-top: 50px; }
+    .location-faq-section .faq-type-wrapper { flex-wrap: wrap; }
+    .location-faq-section .faq-type-wrapper .faq-wrapper { flex: 0 0 100%; max-width: 100%; margin-bottom: 30px; }
+    .location-faq-section .faq-type-wrapper .faq-wrapper:last-of-type { margin-bottom: 0; }
+    .location-faq-section .faq-type-wrapper .faq-wrapper h3 { margin-bottom: 15px; }
+
+    /* Training Courses Page css */
+    .courses-section { padding-bottom: 0; }
+    .courses-section .courses-section-wrapper { flex-wrap: wrap; }
+    .courses-section .courses-section-wrapper .content-block, .courses-section .courses-section-wrapper .form-block { padding: 0; flex: 0 0 100%; max-width: 100%; }
+    .courses-section .courses-section-wrapper .content-block { margin-bottom: 50px; }
+    .courses-section .courses-section-wrapper .content-block .course-wrapper .course-details-wrapper .accordian-wrap .accordian-head { padding: 10px 10px 10px 20px; }
+    .courses-section .courses-section-wrapper .content-block .course-wrapper .course-details-wrapper .accordian-wrap .accordian-body { padding: 10px 10px 10px 30px; }
+
+    /* banner-page-section */
+    .halifax-career-banner h1 { font-size: 64px; margin-bottom: 30px; }
+    .halifax-career-banner h1::after { margin-top: 5px; }
+    .halifax-career-page h2 { font-size: 30px; }
+
+    /* find-us-section  */
+    .find-us-section { padding: 40px 0px; }
+    .find-us-section ul li a { font-size: 16px; }
+    .find-us-section ul li a span { margin-left: 12px; }
+
+    /* alternative-option-text */
+    .alternative-option-text .alternative-text-wrapper .alternative-text-inner { padding: 0px; max-width: 100%; flex: 0 0 100%; }
+    .alternative-option-text .alternative-text-wrapper { margin: 0px; }
+    .alternative-option-text .alternative-text-wrapper .alternative-text-inner li { margin-bottom: 15px; }
+    .alternative-option-text, .hellifax-download.downloadables-section, .halifax-why-choose-alocc.why-choose-alocc-section, .hellifax-contact-form.contact-form-section, .flexible-training, .halifax-career-page .fun-facts-section, .halifax-career-page .meet-director-section { padding: 40px 0px; }
+
+    /* IMAGES BLOCK STYLES*/
+    .halifax-career-page .aolcc-images-section { padding-bottom: 0;}
+    .halifax-career-page .aolcc-images-section .images-grid { margin: 0;position: relative;left: 0;top: 0;width: 100%;}
+    .halifax-career-page .aolcc-images-section .images-grid .img-wrapper.right-left { padding-bottom: 143%;}
+    .halifax-career-page .aolcc-images-section .images-grid .images-grid-item { flex: 0 0 100%; max-width: 100%; padding: 0; }
+    .halifax-career-page .aolcc-images-section .images-grid .images-grid-item:not(:last-child) { margin-bottom: 5px; }
+    .halifax-career-page .aolcc-images-section .sub-grid.top { height: auto;}
+    .halifax-career-page .aolcc-images-section .images-grid .img-wrapper.left-top-left { height: auto;padding-bottom: 69.3%;}
+    .halifax-career-page .aolcc-images-section .images-grid .img-wrapper.left-bottom { height: auto;padding-bottom: 30%;}
+    .halifax-career-page .aolcc-images-section .sub-grid { width: auto;}
+
+    /* FUN FACTS STYLES */
+    .halifax-career-page .fun-facts-section h2::after { width: 65px; }
+    .halifax-career-page .fun-facts-section .content-block p { font-size: 14px; }
+    .halifax-career-page .fun-facts-section .content-block .site-white-btn { height: 30px; line-height: 30px; font-size: 14px; padding: 0 10px; }
+
+    /*meet director*/
+    .halifax-career-page .meet-director-section h2 { margin-bottom: 55px; }
+    .halifax-career-page .meet-director-section .meet-director-grid .grid-item-left .content-block span, .halifax-career-page .meet-director-section .meet-director-grid .grid-item-left .content-block .designation li { font-size: 16px; }
+    .halifax-career-page .meet-director-section .meet-director-grid .grid-item-left .content-block i { font-size: 16px; margin-bottom: 15px; }
+    .halifax-career-page .meet-director-section .meet-director-grid .grid-item-left .content-block .designation { margin-bottom: 15px; }
+    .halifax-career-page .meet-director-section .meet-director-grid .grid-item-left .content-block p { margin-bottom: 18px; }
+}
+@media(max-width:574px) {
+    .courses-section .courses-section-wrapper .content-block .course-wrapper .course-details-wrapper .accordian-wrap .accordian-body li i { margin-right: 5px; }
+    .location-faq-section .faq-button-wrapper { flex-direction: column; align-items: center; margin: 0 0 25px; }
+    .location-faq-section .faq-button-wrapper p+p { margin-top: 10px; padding: 0; }
+
+    /* banner-page-section */
+    .halifax-career-banner h1 { font-size: 58px; }
+
+    /* .flexible-training  */
+    .flexible-training .flexible-training-wrapper .flexible-training-img:after { top: -12px; right: -12px; }
+    .flexible-training .flexible-training-wrapper .flexible-training-img img { width: 100%; }
+
+    /* IMAGES BLOCK STYLES */
+    .halifax-career-page .aolcc-images-section .sub-grid .sub-grid { margin: 0; }
+    
+    .halifax-career-page .aolcc-images-section .sub-grid .sub-grid-item,.halifax-career-page .aolcc-images-section .sub-grid.top .sub-grid-item { flex: 0 0 100%; max-width: 100%; padding: 0; }
+    .halifax-career-page .aolcc-images-section .sub-grid .sub-grid-item:not(:last-child) { margin-bottom: 4px; }
+    .halifax-career-page .aolcc-images-section .images-grid .img-wrapper.right-left { padding-bottom: 100%; }
+    .halifax-career-page .aolcc-images-section .sub-grid .sub-grid-item:not(:last-child) { padding-right: 0; }
+    .halifax-career-page .aolcc-images-section .images-grid .img-wrapper.left-bottom { padding-bottom: 50%; }
+    .halifax-career-page .aolcc-images-section .images-grid .img-wrapper.left-top-right { padding-bottom: 69.3%;height: auto;}
+    .halifax-career-page .aolcc-images-section .images-grid .img-wrapper.right-right-top { padding-bottom: 69.3%;height: auto;}
+    .halifax-career-page .aolcc-images-section .images-grid .img-wrapper.right-right-bottom { height: auto;padding-bottom: 60%;}
+}
+@media(max-width:374px) {
+    .courses-section { padding-bottom: 30px; }
+
+    /* banner-page-section */
+    .halifax-career-banner h1 { font-size: 40px; }
+    .halifax-career-banner .halifax-btn-wrapper .orange-btn { margin-bottom: 10px; }
+}
