@@ -1,0 +1,54 @@
+<div class="navbar-header">
+    <div class="navbar-brand-image">
+        <a href="#/overview">
+            <img src="assets/images/safex_logo.png" aria-label="SAFEX Systems"/>
+        </a>
+    </div>
+    <div class="navbar-powered-by-img">
+        <span>Powered by</span>
+        <a href="#">
+            <img src="assets/images/safex_logo.png" aria-label="SAFEX Systems"/>
+        </a>
+    </div>
+</div>
+<div class="right_stuff">
+    <ul>
+        <li>
+            <h4>
+                <div>
+                    Hello {{user?.username}}
+                    <small>{{user.email}}</small>
+                <fa-icon [icon]="faHand">asd</fa-icon>
+                </div>
+                <div routerLink="/profile">
+                    <small *ngIf="coreCompanies && coreCompanies.length==1">{{user?.company?.name}}</small>
+                    <small class="smaller"> :: {{this.user?.role?.fullname}}</small>
+                    <fa-icon class="fa-icon" [icon]="faUser"></fa-icon>
+                </div>
+            </h4>
+        </li>
+        <li *ngIf="coreCompanies && coreCompanies.length == 1">
+            <app-company-selection></app-company-selection>
+        </li>
+        <li>
+            <a title="New Action" href="#" no-click="true" ng-click="editActionPopup(0)">
+                <fa-icon [icon]="faPlus"></fa-icon>
+            </a>
+        </li>
+        <li>
+            <a title="Home" role="menuitem" aria-label="Home" [routerLink]="">
+                <fa-icon [icon]="faHome"></fa-icon>
+            </a>
+        </li>
+        <li>
+            <a title="Settings" role="menuitem" aria-label="Settings" href="#/settings">
+                <fa-icon class="fa-icon" [icon]="faCog"></fa-icon>
+            </a>
+        </li>
+        <li>
+            <a title="Log out" role="menuitem" aria-label="Log out" (click)="logout">
+                <fa-icon class="fa-solid" [icon]="faSignOut"></fa-icon>
+            </a>
+        </li>
+    </ul>
+</div>
